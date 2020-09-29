@@ -1,0 +1,6 @@
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\ESBasic\obj\x86\Debug\CJBasic.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\ESBasic\obj\x86\Debug\CJBasic.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\ESBasic\bin\Debug\CJBasic.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\ESBasic\bin\Debug\CJBasic.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\ESBasic\obj\x86\Debug\CJBasic.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\ESBasic\obj\x86\Debug\CJBasic.pdb

@@ -1,0 +1,2672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AAAB0C2-2C0E-4ADC-95AA-696A6A4B13FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JGNet.Manage</RootNamespace>
+    <AssemblyName>JGNet.Manage</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/CErp.Manage/</UpdateUrl>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logoGray.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3087EFE21F689AB6CBD4AE57D397DD75CA7F3FF2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CErp.Manage_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DataRabbit">
+      <HintPath>..\dlls\DataRabbit.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFramework.Boost">
+      <HintPath>..\dlls\ESFramework.Boost.dll</HintPath>
+    </Reference>
+    <Reference Include="GoldPrinter, Version=2.5.6955.30196, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\GoldPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CostumeERP\dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\dlls\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="OAUS.Core">
+      <HintPath>..\dlls\OAUS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\dlls\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DistributorSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\DistributorSelectForm.Designer.cs">
+      <DependentUpon>DistributorSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DistributorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DistributorTextBox.Designer.cs">
+      <DependentUpon>DistributorTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EmPfCostumeTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EmPfCostumeTextBox.Designer.cs">
+      <DependentUpon>EmPfCostumeTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EmPfCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\EmPfCostumeForm.Designer.cs">
+      <DependentUpon>EmPfCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EmOrderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EmOrderTextBox.Designer.cs">
+      <DependentUpon>EmOrderTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PfCostumeIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\PfCostumeIDForm.Designer.cs">
+      <DependentUpon>PfCostumeIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PfCostumeIDTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\PfCostumeIDTextBox.Designer.cs">
+      <DependentUpon>PfCostumeIDTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\SupplierDiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\SupplierDiscountForm.Designer.cs">
+      <DependentUpon>SupplierDiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EmCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\EmCostumeForm.Designer.cs">
+      <DependentUpon>EmCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EmCostumeTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EmCostumeTextBox.Designer.cs">
+      <DependentUpon>EmCostumeTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AddCostumeColorComboBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AddCostumeColorComboBoxForm.Designer.cs">
+      <DependentUpon>AddCostumeColorComboBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\BrandComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\BrandComboBox.Designer.cs">
+      <DependentUpon>BrandComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ParameterConfigComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ParameterConfigComboBox.Designer.cs">
+      <DependentUpon>ParameterConfigComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ColorComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ColorComboBox.Designer.cs">
+      <DependentUpon>ColorComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\SizeGroupSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SizeGroupSelector.Designer.cs">
+      <DependentUpon>SizeGroupSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CashRecordCtrls\CashRecordInsertCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CashRecordCtrls\CashRecordInsertCtrl.Designer.cs">
+      <DependentUpon>CashRecordInsertCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSearchCtrls\RefundOrder\MemberRefundOrderSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSearchCtrls\RefundOrder\MemberRefundOrderSearchCtrl.Designer.cs">
+      <DependentUpon>MemberRefundOrderSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSearchCtrls\ReplenishOrder\ReplenishApplyCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSearchCtrls\ReplenishOrder\ReplenishApplyCtrl.Designer.cs">
+      <DependentUpon>ReplenishApplyCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSearchCtrls\ReplenishOrder\ReplenishPickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSearchCtrls\ReplenishOrder\ReplenishPickForm.Designer.cs">
+      <DependentUpon>ReplenishPickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RefundCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RefundCtrl.Designer.cs">
+      <DependentUpon>RefundCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RefundDirectCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RefundDirectCtrl.Designer.cs">
+      <DependentUpon>RefundDirectCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RefundTabControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RefundTabControlCtrl.Designer.cs">
+      <DependentUpon>RefundTabControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShouYinCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ShouYinCtrl.designer.cs">
+      <DependentUpon>ShouYinCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeHandler.cs" />
+    <Compile Include="EMallServerProxy.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BalanceForm.Designer.cs">
+      <DependentUpon>BalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BalanceFormConfiguration.cs" />
+    <Compile Include="Forms\ChooseGiftTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChooseGiftTicketForm.Designer.cs">
+      <DependentUpon>ChooseGiftTicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfirmRefundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmRefundForm.Designer.cs">
+      <DependentUpon>ConfirmRefundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GiftTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiftTicketForm.Designer.cs">
+      <DependentUpon>GiftTicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GiftTicketRichForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiftTicketRichForm.Designer.cs">
+      <DependentUpon>GiftTicketRichForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListGiftTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListGiftTicketForm.Designer.cs">
+      <DependentUpon>ListGiftTicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SingleDiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SingleDiscountForm.Designer.cs">
+      <DependentUpon>SingleDiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TiDanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TiDanForm.Designer.cs">
+      <DependentUpon>TiDanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GA\Algorithm.cs" />
+    <Compile Include="Model\GA\FitnessCalc.cs" />
+    <Compile Include="Model\GA\Individual.cs" />
+    <Compile Include="Model\GA\Population.cs" />
+    <Compile Include="Model\Device.cs" />
+    <Compile Include="Model\HangedOrder.cs" />
+    <Compile Include="Model\PrintBarcodeSetting.cs" />
+    <Compile Include="Model\SizeGroupSetting.cs" />
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordCtrl.Designer.cs">
+      <DependentUpon>EarlyStageCostumeStoreRecordCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageAccountRecordCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageAccountRecordCtrl.Designer.cs">
+      <DependentUpon>EarlyStageAccountRecordCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordForm.Designer.cs">
+      <DependentUpon>EarlyStageCostumeStoreRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordSaveCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordSaveCostumeForm.Designer.cs">
+      <DependentUpon>EarlyStageCostumeStoreRecordSaveCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageTabControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageTabControlCtrl.Designer.cs">
+      <DependentUpon>EarlyStageTabControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordImportCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordImportCtrl.Designer.cs">
+      <DependentUpon>EarlyStageCostumeStoreRecordImportCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\FilterCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EarlyStageAccountRecord\FilterCostumeForm.Designer.cs">
+      <DependentUpon>FilterCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Costume\ColorPictureListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Costume\ColorPictureListForm.Designer.cs">
+      <DependentUpon>ColorPictureListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderExportConfigSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderExportConfigSetForm.Designer.cs">
+      <DependentUpon>EmOrderExportConfigSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmExportUtil.cs" />
+    <Compile Include="Pages\EMall\Order\EmRefundTrackInfoCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmRefundTrackInfoCtrl.Designer.cs">
+      <DependentUpon>EmRefundTrackInfoCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderSellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderSellerForm.Designer.cs">
+      <DependentUpon>EmOrderSellerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderReturnSuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderReturnSuccessForm.Designer.cs">
+      <DependentUpon>EmOrderReturnSuccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderLogisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderLogisticsForm.Designer.cs">
+      <DependentUpon>EmOrderLogisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Costume\SaveEmCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Costume\SaveEmCostumeForm.Designer.cs">
+      <DependentUpon>SaveEmCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderDeliverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderDeliverForm.Designer.cs">
+      <DependentUpon>EmOrderDeliverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderDeliverForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderDeliverForm2.Designer.cs">
+      <DependentUpon>EmOrderDeliverForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderReturnAddressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderReturnAddressForm.Designer.cs">
+      <DependentUpon>EmOrderReturnAddressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderNewAddressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderNewAddressForm.Designer.cs">
+      <DependentUpon>EmOrderNewAddressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderRefundReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderRefundReasonForm.Designer.cs">
+      <DependentUpon>EmOrderRefundReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderTabControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderTabControlCtrl.Designer.cs">
+      <DependentUpon>EmOrderTabControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderDetailCtrl.designer.cs">
+      <DependentUpon>EmRefundOrderDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderEmOrderLogisticsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderEmOrderLogisticsCtrl.designer.cs">
+      <DependentUpon>EmRefundOrderEmOrderLogisticsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderManageCtrl.designer.cs">
+      <DependentUpon>EmRefundOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderRefusedReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\RefundOrder\EmRefundOrderRefusedReasonForm.Designer.cs">
+      <DependentUpon>EmRefundOrderRefusedReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderReturnAddressCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderReturnAddressCtrl.Designer.cs">
+      <DependentUpon>EmOrderReturnAddressCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmRetailOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmRetailOrderForm.Designer.cs">
+      <DependentUpon>EmRetailOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\SeasonComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SeasonComboBox.Designer.cs">
+      <DependentUpon>SeasonComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\CashManagement\CashManagementCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\CashManagement\CashManagementCtrl.Designer.cs">
+      <DependentUpon>CashManagementCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\CashManagement\PaymentCashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\CashManagement\PaymentCashForm.Designer.cs">
+      <DependentUpon>PaymentCashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\CashManagement\PaymentCommissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\CashManagement\PaymentCommissionForm.Designer.cs">
+      <DependentUpon>PaymentCommissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\AddDistributionMemberClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\AddDistributionMemberClassForm.Designer.cs">
+      <DependentUpon>AddDistributionMemberClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\PfDistributorCommissionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\PfDistributorCommissionCtrl.Designer.cs">
+      <DependentUpon>PfDistributorCommissionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\PfCommissionDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\PfCommissionDetailForm.Designer.cs">
+      <DependentUpon>PfCommissionDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCommissionCtrl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCommissionCtrl1.Designer.cs">
+      <DependentUpon>RetailDistributorCommissionCtrl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorClassUtil.cs" />
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\PfDistributorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\PfDistributorCtrl.Designer.cs">
+      <DependentUpon>PfDistributorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCtrl.Designer.cs">
+      <DependentUpon>RetailDistributorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorCtrl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorCtrl1.designer.cs">
+      <DependentUpon>DistributorCtrl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\OffLineCustomerListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\OffLineCustomerListForm.Designer.cs">
+      <DependentUpon>OffLineCustomerListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorCtrl.Designer.cs">
+      <DependentUpon>DistributorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\CommissionTabControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\CommissionTabControlCtrl.Designer.cs">
+      <DependentUpon>CommissionTabControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\SaveDistributorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\SaveDistributorForm.Designer.cs">
+      <DependentUpon>SaveDistributorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\SaveOffLineCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\SaveOffLineCustomerForm.Designer.cs">
+      <DependentUpon>SaveOffLineCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCommissionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCommissionCtrl.Designer.cs">
+      <DependentUpon>RetailDistributorCommissionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailCommissionDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Distribution\RetailCommissionDetailForm.Designer.cs">
+      <DependentUpon>RetailCommissionDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\PaymentManage\PaymentManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\PaymentManage\PaymentManageCtrl.Designer.cs">
+      <DependentUpon>PaymentManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\PaymentManage\AddPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\PaymentManage\AddPaymentForm.Designer.cs">
+      <DependentUpon>AddPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\ReceivedPayments\ReceivedPaymentsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\ReceivedPayments\ReceivedPaymentsCtrl.designer.cs">
+      <DependentUpon>ReceivedPaymentsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\AddLevelModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\AddLevelModelForm.Designer.cs">
+      <DependentUpon>AddLevelModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\LevelSetingManaegCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\LevelSetingManaegCtrl.Designer.cs">
+      <DependentUpon>LevelSetingManaegCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\CostumeImportCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\CostumeImportCtrl.Designer.cs">
+      <DependentUpon>CostumeImportCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\LevelSettingCtrl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\LevelSettingCtrl1.Designer.cs">
+      <DependentUpon>LevelSettingCtrl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\LevelSettingCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\LevelSettingCtrl.Designer.cs">
+      <DependentUpon>LevelSettingCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\DistributorSettingCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\WholeSaleCenter\Setting\DistributorSettingCtrl.Designer.cs">
+      <DependentUpon>DistributorSettingCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\SignRecord\GuideSignRecordCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\SignRecord\GuideSignRecordCtrl.Designer.cs">
+      <DependentUpon>GuideSignRecordCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\SignRecord\GuideSignRecordManCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\SignRecord\GuideSignRecordManCtrl.Designer.cs">
+      <DependentUpon>GuideSignRecordManCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseOrder\PurchaseOrderPickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\PurchaseOrder\PurchaseOrderPickForm.Designer.cs">
+      <DependentUpon>PurchaseOrderPickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\CostumeStoreAnalysis\CostumeStoreAnalysisCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\CostumeStoreAnalysis\CostumeStoreAnalysisCtrl.designer.cs">
+      <DependentUpon>CostumeStoreAnalysisCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\AccumulativeCurrentSaleDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\AccumulativeCurrentSaleDetailForm.Designer.cs">
+      <DependentUpon>AccumulativeCurrentSaleDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\CostumeDistributeSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\CostumeDistributeSearchCtrl.Designer.cs">
+      <DependentUpon>CostumeDistributeSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\AccumulativeTotalStockGoodDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\AccumulativeTotalStockGoodDetailForm.Designer.cs">
+      <DependentUpon>AccumulativeTotalStockGoodDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeSalePfDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeSalePfDetailForm.Designer.cs">
+      <DependentUpon>DistributeCostumeSalePfDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributePfSaleOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributePfSaleOrderDetailForm.Designer.cs">
+      <DependentUpon>DistributePfSaleOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeSaleRetailDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeSaleRetailDetailForm.Designer.cs">
+      <DependentUpon>DistributeCostumeSaleRetailDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeAllocateInDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeAllocateInDetailForm.Designer.cs">
+      <DependentUpon>DistributeCostumeAllocateInDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributePFCostumeInDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributePFCostumeInDetailForm.Designer.cs">
+      <DependentUpon>DistributePFCostumeInDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeInDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Distribute\DistributeCostumeInDetailForm.Designer.cs">
+      <DependentUpon>DistributeCostumeInDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\CostumeInventorySearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\CostumeInventorySearchCtrl.Designer.cs">
+      <DependentUpon>CostumeInventorySearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\CostumeInDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\CostumeInDetailForm.Designer.cs">
+      <DependentUpon>CostumeInDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\CostumeSaleRetailDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\CostumeSaleRetailDetailForm.Designer.cs">
+      <DependentUpon>CostumeSaleRetailDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\sellDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\sellDetailForm.Designer.cs">
+      <DependentUpon>sellDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\StockgoodDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\StockgoodDetailForm.Designer.cs">
+      <DependentUpon>StockgoodDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\RetailCostumeOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\RetailCostumeOrderDetailForm.Designer.cs">
+      <DependentUpon>RetailCostumeOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\PFCostumeOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\PFCostumeOrderDetailForm.Designer.cs">
+      <DependentUpon>PFCostumeOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\WholesaleDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Costume\WholesaleDetailForm.Designer.cs">
+      <DependentUpon>WholesaleDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomerInventorySearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomerInventorySearchCtrl.Designer.cs">
+      <DependentUpon>CustomerInventorySearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomerSaleOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomerSaleOrderDetailForm.Designer.cs">
+      <DependentUpon>CustomerSaleOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomSaleGoodDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomSaleGoodDetailForm.Designer.cs">
+      <DependentUpon>CustomSaleGoodDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\sendOutGoodDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\sendOutGoodDetailForm.Designer.cs">
+      <DependentUpon>sendOutGoodDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomerOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\Inventory\Customer\CustomerOrderDetailForm.Designer.cs">
+      <DependentUpon>CustomerOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\PriceRangeReport\PriceRangeReportDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\PriceRangeReport\PriceRangeReportDetailCtrl.Designer.cs">
+      <DependentUpon>PriceRangeReportDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\PriceRangeReport\PriceRangeReportManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\PriceRangeReport\PriceRangeReportManageCtrl.Designer.cs">
+      <DependentUpon>PriceRangeReportManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReturnOrder\PurchaseSummaryConfiguration.cs" />
+    <Compile Include="Pages\ReturnOrder\GetPurchaseSummaryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ReturnOrder\GetPurchaseSummaryCtrl.Designer.cs">
+      <DependentUpon>GetPurchaseSummaryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReturnOrder\PurchaseSummaryTypeForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ReturnOrder\PurchaseSummaryTypeForm1.Designer.cs">
+      <DependentUpon>PurchaseSummaryTypeForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ClassComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ClassComboBox.Designer.cs">
+      <DependentUpon>ClassComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\PermissonConfiguration.cs" />
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\PermissonCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\PermissonCtrl.Designer.cs">
+      <DependentUpon>PermissonCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\FirstChangePasswordAdminUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\FirstChangePasswordAdminUserCtrl.Designer.cs">
+      <DependentUpon>FirstChangePasswordAdminUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AddCostumeColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AddCostumeColorForm.Designer.cs">
+      <DependentUpon>AddCostumeColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CostumeAddBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\CostumeAddBrandForm.Designer.cs">
+      <DependentUpon>CostumeAddBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeClassCtrl2019.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeClassCtrl2019.Designer.cs">
+      <DependentUpon>CostumeClassCtrl2019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeClassUtil.cs" />
+    <Compile Include="Components\AddCostumeClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AddCostumeClassForm.Designer.cs">
+      <DependentUpon>AddCostumeClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\PrintBarcodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\PrintBarcodeForm.Designer.cs">
+      <DependentUpon>PrintBarcodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\ChangePasswordGuideOfSystemCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\ChangePasswordGuideOfSystemCtrl.Designer.cs">
+      <DependentUpon>ChangePasswordGuideOfSystemCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\UpdateShopPriceAndSalePriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\UpdateShopPriceAndSalePriceForm.Designer.cs">
+      <DependentUpon>UpdateShopPriceAndSalePriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\UpdateShopCostumePriceCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\UpdateShopCostumePriceCtrl.Designer.cs">
+      <DependentUpon>UpdateShopCostumePriceCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\BasicSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\BasicSettingForm.Designer.cs">
+      <DependentUpon>BasicSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\SizeGroup\SizeGroupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\SizeGroup\SizeGroupEditForm.Designer.cs">
+      <DependentUpon>SizeGroupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Supplier\SaveSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Supplier\SaveSupplierForm.Designer.cs">
+      <DependentUpon>SaveSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\GlobalUtilOfPrint.cs" />
+    <Compile Include="Pages\Setting\Print\PrintOfBalanceOnThatDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfBalanceOnThatDay.Designer.cs">
+      <DependentUpon>PrintOfBalanceOnThatDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPtSendBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPtSendBill.Designer.cs">
+      <DependentUpon>PrintOfPtSendBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPfSendBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPfSendBill.Designer.cs">
+      <DependentUpon>PrintOfPfSendBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfAllocateBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfAllocateBill.Designer.cs">
+      <DependentUpon>PrintOfAllocateBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfCheckStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfCheckStore.Designer.cs">
+      <DependentUpon>PrintOfCheckStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOFreplenishBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOFreplenishBill.Designer.cs">
+      <DependentUpon>PrintOFreplenishBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPurchaseStockReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPurchaseStockReturn.Designer.cs">
+      <DependentUpon>PrintOfPurchaseStockReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfSaleReturnTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfSaleReturnTemplate.Designer.cs">
+      <DependentUpon>PrintOfSaleReturnTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfSaleReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfSaleReturn.Designer.cs">
+      <DependentUpon>PrintOfSaleReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPurchaseStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintOfPurchaseStock.Designer.cs">
+      <DependentUpon>PrintOfPurchaseStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintSettingForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Print\PrintSettingForm.Designer.cs">
+      <DependentUpon>PrintSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCostumeSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCostumeSelectForm.Designer.cs">
+      <DependentUpon>SalesPromotionCostumeSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\YearComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\YearComboBox.Designer.cs">
+      <DependentUpon>YearComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\SizeGroupSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\SizeGroupSelectForm.Designer.cs">
+      <DependentUpon>SizeGroupSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\SystemSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\SystemSettingForm.Designer.cs">
+      <DependentUpon>SystemSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\BarCode\BarCodeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\BarCode\BarCodeCtrl.Designer.cs">
+      <DependentUpon>BarCodeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\SaveCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\SaveCostumeForm.Designer.cs">
+      <DependentUpon>SaveCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\ChangePasswordGuideCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\ChangePasswordGuideCtrl.Designer.cs">
+      <DependentUpon>ChangePasswordGuideCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\GuideCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\GuideCtrl.Designer.cs">
+      <DependentUpon>GuideCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guide\GuideEditCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Guide\GuideEditCtrl.Designer.cs">
+      <DependentUpon>GuideEditCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\SizeGroup\SizeGroupCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\SizeGroup\SizeGroupCtrl.designer.cs">
+      <DependentUpon>SizeGroupCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\ConfigSetting\GuideReturnVisit.cs" />
+    <Compile Include="Pages\Setting\ConfigSetting\GuideReturnVisitCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\ConfigSetting\GuideReturnVisitCtrl.Designer.cs">
+      <DependentUpon>GuideReturnVisitCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\Option\OptionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\Option\OptionCtrl.Designer.cs">
+      <DependentUpon>OptionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\GiftTicketTemplateCostumeSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\GiftTicketTemplateCostumeSelectForm.Designer.cs">
+      <DependentUpon>GiftTicketTemplateCostumeSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\GiftTicket\SaveGiftTicketTemplateCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\GiftTicket\SaveGiftTicketTemplateCtrl.Designer.cs">
+      <DependentUpon>SaveGiftTicketTemplateCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\CarriageCostTemplate\CarriageCostTemplateCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\CarriageCostTemplate\CarriageCostTemplateCtrl.designer.cs">
+      <DependentUpon>CarriageCostTemplateCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\CarriageCostTemplate\SaveCarriageCostTemplateCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\CarriageCostTemplate\SaveCarriageCostTemplateCtrl.designer.cs">
+      <DependentUpon>SaveCarriageCostTemplateCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Costume\EmCostumeManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Costume\EmCostumeManageCtrl.designer.cs">
+      <DependentUpon>EmCostumeManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\EditEmallCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\EditEmallCtrl.Designer.cs">
+      <DependentUpon>EditEmallCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Logistic\EmLogisticManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Logistic\EmLogisticManageCtrl.designer.cs">
+      <DependentUpon>EmLogisticManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderLogisticsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderLogisticsCtrl.designer.cs">
+      <DependentUpon>EmOrderLogisticsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderDetailCtrl.designer.cs">
+      <DependentUpon>EmOrderDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EMall\Order\EmOrderManageCtrl.designer.cs">
+      <DependentUpon>EmOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report\SalesQuantityRanking\SalesQuantityRankingShopDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\SalesQuantityRanking\SalesQuantityRankingShopDetailCtrl.Designer.cs">
+      <DependentUpon>SalesQuantityRankingShopDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\GiftTicket\GiftTicketCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\GiftTicket\GiftTicketCtrl.Designer.cs">
+      <DependentUpon>GiftTicketCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalCache.cs" />
+    <Compile Include="GlobalUtil.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ScrapOrder\ScrapOrderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ScrapOrder\ScrapOrderCtrl.Designer.cs">
+      <DependentUpon>ScrapOrderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ScrapOrder\ScrapOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ScrapOrder\ScrapOrderManageCtrl.Designer.cs">
+      <DependentUpon>ScrapOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\ChangePasswordAdminUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\ChangePasswordAdminUserCtrl.Designer.cs">
+      <DependentUpon>ChangePasswordAdminUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Cash\CashFeeTypeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Cash\CashFeeTypeCtrl.Designer.cs">
+      <DependentUpon>CashFeeTypeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeColorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeColorCtrl.Designer.cs">
+      <DependentUpon>CostumeColorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeBrandCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeBrandCtrl.Designer.cs">
+      <DependentUpon>CostumeBrandCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeSeasonCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeSeasonCtrl.Designer.cs">
+      <DependentUpon>CostumeSeasonCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\SaveCostumeManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\SaveCostumeManageCtrl.designer.cs">
+      <DependentUpon>SaveCostumeManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Costume\CostumeManageCtrl.designer.cs">
+      <DependentUpon>CostumeManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\SaveAdminUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\SaveAdminUserCtrl.Designer.cs">
+      <DependentUpon>SaveAdminUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\AdminUserManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\AdminUser\AdminUserManageCtrl.Designer.cs">
+      <DependentUpon>AdminUserManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Shop\SaveShopCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Shop\SaveShopCtrl.Designer.cs">
+      <DependentUpon>SaveShopCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Shop\ShopManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Shop\ShopManageCtrl.Designer.cs">
+      <DependentUpon>ShopManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SaveSalesPromotionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SaveSalesPromotionCtrl.Designer.cs">
+      <DependentUpon>SaveSalesPromotionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RetailOrder\GetRetailSummaryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\RetailOrder\GetRetailSummaryCtrl.Designer.cs">
+      <DependentUpon>GetRetailSummaryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Stock\ReturnOrder\SelectSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Stock\ReturnOrder\SelectSupplierForm.Designer.cs">
+      <DependentUpon>SelectSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountCollectionManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountCollectionManageCtrl.designer.cs">
+      <DependentUpon>SupplierAccountCollectionManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSearchForm.Designer.cs">
+      <DependentUpon>SupplierAccountSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordDetailForm.Designer.cs">
+      <DependentUpon>SupplierAccountRecordDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordSearchCtrl.designer.cs">
+      <DependentUpon>SupplierAccountRecordSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordSearchForm.designer.cs">
+      <DependentUpon>SupplierAccountRecordSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSearchCtrl.Designer.cs">
+      <DependentUpon>SupplierAccountSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReturnOrder\ReturnOrderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ReturnOrder\ReturnOrderCtrl.Designer.cs">
+      <DependentUpon>ReturnOrderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseOrder\PurchaseOrderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\PurchaseOrder\PurchaseOrderCtrl.Designer.cs">
+      <DependentUpon>PurchaseOrderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\IntegralCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\IntegralCtrl.Designer.cs">
+      <DependentUpon>IntegralCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\RechargeRuleCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\RechargeRuleCtrl.designer.cs">
+      <DependentUpon>RechargeRuleCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionDiscountRuleCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionDiscountRuleCtrl.Designer.cs">
+      <DependentUpon>SalesPromotionDiscountRuleCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionMJRuleCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionMJRuleCtrl.Designer.cs">
+      <DependentUpon>SalesPromotionMJRuleCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCtrl.Designer.cs">
+      <DependentUpon>SalesPromotionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Supplier\SaveSupplierCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Supplier\SaveSupplierCtrl.Designer.cs">
+      <DependentUpon>SaveSupplierCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Supplier\SupplierManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BasicSettings\Supplier\SupplierManageCtrl.Designer.cs">
+      <DependentUpon>SupplierManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Stock\Replenish\ReplenishOutboundCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Stock\Replenish\ReplenishOutboundCtrl.Designer.cs">
+      <DependentUpon>ReplenishOutboundCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Stock\PurchaseOrder\PurchaseOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Stock\PurchaseOrder\PurchaseOrderManageCtrl.designer.cs">
+      <DependentUpon>PurchaseOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Stock\ReturnOrder\ReturnOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Stock\ReturnOrder\ReturnOrderManageCtrl.Designer.cs">
+      <DependentUpon>ReturnOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountContrastCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountContrastCtrl.designer.cs">
+      <DependentUpon>SupplierAccountContrastCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSummaryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSummaryCtrl.designer.cs">
+      <DependentUpon>WholesaleAccountSummaryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSummaryShouldPayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSummaryShouldPayForm.Designer.cs">
+      <DependentUpon>WholesaleAccountSummaryShouldPayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSearchForm.Designer.cs">
+      <DependentUpon>WholesaleAccountSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordReceivedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordReceivedForm.Designer.cs">
+      <DependentUpon>WholesaleAccountRecordReceivedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountContrastCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountContrastCtrl.designer.cs">
+      <DependentUpon>WholesaleAccountContrastCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleCollectionManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleCollectionManageCtrl.Designer.cs">
+      <DependentUpon>WholesaleCollectionManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleCostumeStoreRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleCostumeStoreRecordForm.Designer.cs">
+      <DependentUpon>WholesaleCostumeStoreRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningSaveCostumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningSaveCostumeForm.Designer.cs">
+      <DependentUpon>WholesaleBeginningSaveCostumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningImportCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningImportCtrl.Designer.cs">
+      <DependentUpon>WholesaleBeginningImportCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningControlCtrl.Designer.cs">
+      <DependentUpon>WholesaleBeginningControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningStoreCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningStoreCtrl.Designer.cs">
+      <DependentUpon>WholesaleBeginningStoreCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerBalanceDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerBalanceDetailCtrl.Designer.cs">
+      <DependentUpon>WholesaleCustomerBalanceDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\NewWholesaleCustomerSimpleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\NewWholesaleCustomerSimpleForm.Designer.cs">
+      <DependentUpon>NewWholesaleCustomerSimpleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerRechargeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerRechargeForm.Designer.cs">
+      <DependentUpon>WholesaleCustomerRechargeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordSearchCtrl.Designer.cs">
+      <DependentUpon>WholesaleAccountRecordSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordOrderDetailForm.Designer.cs">
+      <DependentUpon>WholesaleAccountRecordOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordSearchForm.Designer.cs">
+      <DependentUpon>WholesaleAccountRecordSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordDetailForm.Designer.cs">
+      <DependentUpon>WholesaleAccountRecordDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountSearchCtrl.Designer.cs">
+      <DependentUpon>WholesaleAccountSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderDeliveryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderDeliveryCtrl.designer.cs">
+      <DependentUpon>WholesaleEmOrderDeliveryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderDetailCtrl.designer.cs">
+      <DependentUpon>WholesaleEmOrderDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderFinishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderFinishForm.Designer.cs">
+      <DependentUpon>WholesaleEmOrderFinishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\WholesaleEmOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\EMall\Order\WholesaleEmOrderManageCtrl.designer.cs">
+      <DependentUpon>WholesaleEmOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Sale\WholesaleCustomeSaleCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Sale\WholesaleCustomeSaleCtrl.Designer.cs">
+      <DependentUpon>WholesaleCustomeSaleCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Sale\WholesaleCustomeSaleEditCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Sale\WholesaleCustomeSaleEditCtrl.Designer.cs">
+      <DependentUpon>WholesaleCustomeSaleEditCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryCtrl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryCtrl1.Designer.cs">
+      <DependentUpon>WholesaleDeliveryCtrl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryPickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryPickForm.designer.cs">
+      <DependentUpon>WholesaleDeliveryPickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryReturnForm.Designer.cs">
+      <DependentUpon>WholesaleDeliveryReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleReturnCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleReturnCtrl.Designer.cs">
+      <DependentUpon>WholesaleReturnCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryPayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleDeliveryPayForm.Designer.cs">
+      <DependentUpon>WholesaleDeliveryPayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleOrderManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleOrderManageCtrl.Designer.cs">
+      <DependentUpon>WholesaleOrderManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Sale\WholesaleCustomeSaleManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Sale\WholesaleCustomeSaleManageCtrl.Designer.cs">
+      <DependentUpon>WholesaleCustomeSaleManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningStoreCtrl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningStoreCtrl1.Designer.cs">
+      <DependentUpon>WholesaleBeginningStoreCtrl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningBillCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Beginning\WholesaleBeginningBillCtrl.Designer.cs">
+      <DependentUpon>WholesaleBeginningBillCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleCustomeStoreCtrl_old.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Store\WholesaleCustomeStoreCtrl_old.Designer.cs">
+      <DependentUpon>WholesaleCustomeStoreCtrl_old.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerSaveCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerSaveCtrl.Designer.cs">
+      <DependentUpon>WholesaleCustomerSaveCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\Customer\WholesaleCustomerManageCtrl.Designer.cs">
+      <DependentUpon>WholesaleCustomerManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordRefundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordRefundForm.Designer.cs">
+      <DependentUpon>WholesaleAccountRecordRefundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSummaryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSummaryCtrl.designer.cs">
+      <DependentUpon>SupplierAccountSummaryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSummaryShouldPayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountSummaryShouldPayForm.Designer.cs">
+      <DependentUpon>SupplierAccountSummaryShouldPayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountContrastInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountContrastInfoForm.Designer.cs">
+      <DependentUpon>SupplierAccountContrastInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountContrastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Wholesale\AccountRecord\WholesaleAccountContrastForm.Designer.cs">
+      <DependentUpon>WholesaleAccountContrastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WorkDeskMenuItemCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\WorkDeskMenuItemCtrl.designer.cs">
+      <DependentUpon>WorkDeskMenuItemCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WorkDeskMenuItem\OperationInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\WorkDeskMenuItem\OperationInfoForm.Designer.cs">
+      <DependentUpon>OperationInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\Report\CostumeRetailAnalysis\CostumeRetailAnalysisDetailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Report\CostumeRetailAnalysis\CostumeRetailAnalysisDetailCtrl.Designer.cs">
+      <DependentUpon>CostumeRetailAnalysisDetailCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerProxy.cs" />
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SupplierAccountRecord\SupplierAccountRecordOrderDetailForm.Designer.cs">
+      <DependentUpon>SupplierAccountRecordOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\DistributorSelectForm.resx">
+      <DependentUpon>DistributorSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\EmPfCostumeForm.resx">
+      <DependentUpon>EmPfCostumeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\EmOrderTextBox.resx">
+      <DependentUpon>EmOrderTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PfCostumeIDForm.resx">
+      <DependentUpon>PfCostumeIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SeasonComboBox.resx">
+      <DependentUpon>SeasonComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SupplierDiscountForm.resx">
+      <DependentUpon>SupplierDiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\EmCostumeForm.resx">
+      <DependentUpon>EmCostumeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AddCostumeColorComboBoxForm.resx">
+      <DependentUpon>AddCostumeColorComboBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\BrandComboBox.resx">
+      <DependentUpon>BrandComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ColorComboBox.resx">
+      <DependentUpon>ColorComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SizeGroupSelector.resx">
+      <DependentUpon>SizeGroupSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CashRecordCtrls\CashRecordInsertCtrl.resx">
+      <DependentUpon>CashRecordInsertCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderSearchCtrls\RefundOrder\MemberRefundOrderSearchCtrl.resx">
+      <DependentUpon>MemberRefundOrderSearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderSearchCtrls\ReplenishOrder\ReplenishApplyCtrl.resx">
+      <DependentUpon>ReplenishApplyCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OrderSearchCtrls\ReplenishOrder\ReplenishPickForm.resx">
+      <DependentUpon>ReplenishPickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RefundCtrl.resx">
+      <DependentUpon>RefundCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RefundDirectCtrl.resx">
+      <DependentUpon>RefundDirectCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RefundTabControlCtrl.resx">
+      <DependentUpon>RefundTabControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ShouYinCtrl.resx">
+      <DependentUpon>ShouYinCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BalanceForm.resx">
+      <DependentUpon>BalanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChooseGiftTicketForm.resx">
+      <DependentUpon>ChooseGiftTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfirmRefundForm.resx">
+      <DependentUpon>ConfirmRefundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiftTicketForm.resx">
+      <DependentUpon>GiftTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiftTicketRichForm.resx">
+      <DependentUpon>GiftTicketRichForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListGiftTicketForm.resx">
+      <DependentUpon>ListGiftTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SingleDiscountForm.resx">
+      <DependentUpon>SingleDiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TiDanForm.resx">
+      <DependentUpon>TiDanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordCtrl.resx">
+      <DependentUpon>EarlyStageCostumeStoreRecordCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageAccountRecordCtrl.resx">
+      <DependentUpon>EarlyStageAccountRecordCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordForm.resx">
+      <DependentUpon>EarlyStageCostumeStoreRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordSaveCostumeForm.resx">
+      <DependentUpon>EarlyStageCostumeStoreRecordSaveCostumeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageTabControlCtrl.resx">
+      <DependentUpon>EarlyStageTabControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordImportCtrl.resx">
+      <DependentUpon>EarlyStageCostumeStoreRecordImportCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EarlyStageAccountRecord\FilterCostumeForm.resx">
+      <DependentUpon>FilterCostumeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Costume\ColorPictureListForm.resx">
+      <DependentUpon>ColorPictureListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderExportConfigSetForm.resx">
+      <DependentUpon>EmOrderExportConfigSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderSellerForm.resx">
+      <DependentUpon>EmOrderSellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderReturnSuccessForm.resx">
+      <DependentUpon>EmOrderReturnSuccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderLogisticsForm.resx">
+      <DependentUpon>EmOrderLogisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Costume\SaveEmCostumeForm.resx">
+      <DependentUpon>SaveEmCostumeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderDeliverForm.resx">
+      <DependentUpon>EmOrderDeliverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderDeliverForm2.resx">
+      <DependentUpon>EmOrderDeliverForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmRefundTrackInfoCtrl.resx">
+      <DependentUpon>EmRefundTrackInfoCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderReturnAddressForm.resx">
+      <DependentUpon>EmOrderReturnAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderNewAddressForm.resx">
+      <DependentUpon>EmOrderNewAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderRefundReasonForm.resx">
+      <DependentUpon>EmOrderRefundReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderTabControlCtrl.resx">
+      <DependentUpon>EmOrderTabControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\RefundOrder\EmRefundOrderDetailCtrl.resx">
+      <DependentUpon>EmRefundOrderDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\RefundOrder\EmRefundOrderEmOrderLogisticsCtrl.resx">
+      <DependentUpon>EmRefundOrderEmOrderLogisticsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\RefundOrder\EmRefundOrderManageCtrl.resx">
+      <DependentUpon>EmRefundOrderManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\RefundOrder\EmRefundOrderRefusedReasonForm.resx">
+      <DependentUpon>EmRefundOrderRefusedReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderReturnAddressCtrl.resx">
+      <DependentUpon>EmOrderReturnAddressCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmRetailOrderForm.resx">
+      <DependentUpon>EmRetailOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\CashManagement\CashManagementCtrl.resx">
+      <DependentUpon>CashManagementCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\CashManagement\PaymentCashForm.resx">
+      <DependentUpon>PaymentCashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\CashManagement\PaymentCommissionForm.resx">
+      <DependentUpon>PaymentCommissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\AddDistributionMemberClassForm.resx">
+      <DependentUpon>AddDistributionMemberClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\PfDistributorCommissionCtrl.resx">
+      <DependentUpon>PfDistributorCommissionCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\PfCommissionDetailForm.resx">
+      <DependentUpon>PfCommissionDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCommissionCtrl1.resx">
+      <DependentUpon>RetailDistributorCommissionCtrl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\PfDistributorCtrl.resx">
+      <DependentUpon>PfDistributorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCtrl.resx">
+      <DependentUpon>RetailDistributorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorCtrl1.resx">
+      <DependentUpon>DistributorCtrl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\OffLineCustomerListForm.resx">
+      <DependentUpon>OffLineCustomerListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\DistributorCtrl.resx">
+      <DependentUpon>DistributorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\CommissionTabControlCtrl.resx">
+      <DependentUpon>CommissionTabControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\SaveDistributorForm.resx">
+      <DependentUpon>SaveDistributorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\SaveOffLineCustomerForm.resx">
+      <DependentUpon>SaveOffLineCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\RetailDistributorCommissionCtrl.resx">
+      <DependentUpon>RetailDistributorCommissionCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Distribution\RetailCommissionDetailForm.resx">
+      <DependentUpon>RetailCommissionDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\PaymentManage\PaymentManageCtrl.resx">
+      <DependentUpon>PaymentManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\PaymentManage\AddPaymentForm.resx">
+      <DependentUpon>AddPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\ReceivedPayments\ReceivedPaymentsCtrl.resx">
+      <DependentUpon>ReceivedPaymentsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Setting\AddLevelModelForm.resx">
+      <DependentUpon>AddLevelModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Setting\LevelSetingManaegCtrl.resx">
+      <DependentUpon>LevelSetingManaegCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Setting\CostumeImportCtrl.resx">
+      <DependentUpon>CostumeImportCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Setting\LevelSettingCtrl1.resx">
+      <DependentUpon>LevelSettingCtrl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Setting\LevelSettingCtrl.resx">
+      <DependentUpon>LevelSettingCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\WholeSaleCenter\Setting\DistributorSettingCtrl.resx">
+      <DependentUpon>DistributorSettingCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\SignRecord\GuideSignRecordCtrl.resx">
+      <DependentUpon>GuideSignRecordCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\SignRecord\GuideSignRecordManCtrl.resx">
+      <DependentUpon>GuideSignRecordManCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchaseOrder\PurchaseOrderPickForm.resx">
+      <DependentUpon>PurchaseOrderPickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\CostumeStoreAnalysis\CostumeStoreAnalysisCtrl.resx">
+      <DependentUpon>CostumeStoreAnalysisCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\AccumulativeCurrentSaleDetailForm.resx">
+      <DependentUpon>AccumulativeCurrentSaleDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\CostumeDistributeSearchCtrl.resx">
+      <DependentUpon>CostumeDistributeSearchCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\AccumulativeTotalStockGoodDetailForm.resx">
+      <DependentUpon>AccumulativeTotalStockGoodDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\DistributeCostumeSalePfDetailForm.resx">
+      <DependentUpon>DistributeCostumeSalePfDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\DistributePfSaleOrderDetailForm.resx">
+      <DependentUpon>DistributePfSaleOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\DistributeCostumeSaleRetailDetailForm.resx">
+      <DependentUpon>DistributeCostumeSaleRetailDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\DistributeCostumeAllocateInDetailForm.resx">
+      <DependentUpon>DistributeCostumeAllocateInDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\DistributePFCostumeInDetailForm.resx">
+      <DependentUpon>DistributePFCostumeInDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Distribute\DistributeCostumeInDetailForm.resx">
+      <DependentUpon>DistributeCostumeInDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\CostumeInventorySearchCtrl.resx">
+      <DependentUpon>CostumeInventorySearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\CostumeInDetailForm.resx">
+      <DependentUpon>CostumeInDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\CostumeSaleRetailDetailForm.resx">
+      <DependentUpon>CostumeSaleRetailDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\sellDetailForm.resx">
+      <DependentUpon>sellDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\StockgoodDetailForm.resx">
+      <DependentUpon>StockgoodDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\RetailCostumeOrderDetailForm.resx">
+      <DependentUpon>RetailCostumeOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\PFCostumeOrderDetailForm.resx">
+      <DependentUpon>PFCostumeOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Costume\WholesaleDetailForm.resx">
+      <DependentUpon>WholesaleDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Customer\CustomerInventorySearchCtrl.resx">
+      <DependentUpon>CustomerInventorySearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Customer\CustomerSaleOrderDetailForm.resx">
+      <DependentUpon>CustomerSaleOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Customer\CustomSaleGoodDetailForm.resx">
+      <DependentUpon>CustomSaleGoodDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Customer\sendOutGoodDetailForm.resx">
+      <DependentUpon>sendOutGoodDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\Inventory\Customer\CustomerOrderDetailForm.resx">
+      <DependentUpon>CustomerOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\PriceRangeReport\PriceRangeReportDetailCtrl.resx">
+      <DependentUpon>PriceRangeReportDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\PriceRangeReport\PriceRangeReportManageCtrl.resx">
+      <DependentUpon>PriceRangeReportManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ReturnOrder\GetPurchaseSummaryCtrl.resx">
+      <DependentUpon>GetPurchaseSummaryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ReturnOrder\PurchaseSummaryTypeForm1.resx">
+      <DependentUpon>PurchaseSummaryTypeForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\AdminUser\PermissonCtrl.resx">
+      <DependentUpon>PermissonCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\AdminUser\FirstChangePasswordAdminUserCtrl.resx">
+      <DependentUpon>FirstChangePasswordAdminUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AddCostumeColorForm.resx">
+      <DependentUpon>AddCostumeColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CostumeAddBrandForm.resx">
+      <DependentUpon>CostumeAddBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\CostumeClassCtrl2019.resx">
+      <DependentUpon>CostumeClassCtrl2019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AddCostumeClassForm.resx">
+      <DependentUpon>AddCostumeClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\PrintBarcodeForm.resx">
+      <DependentUpon>PrintBarcodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\ChangePasswordGuideCtrl.resx">
+      <DependentUpon>ChangePasswordGuideCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\ChangePasswordGuideOfSystemCtrl.resx">
+      <DependentUpon>ChangePasswordGuideOfSystemCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\GuideCtrl.resx">
+      <DependentUpon>GuideCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\GuideEditCtrl.resx">
+      <DependentUpon>GuideEditCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\UpdateShopPriceAndSalePriceForm.resx">
+      <DependentUpon>UpdateShopPriceAndSalePriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Guide\UpdateShopCostumePriceCtrl.resx">
+      <DependentUpon>UpdateShopCostumePriceCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\BasicSettingForm.resx">
+      <DependentUpon>BasicSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\SizeGroup\SizeGroupEditForm.resx">
+      <DependentUpon>SizeGroupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Supplier\SaveSupplierForm.resx">
+      <DependentUpon>SaveSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfBalanceOnThatDay.resx">
+      <DependentUpon>PrintOfBalanceOnThatDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfPtSendBill.resx">
+      <DependentUpon>PrintOfPtSendBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfPfSendBill.resx">
+      <DependentUpon>PrintOfPfSendBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfAllocateBill.resx">
+      <DependentUpon>PrintOfAllocateBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfCheckStore.resx">
+      <DependentUpon>PrintOfCheckStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOFreplenishBill.resx">
+      <DependentUpon>PrintOFreplenishBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfPurchaseStockReturn.resx">
+      <DependentUpon>PrintOfPurchaseStockReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfSaleReturnTemplate.resx">
+      <DependentUpon>PrintOfSaleReturnTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfSaleReturn.resx">
+      <DependentUpon>PrintOfSaleReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintOfPurchaseStock.resx">
+      <DependentUpon>PrintOfPurchaseStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Print\PrintSettingForm.resx">
+      <DependentUpon>PrintSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCostumeSelectForm.resx">
+      <DependentUpon>SalesPromotionCostumeSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\YearComboBox.resx">
+      <DependentUpon>YearComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\SizeGroupSelectForm.resx">
+      <DependentUpon>SizeGroupSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\SystemSettingForm.resx">
+      <DependentUpon>SystemSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\BarCode\BarCodeCtrl.resx">
+      <DependentUpon>BarCodeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\SaveCostumeForm.resx">
+      <DependentUpon>SaveCostumeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\SizeGroup\SizeGroupCtrl.resx">
+      <DependentUpon>SizeGroupCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\ConfigSetting\GuideReturnVisitCtrl.resx">
+      <DependentUpon>GuideReturnVisitCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\Option\OptionCtrl.resx">
+      <DependentUpon>OptionCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\GiftTicketTemplateCostumeSelectForm.resx">
+      <DependentUpon>GiftTicketTemplateCostumeSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\GiftTicket\SaveGiftTicketTemplateCtrl.resx">
+      <DependentUpon>SaveGiftTicketTemplateCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\CarriageCostTemplate\CarriageCostTemplateCtrl.resx">
+      <DependentUpon>CarriageCostTemplateCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\CarriageCostTemplate\SaveCarriageCostTemplateCtrl.resx">
+      <DependentUpon>SaveCarriageCostTemplateCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Costume\EmCostumeManageCtrl.resx">
+      <DependentUpon>EmCostumeManageCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\EditEmallCtrl.resx">
+      <DependentUpon>EditEmallCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Logistic\EmLogisticManageCtrl.resx">
+      <DependentUpon>EmLogisticManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderLogisticsCtrl.resx">
+      <DependentUpon>EmOrderLogisticsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderDetailCtrl.resx">
+      <DependentUpon>EmOrderDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EMall\Order\EmOrderManageCtrl.resx">
+      <DependentUpon>EmOrderManageCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\SalesQuantityRanking\SalesQuantityRankingShopDetailCtrl.resx">
+      <DependentUpon>SalesQuantityRankingShopDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\GiftTicket\GiftTicketCtrl.resx">
+      <DependentUpon>GiftTicketCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ScrapOrder\ScrapOrderCtrl.resx">
+      <DependentUpon>ScrapOrderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ScrapOrder\ScrapOrderManageCtrl.resx">
+      <DependentUpon>ScrapOrderManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\AdminUser\ChangePasswordAdminUserCtrl.resx">
+      <DependentUpon>ChangePasswordAdminUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Cash\CashFeeTypeCtrl.resx">
+      <DependentUpon>CashFeeTypeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\CostumeColorCtrl.resx">
+      <DependentUpon>CostumeColorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\CostumeBrandCtrl.resx">
+      <DependentUpon>CostumeBrandCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\CostumeSeasonCtrl.resx">
+      <DependentUpon>CostumeSeasonCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\SaveCostumeManageCtrl.resx">
+      <DependentUpon>SaveCostumeManageCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Costume\CostumeManageCtrl.resx">
+      <DependentUpon>CostumeManageCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\AdminUser\SaveAdminUserCtrl.resx">
+      <DependentUpon>SaveAdminUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\AdminUser\AdminUserManageCtrl.resx">
+      <DependentUpon>AdminUserManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Shop\SaveShopCtrl.resx">
+      <DependentUpon>SaveShopCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Shop\ShopManageCtrl.resx">
+      <DependentUpon>ShopManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\SalesPromotion\SaveSalesPromotionCtrl.resx">
+      <DependentUpon>SaveSalesPromotionCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RetailOrder\GetRetailSummaryCtrl.resx">
+      <DependentUpon>GetRetailSummaryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Stock\ReturnOrder\SelectSupplierForm.resx">
+      <DependentUpon>SelectSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountCollectionManageCtrl.resx">
+      <DependentUpon>SupplierAccountCollectionManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountSearchForm.resx">
+      <DependentUpon>SupplierAccountSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountRecordDetailForm.resx">
+      <DependentUpon>SupplierAccountRecordDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountRecordSearchCtrl.resx">
+      <DependentUpon>SupplierAccountRecordSearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountRecordSearchForm.resx">
+      <DependentUpon>SupplierAccountRecordSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountSearchCtrl.resx">
+      <DependentUpon>SupplierAccountSearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ReturnOrder\ReturnOrderCtrl.resx">
+      <DependentUpon>ReturnOrderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchaseOrder\PurchaseOrderCtrl.resx">
+      <DependentUpon>PurchaseOrderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\IntegralCtrl.resx">
+      <DependentUpon>IntegralCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\RechargeRuleCtrl.resx">
+      <DependentUpon>RechargeRuleCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionDiscountRuleCtrl.resx">
+      <DependentUpon>SalesPromotionDiscountRuleCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionMJRuleCtrl.resx">
+      <DependentUpon>SalesPromotionMJRuleCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCtrl.resx">
+      <DependentUpon>SalesPromotionCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Supplier\SaveSupplierCtrl.resx">
+      <DependentUpon>SaveSupplierCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\BasicSettings\Supplier\SupplierManageCtrl.resx">
+      <DependentUpon>SupplierManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Stock\Replenish\ReplenishOutboundCtrl.resx">
+      <DependentUpon>ReplenishOutboundCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Stock\PurchaseOrder\PurchaseOrderManageCtrl.resx">
+      <DependentUpon>PurchaseOrderManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Stock\ReturnOrder\ReturnOrderManageCtrl.resx">
+      <DependentUpon>ReturnOrderManageCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountContrastCtrl.resx">
+      <DependentUpon>SupplierAccountContrastCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountSummaryCtrl.resx">
+      <DependentUpon>WholesaleAccountSummaryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountSummaryShouldPayForm.resx">
+      <DependentUpon>WholesaleAccountSummaryShouldPayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountSearchForm.resx">
+      <DependentUpon>WholesaleAccountSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordReceivedForm.resx">
+      <DependentUpon>WholesaleAccountRecordReceivedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountContrastCtrl.resx">
+      <DependentUpon>WholesaleAccountContrastCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleCollectionManageCtrl.resx">
+      <DependentUpon>WholesaleCollectionManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleCostumeStoreRecordForm.resx">
+      <DependentUpon>WholesaleCostumeStoreRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningSaveCostumeForm.resx">
+      <DependentUpon>WholesaleBeginningSaveCostumeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningImportCtrl.resx">
+      <DependentUpon>WholesaleBeginningImportCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningControlCtrl.resx">
+      <DependentUpon>WholesaleBeginningControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningStoreCtrl.resx">
+      <DependentUpon>WholesaleBeginningStoreCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Customer\WholesaleCustomerBalanceDetailCtrl.resx">
+      <DependentUpon>WholesaleCustomerBalanceDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Customer\NewWholesaleCustomerSimpleForm.resx">
+      <DependentUpon>NewWholesaleCustomerSimpleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Customer\WholesaleCustomerRechargeForm.resx">
+      <DependentUpon>WholesaleCustomerRechargeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordSearchCtrl.resx">
+      <DependentUpon>WholesaleAccountRecordSearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordOrderDetailForm.resx">
+      <DependentUpon>WholesaleAccountRecordOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordSearchForm.resx">
+      <DependentUpon>WholesaleAccountRecordSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordDetailForm.resx">
+      <DependentUpon>WholesaleAccountRecordDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountSearchCtrl.resx">
+      <DependentUpon>WholesaleAccountSearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderDeliveryCtrl.resx">
+      <DependentUpon>WholesaleEmOrderDeliveryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderDetailCtrl.resx">
+      <DependentUpon>WholesaleEmOrderDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\EMall\Order\Detail\WholesaleEmOrderFinishForm.resx">
+      <DependentUpon>WholesaleEmOrderFinishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\EMall\Order\WholesaleEmOrderManageCtrl.resx">
+      <DependentUpon>WholesaleEmOrderManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Sale\WholesaleCustomeSaleCtrl.resx">
+      <DependentUpon>WholesaleCustomeSaleCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Sale\WholesaleCustomeSaleEditCtrl.resx">
+      <DependentUpon>WholesaleCustomeSaleEditCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleDeliveryCtrl1.resx">
+      <DependentUpon>WholesaleDeliveryCtrl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleDeliveryPickForm.resx">
+      <DependentUpon>WholesaleDeliveryPickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleDeliveryReturnForm.resx">
+      <DependentUpon>WholesaleDeliveryReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleReturnCtrl.resx">
+      <DependentUpon>WholesaleReturnCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleDeliveryPayForm.resx">
+      <DependentUpon>WholesaleDeliveryPayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleOrderManageCtrl.resx">
+      <DependentUpon>WholesaleOrderManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Sale\WholesaleCustomeSaleManageCtrl.resx">
+      <DependentUpon>WholesaleCustomeSaleManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningStoreCtrl1.resx">
+      <DependentUpon>WholesaleBeginningStoreCtrl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningBillCtrl.resx">
+      <DependentUpon>WholesaleBeginningBillCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Store\WholesaleCustomeStoreCtrl_old.resx">
+      <DependentUpon>WholesaleCustomeStoreCtrl_old.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Customer\WholesaleCustomerSaveCtrl.resx">
+      <DependentUpon>WholesaleCustomerSaveCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\Customer\WholesaleCustomerManageCtrl.resx">
+      <DependentUpon>WholesaleCustomerManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountRecordRefundForm.resx">
+      <DependentUpon>WholesaleAccountRecordRefundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountSummaryCtrl.resx">
+      <DependentUpon>SupplierAccountSummaryCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountSummaryShouldPayForm.resx">
+      <DependentUpon>SupplierAccountSummaryShouldPayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountContrastInfoForm.resx">
+      <DependentUpon>SupplierAccountContrastInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Wholesale\AccountRecord\WholesaleAccountContrastForm.resx">
+      <DependentUpon>WholesaleAccountContrastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\WorkDeskMenuItemCtrl.resx">
+      <DependentUpon>WorkDeskMenuItemCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\WorkDeskMenuItem\OperationInfoForm.resx">
+      <DependentUpon>OperationInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Report\CostumeRetailAnalysis\CostumeRetailAnalysisDetailCtrl.resx">
+      <DependentUpon>CostumeRetailAnalysisDetailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountRecordOrderDetailForm.resx">
+      <DependentUpon>SupplierAccountRecordOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\CErp.AdminUser.datasource" />
+    <None Include="Properties\DataSources\CErp.AllocateOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.BarCode.datasource" />
+    <None Include="Properties\DataSources\CErp.BoundDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.Brand.datasource" />
+    <None Include="Properties\DataSources\CErp.BrandBenefitDayReport.datasource" />
+    <None Include="Properties\DataSources\CErp.BrandBenefitMonthReport.datasource" />
+    <None Include="Properties\DataSources\CErp.BusinessAccount.datasource" />
+    <None Include="Properties\DataSources\CErp.CashRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.CheckStoreDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.CheckStoreOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.CheckStoreSummary.datasource" />
+    <None Include="Properties\DataSources\CErp.CheckStoreTask.datasource" />
+    <None Include="Properties\DataSources\CErp.CommissionTemplate.datasource" />
+    <None Include="Properties\DataSources\CErp.Common.Entitys.MonthTaskSearch.datasource" />
+    <None Include="Properties\DataSources\CErp.Common.Models.CarriageCost.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeDistribution.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeDistributionDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeRetailAnalysis.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeStoreAnalysisData.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.DistributorCommissionPage.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.EmCostume.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.EmOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.GetEmOrderPagePara.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.GuideAchievementSummary.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.GuideReturnVisitPara.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.OrderInfo.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.PrintColumnsInfo.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.PrintSysInfo.datasource" />
+    <None Include="Properties\DataSources\CErp.Core.InteractEntity.PrintTemplateInfo.datasource" />
+    <None Include="Properties\DataSources\CErp.Costume.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeClass.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeColor.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeItem.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeStore.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeStoreListPara.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeStoreSummary.datasource" />
+    <None Include="Properties\DataSources\CErp.CostumeStoreTrack.datasource" />
+    <None Include="Properties\DataSources\CErp.DayBenefitReport.datasource" />
+    <None Include="Properties\DataSources\CErp.DayReport.datasource" />
+    <None Include="Properties\DataSources\CErp.DifferenceDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.DifferenceOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.DiscountPromotionRule.datasource" />
+    <None Include="Properties\DataSources\CErp.Distributor.datasource" />
+    <None Include="Properties\DataSources\CErp.DistributorCommissionRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.DistributorWithdrawRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.EmCarriageCostTemplate.datasource" />
+    <None Include="Properties\DataSources\CErp.EmExpressCompany.datasource" />
+    <None Include="Properties\DataSources\CErp.EmRefundDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.EmRefundOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.EmRetailDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.EmRetailOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.GiftTicketTemplate.datasource" />
+    <None Include="Properties\DataSources\CErp.Guide.datasource" />
+    <None Include="Properties\DataSources\CErp.GuideAchievement.datasource" />
+    <None Include="Properties\DataSources\CErp.GuideDayAchievement.datasource" />
+    <None Include="Properties\DataSources\CErp.GuideMonthAchievement.datasource" />
+    <None Include="Properties\DataSources\CErp.InboundDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.InboundOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.InventoryDayReport.datasource" />
+    <None Include="Properties\DataSources\CErp.IPromotionRule.datasource" />
+    <None Include="Properties\DataSources\CErp.Member.datasource" />
+    <None Include="Properties\DataSources\CErp.MemberListPage.datasource" />
+    <None Include="Properties\DataSources\CErp.MemberListPagePara.datasource" />
+    <None Include="Properties\DataSources\CErp.MJPromotionRule.datasource" />
+    <None Include="Properties\DataSources\CErp.MonthBenefitReport.datasource" />
+    <None Include="Properties\DataSources\CErp.MonthReport.datasource" />
+    <None Include="Properties\DataSources\CErp.MonthTask.datasource" />
+    <None Include="Properties\DataSources\CErp.OutboundDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.OutboundOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.ParameterConfig.datasource" />
+    <None Include="Properties\DataSources\CErp.PaymentRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.PfAccountRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomer.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomerBalanceRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomerDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomerOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomerRetailDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomerRetailOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.PfCustomerStore.datasource" />
+    <None Include="Properties\DataSources\CErp.PfOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.PfOrderDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.PosInformationTypes.datasource" />
+    <None Include="Properties\DataSources\CErp.PurchaseOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.RechargeDonateRule.datasource" />
+    <None Include="Properties\DataSources\CErp.RechargeRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.ReplenishDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.ReplenishOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.RetailCostume.datasource" />
+    <None Include="Properties\DataSources\CErp.RetailDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.RetailOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.ReturnOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.Role.datasource" />
+    <None Include="Properties\DataSources\CErp.Rule.datasource" />
+    <None Include="Properties\DataSources\CErp.SalesPromotion.datasource" />
+    <None Include="Properties\DataSources\CErp.SalesQuantityDayReport.datasource" />
+    <None Include="Properties\DataSources\CErp.ScrapDetail.datasource" />
+    <None Include="Properties\DataSources\CErp.ScrapOrder.datasource" />
+    <None Include="Properties\DataSources\CErp.SeasonClass.datasource" />
+    <None Include="Properties\DataSources\CErp.SerializeHelper.datasource" />
+    <None Include="Properties\DataSources\CErp.Shop.datasource" />
+    <None Include="Properties\DataSources\CErp.SignRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.SizeGroup.datasource" />
+    <None Include="Properties\DataSources\CErp.Supplier.datasource" />
+    <None Include="Properties\DataSources\CErp.SupplierAccountRecord.datasource" />
+    <None Include="Properties\DataSources\CErp.WxShopMan.datasource" />
+    <None Include="Properties\DataSources\GuideReturnVisit.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CErp.Common\JGNet.Common.csproj">
+      <Project>{2bf356c7-f1f4-4447-aba8-d0f23dbd99dd}</Project>
+      <Name>JGNet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CErp.Core\JGNet.Core.csproj">
+      <Project>{94abc99c-89ec-44fa-8a0e-59ff3eae4d62}</Project>
+      <Name>JGNet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESBasic\CJBasic.csproj">
+      <Project>{414e1d01-f1bd-4f9c-a00d-10549ee5db68}</Project>
+      <Name>CJBasic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFramework\CJFramework.csproj">
+      <Project>{922f10fc-080a-4fb4-ae93-2041b807a749}</Project>
+      <Name>CJFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退款.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\转账汇款.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20180404104401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-排行榜-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\库存查询.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\调拨64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\调拨单.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\销售退货单.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\采购进货流程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\采购退货流程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报损流程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\64.png" />
+    <None Include="Resources\800.png" />
+    <None Include="Resources\81021343970475.jpg" />
+    <None Include="Resources\折扣.png" />
+    <None Include="Resources\优惠券.png" />
+    <None Include="Resources\一口价.png" />
+    <None Include="Resources\满减.png" />
+    <None Include="Resources\供应商.png" />
+    <None Include="Resources\补货流程.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\empty.png" />
+    <None Include="Resources\C.png" />
+    <None Include="Resources\B.png" />
+    <None Include="Resources\小类.png" />
+    <None Include="Resources\所有.png" />
+    <None Include="Resources\大类.png" />
+    <None Include="Resources\次小类.png" />
+    <None Include="Resources\重结.png" />
+    <None Include="Resources\月结存.png" />
+    <None Include="Resources\营业日报.png" />
+    <None Include="Resources\销售退货单查询.png" />
+    <None Include="Resources\销售分析.png" />
+    <None Include="Resources\线上商城.png" />
+    <None Include="Resources\现金记录.png" />
+    <None Include="Resources\退货.png" />
+    <None Include="Resources\退出.png" />
+    <None Include="Resources\调拨单查询.png" />
+    <None Include="Resources\调拨出库.png" />
+    <None Include="Resources\收银.png" />
+    <None Include="Resources\实时运营信息.png" />
+    <None Include="Resources\设置.png" />
+    <None Include="Resources\商品分析.png" />
+    <None Include="Resources\商品.png" />
+    <None Include="Resources\日结账单.png" />
+    <None Include="Resources\签到.png" />
+    <None Include="Resources\品牌利润.png" />
+    <None Include="Resources\批发商城.png" />
+    <None Include="Resources\批发.png" />
+    <None Include="Resources\盘点汇总.png" />
+    <None Include="Resources\盘点.png" />
+    <None Include="Resources\库存分析.png" />
+    <None Include="Resources\库存.png" />
+    <None Include="Resources\进销存简报.png" />
+    <None Include="Resources\会员管理.png" />
+    <None Include="Resources\会员.png" />
+    <None Include="Resources\供应商账目.png" />
+    <None Include="Resources\店铺.png" />
+    <None Include="Resources\导购业绩.png" />
+    <None Include="Resources\单款库存查询.png" />
+    <None Include="Resources\单据.png" />
+    <None Include="Resources\串码调整.png" />
+    <None Include="Resources\畅滞排行榜.png" />
+    <None Include="Resources\采购退货.png" />
+    <None Include="Resources\采购进货.png" />
+    <None Include="Resources\财务.png" />
+    <None Include="Resources\补货申请.png" />
+    <None Include="Resources\本店库存查询.png" />
+    <None Include="Resources\报损.png" />
+    <None Include="Resources\报表.png" />
+    <None Include="Resources\salesAnalysis.png" />
+    <None Include="Resources\guideRanking.png" />
+    <None Include="Resources\favicon.ico" />
+    <None Include="Resources\Date_16px.png" />
+    <None Include="areas.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\logoGray.ico" />
+    <None Include="Resources\login_inputbtn_normal.png" />
+    <None Include="Resources\login_inputbtn_highlight.png" />
+    <None Include="Resources\login_inputbtn_down.png" />
+    <None Include="Resources\changePwd.png" />
+    <None Include="Resources\TabPageDown.png" />
+    <None Include="Resources\skinTabControl12.PageDown.png" />
+    <None Include="Resources\skinTabControl1.PageHover.png" />
+    <None Include="Resources\skinTabControl1.PageDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

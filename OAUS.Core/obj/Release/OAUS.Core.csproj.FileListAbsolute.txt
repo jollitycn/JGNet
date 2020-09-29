@@ -1,0 +1,8 @@
+E:\studio\projects\CostumeERP\OAUS.Core\bin\Release\OAUS.Core.dll
+E:\studio\projects\CostumeERP\OAUS.Core\bin\Release\OAUS.Core.pdb
+E:\studio\projects\CostumeERP\OAUS.Core\bin\Release\ESBasic.dll
+E:\studio\projects\CostumeERP\OAUS.Core\bin\Release\ESBasic.xml
+E:\studio\projects\CostumeERP\OAUS.Core\obj\Release\OAUS.Core.csproj.CoreCompileInputs.cache
+E:\studio\projects\CostumeERP\OAUS.Core\obj\Release\OAUS.Core.csproj.CopyComplete
+E:\studio\projects\CostumeERP\OAUS.Core\obj\Release\OAUS.Core.dll
+E:\studio\projects\CostumeERP\OAUS.Core\obj\Release\OAUS.Core.pdb
