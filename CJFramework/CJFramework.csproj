@@ -83,7 +83,7 @@
     <Compile Include="Class17.cs" />
     <Compile Include="OutConnectionManager.cs" />
     <Compile Include="CJPlus\Application\Group\Passive\IGroupOutter.cs" />
-    <Compile Include="Class19.cs" />
+    <Compile Include="GroupOutter2.cs" />
     <Compile Include="CJPlus\Application\Friends\Passive\IFriendsOutter.cs" />
     <Compile Include="CJPlus\Application\FileTransfering\CbFileRequestReceived.cs" />
     <Compile Include="CJPlus\Application\FileTransfering\IFile.cs" />
@@ -132,7 +132,7 @@
     <Compile Include="WebSocketEngine.cs" />
     <Compile Include="Class6.cs" />
     <Compile Include="Class38.cs" />
-    <Compile Include="Class39.cs" />
+    <Compile Include="AgileTcpListener.cs" />
     <Compile Include="Enum0.cs" />
     <Compile Include="CJPlus\Core\IServiceTypeNameMatcher.cs" />
     <Compile Include="Class40.cs" />
@@ -176,8 +176,8 @@
     <Compile Include="Class59.cs" />
     <Compile Include="CJPlus\Application\CustomizeInfo\BinaryInformationContract.cs" />
     <Compile Include="CJPlus\Application\CustomizeInfo\ResGetTimeContract.cs" />
-    <Compile Include="CJPlus\Application\Contacts\Server\GInterface5.cs" />
-    <Compile Include="Class60.cs" />
+    <Compile Include="CJPlus\Application\Contacts\Server\IContactsOutter.cs" />
+    <Compile Include="ContactsMessageHandler.cs" />
     <Compile Include="CJPlus\Application\BlobFragmentContract.cs" />
     <Compile Include="CJPlus\Application\BlobAndTagContract.cs" />
     <Compile Include="MessageDispatcher.cs" />
@@ -227,7 +227,7 @@
     <Compile Include="IActionType.cs" />
     <Compile Include="Class79.cs" />
     <Compile Include="Class80.cs" />
-    <Compile Include="Class81.cs" />
+    <Compile Include="BaseUdpEngine.cs" />
     <Compile Include="Interface32.cs" />
     <Compile Include="Class84.cs" />
     <Compile Include="Class85.cs" />
@@ -275,7 +275,7 @@
     <Compile Include="Interface38.cs" />
     <Compile Include="Interface39.cs" />
     <Compile Include="MessageForbiddenHandler.cs" />
-    <Compile Include="Class97.cs" />
+    <Compile Include="MessageForbiddenHandler2.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="OnlineUsers.cs" />
     <Compile Include="Class100.cs" />
@@ -442,7 +442,7 @@
     <EmbeddedResource Include="aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resources" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESBasic\CJBasic.csproj">
+    <ProjectReference Include="..\CJBasic\CJBasic.csproj">
       <Project>{414e1d01-f1bd-4f9c-a00d-10549ee5db68}</Project>
       <Name>CJBasic</Name>
     </ProjectReference>

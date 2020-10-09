@@ -1715,6 +1715,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordCtrl.resx">
       <DependentUpon>EarlyStageCostumeStoreRecordCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageAccountRecordCtrl.resx">
       <DependentUpon>EarlyStageAccountRecordCtrl.cs</DependentUpon>
@@ -1724,6 +1725,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageCostumeStoreRecordSaveCostumeForm.resx">
       <DependentUpon>EarlyStageCostumeStoreRecordSaveCostumeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EarlyStageAccountRecord\EarlyStageTabControlCtrl.resx">
       <DependentUpon>EarlyStageTabControlCtrl.cs</DependentUpon>
@@ -1912,6 +1914,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Report\Inventory\Costume\CostumeInventorySearchCtrl.resx">
       <DependentUpon>CostumeInventorySearchCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Report\Inventory\Costume\CostumeInDetailForm.resx">
       <DependentUpon>CostumeInDetailForm.cs</DependentUpon>
@@ -1999,6 +2002,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Guide\UpdateShopCostumePriceCtrl.resx">
       <DependentUpon>UpdateShopCostumePriceCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Setting\BasicSettings\BasicSettingForm.resx">
       <DependentUpon>BasicSettingForm.cs</DependentUpon>
@@ -2044,6 +2048,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Setting\RuleSettings\SalesPromotion\SalesPromotionCostumeSelectForm.resx">
       <DependentUpon>SalesPromotionCostumeSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\YearComboBox.resx">
       <DependentUpon>YearComboBox.cs</DependentUpon>
@@ -2245,6 +2250,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningSaveCostumeForm.resx">
       <DependentUpon>WholesaleBeginningSaveCostumeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Wholesale\Beginning\WholesaleBeginningImportCtrl.resx">
       <DependentUpon>WholesaleBeginningImportCtrl.cs</DependentUpon>
@@ -2491,19 +2497,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CErp.Common\JGNet.Common.csproj">
+    <ProjectReference Include="..\JGNet.Common\JGNet.Common.csproj">
       <Project>{2bf356c7-f1f4-4447-aba8-d0f23dbd99dd}</Project>
       <Name>JGNet.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CErp.Core\JGNet.Core.csproj">
+    <ProjectReference Include="..\JGNet.Core\JGNet.Core.csproj">
       <Project>{94abc99c-89ec-44fa-8a0e-59ff3eae4d62}</Project>
       <Name>JGNet.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ESBasic\CJBasic.csproj">
+    <ProjectReference Include="..\CJBasic\CJBasic.csproj">
       <Project>{414e1d01-f1bd-4f9c-a00d-10549ee5db68}</Project>
       <Name>CJBasic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ESFramework\CJFramework.csproj">
+    <ProjectReference Include="..\CJFramework\CJFramework.csproj">
       <Project>{922f10fc-080a-4fb4-ae93-2041b807a749}</Project>
       <Name>CJFramework</Name>
     </ProjectReference>

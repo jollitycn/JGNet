@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-internal class Class60 : IEngineActor, IProcess, GInterface5
+internal class ContactsMessageHandler : IEngineActor, IProcess, IContactsOutter
 {
     private AgileCycleEngine agileCycleEngine_0;
     private bool bool_0 = false;
@@ -29,13 +29,13 @@ internal class Class60 : IEngineActor, IProcess, GInterface5
     private Interface40 interface40_0 = null;
     private IStreamContractHelper interface9_0 = null;
     private IUserManager iuserManager_0 = null;
-    private object object_0;
+    private ContactsMessageTypeRoom object_0;
 
     public event CbGeneric<string, BroadcastInformation> BroadcastFailed;
 
     public event CbGeneric<string, string, int, byte[], string> BroadcastReceived;
 
-    public Class60()
+    public ContactsMessageHandler()
     {
         this.agileCycleEngine_0 = new AgileCycleEngine(this);
         this.agileCycleEngine_0.DetectSpanInSecs = 0;

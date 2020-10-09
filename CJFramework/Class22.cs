@@ -25,7 +25,7 @@ internal class Class22 : IFileOutter
     private int int_0 = 0x800;
     private int int_1 = 0x100000;
     private IFilePackageHelper interface35_0;
-    private object object_0 = 0;
+    private int object_0 = 0;
     private object object_1 = new object();
     private static Random random_0 = new Random();
     private Stream stream_0;
@@ -240,7 +240,7 @@ internal class Class22 : IFileOutter
                     this.ulong_1 += (ulong) dst.Length;
                     package = new FilePackage(this.string_2, num5 = (byte) (num5 + 1), dst, PackageType.FileTransferingPackage);
                     this.interface35_0.sendMessage(this.string_1, package);
-                    this.cbFileSendedProgress_0(this.imethod_5(), this.ulong_0, this.ulong_1);
+                    this.FileTransProgress(this.imethod_5(), this.ulong_0, this.ulong_1);
                     if (((this.Diaygioqui <= 0) ? 1 : this.object_0) == null)
                     {
                         Thread.Sleep(this.Diaygioqui);
@@ -253,18 +253,18 @@ internal class Class22 : IFileOutter
                     this.ulong_1 += (ulong) buffer3.Length;
                     package = new FilePackage(this.string_2, num5 = (byte) (num5 + 1), buffer3, PackageType.FileTransferingPackage);
                     this.interface35_0.sendMessage(this.string_1, package);
-                    this.cbFileSendedProgress_0(this.imethod_5(), this.ulong_0, this.ulong_1);
+                    this.FileTransProgress(this.imethod_5(), this.ulong_0, this.ulong_1);
                     if (((this.Diaygioqui <= 0) ? 1 : this.object_0) == null)
                     {
                         Thread.Sleep(this.Diaygioqui);
                     }
                 }
             }
-            goto Label_0048;
+           // goto Label_0048;
         Label_0234:
             if (this.object_0 == null)
             {
-                this.cbFileTransCompleted_0(this.imethod_5());
+                this.FileTransCompleted(this.imethod_5());
             }
             else if (this.fileTransDisrupttedType_0 != FileTransDisrupttedType.NetworkSpeedSlow)
             {
@@ -285,7 +285,7 @@ internal class Class22 : IFileOutter
             if (!this.bool_2)
             {
                 this.bool_2 = true;
-                this.cbFileTransDisruptted_0(this.imethod_5(), fileTransDisrupttedType_1, string_4);
+                this.FileTransDisruptted(this.imethod_5(), fileTransDisrupttedType_1, string_4);
             }
         }
     }

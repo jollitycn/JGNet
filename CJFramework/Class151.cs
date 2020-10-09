@@ -2,7 +2,7 @@
 
 internal class Class151 : IBody
 {
-    private object object_0;
+    private byte[] object_0;
 
     public Class151(byte[] byte_0)
     {

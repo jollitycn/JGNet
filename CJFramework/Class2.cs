@@ -302,7 +302,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
         IFileTransHelper interface2 = this.iobjectManager_0.Get(filePackage_0.ProjectID);
         if (interface2 != null)
         {
-            interface2.Receive(filePackage_0);
+            interface2.FileReceive(filePackage_0);
         }
     }
 

@@ -10,13 +10,13 @@ internal sealed class MessageDispatcher : Interface25
     public MessageDispatcher()
     {
         this.emptyAgileLogger_0 = new EmptyAgileLogger();
-        this.class97_0 = new Class97();
+        this.class97_0 = new MessageForbiddenHandler2();
     }
 
     public MessageDispatcher(Interface32 interface32_1, IMessageForbidden interface39_0)
     {
         this.emptyAgileLogger_0 = new EmptyAgileLogger();
-        this.class97_0 = new Class97();
+        this.class97_0 = new MessageForbiddenHandler2();
         this.interface32_0 = interface32_1;
         this.imethod_2(interface39_0);
     }
@@ -36,7 +36,7 @@ internal sealed class MessageDispatcher : Interface25
 
     public void imethod_2(IMessageForbidden interface39_0)
     {
-        this.class97_0 = interface39_0 ?? new Class97();
+        this.class97_0 = interface39_0 ?? new MessageForbiddenHandler2();
     }
 
     public void imethod_3(Interface32 interface32_1)

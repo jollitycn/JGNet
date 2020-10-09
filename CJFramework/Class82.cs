@@ -21,8 +21,9 @@ internal class Class82 : BaseUdpEngine, IDisposable, IEngine, ICommitMessageToSe
     {
         this.agileIPE_0 = agileIPE_1;
     }
+     
 
-    public bool imethod_20(IMessageHandler interface37_0, bool bool_3, ActionTypeOnChannelIsBusy actionTypeOnChannelIsBusy_0)
+    public bool CommitMessageToServer(IMessageHandler interface37_0, bool bool_3, ActionTypeOnChannelIsBusy actionTypeOnChannelIsBusy_0)
     {
         if (this.ChannelIsBusy && (actionTypeOnChannelIsBusy_0 == ActionTypeOnChannelIsBusy.Discard))
         {
@@ -30,7 +31,7 @@ internal class Class82 : BaseUdpEngine, IDisposable, IEngine, ICommitMessageToSe
         }
         if (bool_3)
         {
-            base.imethod_22(interface37_0, this.agileIPE_0.IPEndPoint_0);
+            base.SendMessage(interface37_0, this.agileIPE_0.IPEndPoint_0);
         }
         else
         {
@@ -65,6 +66,11 @@ internal class Class82 : BaseUdpEngine, IDisposable, IEngine, ICommitMessageToSe
             return new IPv6UdpClient(base.imethod_4(), base.int_0);
         }
         return new IPv6UdpClient(base.imethod_4(), base.int_0);
+    }
+
+    public void CommitMessageToServer(IMessageHandler interface37_0, IPEndPoint ipendPoint_0)
+    {
+        throw new NotImplementedException();
     }
 
     public bool ChannelIsBusy

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-internal class Class86
+internal class ContinueTransFile
 {
     private int int_0 = 2;
     private int int_1 = 8;

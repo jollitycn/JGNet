@@ -7,7 +7,7 @@ using System.Net.Sockets;
 
 internal class PassiveStreamTcpEngine : TcpEngine
 {
-    private IStreamContract interface46_0;
+    private IStreamContractHelper1 interface46_0;
     private byte[] LvFuuIfhcm;
 
     public override Enum6 imethod_1()
@@ -69,7 +69,7 @@ internal class PassiveStreamTcpEngine : TcpEngine
 
     protected override void vmethod_0()
     {
-        this.interface46_0 = (IStreamContract) base.GetStreamContract();
+        this.interface46_0 = (IStreamContractHelper1) base.GetStreamContract();
         this.LvFuuIfhcm = new byte[this.interface46_0.imethod_9()];
         base.object_0.BeginRead(this.LvFuuIfhcm, 0, this.LvFuuIfhcm.Length, new AsyncCallback(this.ReceiveCallback), base.object_0);
     }

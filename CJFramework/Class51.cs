@@ -22,7 +22,7 @@ internal class Class51
     private int int_7 = 1;
     private int int_8 = 2;
     private int[] int_9 = new int[] { 20, 0x1c, 0x24, 0x2c, 0x34, 60, 0x44, 0x4c, 4, 12 };
-    private object object_0;
+    private NetworkStream object_0;
     private object object_1 = new object();
     private object object_2 = new object();
     private string string_0 = "12630963";

@@ -5,7 +5,7 @@
     using CJPlus.Application;
     using System;
 
-    public interface GInterface5
+    public interface IContactsOutter
     {
         event CbGeneric<string, BroadcastInformation> BroadcastFailed;
 

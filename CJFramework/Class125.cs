@@ -23,7 +23,7 @@ internal class Class125 : Interface41
 
     public event CbGeneric<string, IPEndPoint, bool> SomeOneConnected;
 
-    public event CbGeneric<string> Event_1;
+    public event CbGeneric<string> OnSomeOneDisconnected;
 
     public Class125()
     {
@@ -36,7 +36,7 @@ internal class Class125 : Interface41
         {
             cbGeneric_3 = new CbGeneric<string>(Class125.smethod_1);
         }
-        this.Event_1 += cbGeneric_3;
+        this.OnSomeOneDisconnected += cbGeneric_3;
     }
 
     public bool imethod_0(IPEndPoint ipendPoint_0, Enum4 enum4_0, IMessageHandler interface37_0)
@@ -102,7 +102,7 @@ internal class Class125 : Interface41
 
     private void SomeOneDisconnected(UserData userData_0, DisconnectedType disconnectedType_0)
     {
-        this.Event_1(userData_0.UserID);
+        this.OnSomeOneDisconnected(userData_0.UserID);
     }
 
     private void OnSomeOneConnected(UserData userData_0)

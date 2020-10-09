@@ -179,7 +179,7 @@ internal class FileReceiver : IFileTransHelper
         this.FileTransProgress += cbFileSendedProgress_3;
     }
 
-    public void Receive(FilePackage filePackage_1)
+    public void FileReceive(FilePackage filePackage_1)
     {
         if ((this.object_0 == null) && (this.fileStream_0 != null))
         {

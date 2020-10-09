@@ -5,10 +5,10 @@ using System;
 
 internal class Class140 : IProcess
 {
-    private Class19 class19_0;
+    private GroupOutter2 class19_0;
     private Class76 class76_0 = new Class76();
     private IStreamContractHelper interface9_0 = null;
-    private object object_0;
+    private GroupMessageTypeRoom object_0;
 
     public bool CanProcess(int int_0)
     {
@@ -25,7 +25,7 @@ internal class Class140 : IProcess
         this.interface9_0 = interface9_1;
     }
 
-    public void method_2(Class19 class19_1)
+    public void method_2(GroupOutter2 class19_1)
     {
         this.class19_0 = class19_1;
     }
@@ -37,13 +37,13 @@ internal class Class140 : IProcess
         if (interface37_0.Header.MessageType == this.object_0.GroupmateConnectedNotify)
         {
             contract3 = this.interface9_0.imethod_1<UserContract>(interface37_0);
-            this.class19_0.grlbzriTrc(contract3.UserID);
+            this.class19_0.GroupmateConnectedNotify(contract3.UserID);
             return null;
         }
         if (interface37_0.Header.MessageType == this.object_0.GroupmateOfflineNotify)
         {
             contract3 = this.interface9_0.imethod_1<UserContract>(interface37_0);
-            this.class19_0.method_5(contract3.UserID);
+            this.class19_0.GroupmateOfflineNotify(contract3.UserID);
             return null;
         }
         if (interface37_0.Header.MessageType == this.object_0.BroadcastByServer)

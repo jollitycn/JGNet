@@ -7,10 +7,10 @@ using CJPlus.Application.P2PSession.Passive;
 using System;
 using System.Threading;
 
-internal class Class19 : IGroupOutter
+internal class GroupOutter2 : IGroupOutter
 {
     private bool bool_0 = false;
-    private GClass0 gclass0_0 = new GClass0();
+    private IP2PController gclass0_0 = new GClass0();
     private GroupMessageTypeRoom groupMessageTypeRoom_0;
     private int int_0 = 0;
     private IActionType interface31_0 = null;
@@ -80,14 +80,14 @@ internal class Class19 : IGroupOutter
         return this.interface9_0.imethod_1<GroupmatesContract>(interface3);
     }
 
-    internal void grlbzriTrc(string string_1)
+    internal void GroupmateConnectedNotify(string string_1)
     {
-        if (this.cbGeneric_0 != null)
+        if (this.GroupmateConnected != null)
         {
-            this.cbGeneric_0(string_1);
+            this.GroupmateConnected(string_1);
         }
     }
-
+    
     public void Iibebiqvn1(GroupMessageTypeRoom groupMessageTypeRoom_1)
     {
         this.groupMessageTypeRoom_0 = groupMessageTypeRoom_1;
@@ -119,19 +119,23 @@ internal class Class19 : IGroupOutter
         this.bool_0 = true;
     }
 
-    internal void method_5(string string_1)
+    internal void GroupmateOfflineNotify(string string_1)
     {
-        if (this.GayesUqUmx != null)
+        if (this.GroupmateOffline != null)
         {
-            this.GayesUqUmx(string_1);
+            this.GroupmateOffline(string_1);
         }
     }
+    //public event CbGeneric<string, string, int, byte[]> BroadcastReceived;
 
+    //public event CbGeneric<string> GroupmateConnected;
+
+    //public event CbGeneric<string> GroupmateOffline;
     internal void method_6(string string_1, string string_2, int int_1, byte[] byte_0)
     {
-        if (this.cbGeneric_1 != null)
+        if (this.BroadcastReceived != null)
         {
-            this.cbGeneric_1(string_1, string_2, int_1, byte_0);
+            this.BroadcastReceived(string_1, string_2, int_1, byte_0);
         }
     }
 

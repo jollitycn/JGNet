@@ -10,7 +10,7 @@ internal interface IFileTransHelper
 
     event CbFileSendedProgress FileTransProgress;
 
-    void Receive(FilePackage filePackage_0);
+    void FileReceive(FilePackage filePackage_0);
     void imethod_1(FileTransDisrupttedType fileTransDisrupttedType_0, bool bool_0, string string_0);
     FileTransferingProgress imethod_2();
     void imethod_3();

@@ -57,7 +57,7 @@
     <Compile Include="VersionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESBasic\CJBasic.csproj">
+    <ProjectReference Include="..\CJBasic\CJBasic.csproj">
       <Project>{414e1d01-f1bd-4f9c-a00d-10549ee5db68}</Project>
       <Name>CJBasic</Name>
     </ProjectReference>

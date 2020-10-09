@@ -579,11 +579,11 @@
     <Compile Include="WxPayApi\lib\WxPayApi.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESBasic\CJBasic.csproj">
+    <ProjectReference Include="..\CJBasic\CJBasic.csproj">
       <Project>{414e1d01-f1bd-4f9c-a00d-10549ee5db68}</Project>
       <Name>CJBasic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ESFramework\CJFramework.csproj">
+    <ProjectReference Include="..\CJFramework\CJFramework.csproj">
       <Project>{922f10fc-080a-4fb4-ae93-2041b807a749}</Project>
       <Name>CJFramework</Name>
     </ProjectReference>

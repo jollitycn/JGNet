@@ -41,7 +41,7 @@ internal class ServerEngine : IRapidEngine, GInterface7, Interface41
     private Class25 class25_0 = new Class25();
     private Parameterized class27_0;
     private Class40 class40_0;
-    private Class60 class60_0 = new Class60();
+    private ContactsMessageHandler class60_0 = new ContactsMessageHandler();
     private Class64 class64_0 = new Class64();
     private UserManager class98_0;
     private EmptyAgileLogger emptyAgileLogger_0 = null;
@@ -400,7 +400,7 @@ internal class ServerEngine : IRapidEngine, GInterface7, Interface41
         }
     }
 
-    public GInterface5 ContactsController
+    public IContactsOutter ContactsController
     {
         get
         {

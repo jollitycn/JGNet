@@ -5,7 +5,7 @@ using System.Net;
 internal class Class129 : Interface44
 {
     private int int_0 = 0x400;
-    private object object_0;
+    private ITextContractHelper object_0;
     private string string_0 = "";
 
     public Class129(ITextContractHelper interface11_0, int int_1, string string_1)

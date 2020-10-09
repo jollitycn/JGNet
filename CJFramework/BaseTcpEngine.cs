@@ -22,7 +22,7 @@ internal abstract class BaseTcpEngine : IDisposable, IEngine, IAction, IConnecti
     internal CbGeneric<Interface5, IMessageHandler> cbGeneric_0;
     private Class119 class119_0;
     private CycleEngine class142_0 = new CycleEngine();
-    private Class39 class39_0 = null;
+    private AgileTcpListener class39_0 = null;
     private DateTime dateTime_0 = DateTime.Now;
     protected EmptyAgileLogger emptyAgileLogger_0 = new EmptyAgileLogger();
     private EventSafeTrigger eventSafeTrigger_0 = new EventSafeTrigger(new EmptyAgileLogger(), "MUlc7RBFq63dQQqjO8e.hgyHtKB85UrT1SUEBVA");
@@ -399,9 +399,9 @@ internal abstract class BaseTcpEngine : IDisposable, IEngine, IAction, IConnecti
     public virtual void Initialize()
     {
         this.cbGeneric_0 = new CbGeneric<Interface5, IMessageHandler>(this.OnMessageReceived);
-        this.class39_0 = new Class39(this.int_0, this.TfuhhomjeB, this.string_1, this.bool_3, this.bool_4, this.emptyAgileLogger_0, this.fileAgileLogger_0, this.class119_0);
+        this.class39_0 = new AgileTcpListener(this.int_0, this.TfuhhomjeB, this.string_1, this.bool_3, this.bool_4, this.emptyAgileLogger_0, this.fileAgileLogger_0, this.class119_0);
         this.class39_0.method_1(this);
-        this.class39_0.Event_0 += new CbGeneric<NetworkStream, EndPoint>(this.OnSomeOneConnected);
+        this.class39_0.TcpConnectionEstablished += new CbGeneric<NetworkStream, EndPoint>(this.OnSomeOneConnected);
         this.class39_0.method_5(this.int_3);
         this.class39_0.method_3(this.int_2);
         this.class142_0.Event_0 += new CbSimpleInt(this.OnConnectionCountChanged);
@@ -446,7 +446,7 @@ internal abstract class BaseTcpEngine : IDisposable, IEngine, IAction, IConnecti
             }
             if (flag)
             {
-                this.class39_0.Event_0 -= new CbGeneric<NetworkStream, EndPoint>(this.OnSomeOneConnected);
+                this.class39_0.TcpConnectionEstablished -= new CbGeneric<NetworkStream, EndPoint>(this.OnSomeOneConnected);
             }
         }
     }

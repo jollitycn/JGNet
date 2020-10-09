@@ -41,7 +41,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
     private ContactsOutter ContactsOutter_0;
     private FileHandler class13_0;
     private Class141 class141_0;
-    private Class19 class19_0;
+    private GroupOutter2 class19_0;
     private Class2 class2_0;
     private Class28 class28_0;
     private Class43 class43_0;
@@ -250,7 +250,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
         class12.method_2(class2);
         class12.method_3(this.class126_0);
         class12.method_1(room5);
-        this.class19_0 = new Class19();
+        this.class19_0 = new GroupOutter2();
         this.class19_0.method_0(class4);
         this.class19_0.uBkeyEkxPJ(class2);
         this.class19_0.Iibebiqvn1(room6);

@@ -31,7 +31,7 @@
 
         int ConnectionCount { get; }
 
-        GInterface5 ContactsController { get; }
+        IContactsOutter ContactsController { get; }
 
         IContactsManager ContactsManager { set; }
 

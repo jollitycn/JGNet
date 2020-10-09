@@ -123,7 +123,7 @@ internal class DirectoryReceiver : IFileTransHelper
         this.FileTransProgress += cbFileSendedProgress_1;
     }
 
-    public void Receive(FilePackage filePackage_0)
+    public void FileReceive(FilePackage filePackage_0)
     {
         try
         {
@@ -146,7 +146,7 @@ internal class DirectoryReceiver : IFileTransHelper
             }
             else if (filePackage_0.PackageType == PackageType.FileTransferingPackage)
             {
-                this.enisnmwGbe.Receive(filePackage_0);
+                this.enisnmwGbe.FileReceive(filePackage_0);
             }
             else
             {

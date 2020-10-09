@@ -9,7 +9,7 @@ using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-internal sealed class Class39 : BaseCycleEngine, IDisposable
+internal sealed class AgileTcpListener : BaseCycleEngine, IDisposable
 {
     private bool bool_0 = true;
     private bool bool_1 = false;
@@ -30,15 +30,15 @@ internal sealed class Class39 : BaseCycleEngine, IDisposable
     private Interface20 interface20_0;
     private ListenerSubState listenerSubState_0 = ListenerSubState.IdleSleep;
     private static Mutex mutex_0 = null;
-    private object object_0 = 0;
+    private int object_0 = 0;
     private string string_0 = "elinkshop";
     private string string_1 = "cc5aa7a882472f2c7497b4f1c8d96a43";
     private TcpListener tcpListener_0 = null;
     private TcpListener tcpListener_1 = null;
 
-    internal event CbGeneric<NetworkStream, EndPoint> Event_0;
+    internal event CbGeneric<NetworkStream, EndPoint> TcpConnectionEstablished;
 
-    internal Class39(int int_5, bool bool_3, string string_2, bool bool_4, bool bool_5, IAgileLogger iagileLogger_2, IAgileLogger iagileLogger_3, Class119 class119_0)
+    internal AgileTcpListener(int int_5, bool bool_3, string string_2, bool bool_4, bool bool_5, IAgileLogger iagileLogger_2, IAgileLogger iagileLogger_3, Class119 class119_0)
     {
         if ((!bool_3 && ((this.enum0_0 == ((Enum0) 3)) || (this.enum0_0 == ((Enum0) 2)))) && smethod_0("ESF-" + this.string_0))
         {
@@ -56,9 +56,9 @@ internal sealed class Class39 : BaseCycleEngine, IDisposable
         }
         if (cbGeneric_1 == null)
         {
-            cbGeneric_1 = new CbGeneric<NetworkStream, EndPoint>(Class39.smethod_2);
+            cbGeneric_1 = new CbGeneric<NetworkStream, EndPoint>(AgileTcpListener.OnTcpConnectionEstablished);
         }
-        this.Event_0 += cbGeneric_1;
+        this.TcpConnectionEstablished += cbGeneric_1;
         this.bool_1 = bool_3;
         this.int_0 = bool_3 ? 0x7fffffff : (this.int_3 + 1);
         if (string_2 != null)
@@ -158,11 +158,11 @@ internal sealed class Class39 : BaseCycleEngine, IDisposable
             this.listenerSubState_0 = ListenerSubState.SpringEstablishedEvent;
             if (this.bool_0)
             {
-                this.eventSafeTrigger_0.ActionAsyn<NetworkStream, EndPoint>("TcpConnectionEstablished", this.cbGeneric_0, stream, socket.RemoteEndPoint);
+                this.eventSafeTrigger_0.ActionAsyn<NetworkStream, EndPoint>("TcpConnectionEstablished", this.TcpConnectionEstablished, stream, socket.RemoteEndPoint);
             }
             else
             {
-                this.eventSafeTrigger_0.Action<NetworkStream, EndPoint>("TcpConnectionEstablished", this.cbGeneric_0, stream, socket.RemoteEndPoint);
+                this.eventSafeTrigger_0.Action<NetworkStream, EndPoint>("TcpConnectionEstablished", this.TcpConnectionEstablished, stream, socket.RemoteEndPoint);
             }
             this.listenerSubState_0 = ListenerSubState.IdleSleep;
             return true;
@@ -177,7 +177,7 @@ internal sealed class Class39 : BaseCycleEngine, IDisposable
 
     internal bool method_0()
     {
-        return (bool) this.object_0;
+        return  this.object_0==1;
     }
 
     internal void method_1(Interface20 interface20_1)
@@ -263,7 +263,7 @@ internal sealed class Class39 : BaseCycleEngine, IDisposable
 
     public PortListenerState method_9()
     {
-        return new PortListenerState(this.dateTime_0, (bool) this.object_0, this.class117_0.method_0(), this.interface20_0.imethod_40() >= this.int_0, base.IsRunning, this.listenerSubState_0);
+        return new PortListenerState(this.dateTime_0,  this.object_0==1, this.class117_0.method_0(), this.interface20_0.imethod_40() >= this.int_0, base.IsRunning, this.listenerSubState_0);
     }
 
     private static bool smethod_0(string string_2)
@@ -283,7 +283,7 @@ internal sealed class Class39 : BaseCycleEngine, IDisposable
     }
 
     [CompilerGenerated]
-    private static void smethod_2(object object_1, object object_2)
+    private static void OnTcpConnectionEstablished(object object_1, object object_2)
     {
     }
 }

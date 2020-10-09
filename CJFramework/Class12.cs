@@ -160,7 +160,7 @@ internal class Class12
         return new Class12(class2, dst, buffer, buffer3);
     }
 
-    private static byte[] smethod_1(byte[] byte_3, object object_0)
+    private static byte[] smethod_1(byte[] byte_3, byte[] object_0)
     {
         for (int i = 0; i < byte_3.Length; i++)
         {

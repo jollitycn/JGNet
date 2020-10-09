@@ -1453,6 +1453,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Report\CostumeRetailAnalysis\CostumeRetailAnalysisCtrl.resx">
       <DependentUpon>CostumeRetailAnalysisCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Report\CostumeRetailAnalysis\CostumeRetailAnalysisDetailForm.resx">
       <DependentUpon>CostumeRetailAnalysisDetailForm.cs</DependentUpon>
@@ -1581,6 +1582,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\RetailOrder\RetailOrderSearchCtrl.resx">
       <DependentUpon>RetailOrderSearchCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\RefundOrder\RefundOrderListCtrl.resx">
       <DependentUpon>RefundOrderListCtrl.cs</DependentUpon>
@@ -1606,11 +1608,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CErp.Core\JGNet.Core.csproj">
+    <ProjectReference Include="..\JGNet.Core\JGNet.Core.csproj">
       <Project>{94abc99c-89ec-44fa-8a0e-59ff3eae4d62}</Project>
       <Name>JGNet.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ESBasic\CJBasic.csproj">
+    <ProjectReference Include="..\CJBasic\CJBasic.csproj">
       <Project>{414e1d01-f1bd-4f9c-a00d-10549ee5db68}</Project>
       <Name>CJBasic</Name>
     </ProjectReference>

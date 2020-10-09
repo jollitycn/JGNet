@@ -12,7 +12,7 @@ internal class Class158 : IProcess
     private ICustomizeHandler icustomizeHandler_0;
     private IActionType interface31_0 = null;
     private IStreamContractHelper interface9_0 = null;
-    private object object_0 = null;
+    private CustomizeMessageTypeRoom object_0 = null;
 
     internal event CbGeneric<string, int, byte[], string> Event_0;
 
@@ -70,10 +70,10 @@ internal class Class158 : IProcess
                 {
                     this.icustomizeHandler_0.HandleInformation(str, information.InformationType, information.Content);
                 }
-                else if (this.cbGeneric_0 != null)
+                else if (this.Event_0 != null)
                 {
                     BlobAndTagContract contract = CompactPropertySerializer.Default.Deserialize<BlobAndTagContract>(information.Content, 0);
-                    this.cbGeneric_0(str, information.InformationType, contract.Message, contract.Tag);
+                    this.Event_0(str, information.InformationType, contract.Message, contract.Tag);
                 }
             }
             return null;

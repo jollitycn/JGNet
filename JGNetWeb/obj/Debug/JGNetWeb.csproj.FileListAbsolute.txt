@@ -1,0 +1,7 @@
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\bin\JGNetWeb.dll.config
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\bin\JGNetWeb.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\bin\JGNetWeb.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\obj\Debug\JGNetWeb.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\obj\Debug\JGNetWeb.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\obj\Debug\JGNetWeb.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNetWeb\obj\Debug\JGNetWeb.pdb

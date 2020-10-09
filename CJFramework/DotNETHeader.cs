@@ -43,12 +43,7 @@ internal class DotNETHeader : ICloneable, IHeader, IHeader4
     public Interface10 imethod_2()
     {
         return Class84.smethod_0();
-    }
-
-    public void SetClientType(ClientType clientType_0)
-    {
-        throw new NotImplementedException();
-    }
+    } 
 
     public string DestUserID
     {

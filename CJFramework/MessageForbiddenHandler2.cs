@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-internal class Class97 : IMessageForbidden
+internal class MessageForbiddenHandler2 : IMessageForbidden
 {
     public event CbGeneric<IMessageHandler> MessageForbidden;
 

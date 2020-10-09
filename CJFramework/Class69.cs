@@ -19,7 +19,7 @@ internal class Class69 : FileMessage, IProcess
         }
         if (interface37_0.Header.MessageType == base.object_0.ContinueTransFile)
         {
-            new Class86().method_0();
+            new ContinueTransFile().method_0();
             return null;
         }
         return base.method_5(interface37_0);

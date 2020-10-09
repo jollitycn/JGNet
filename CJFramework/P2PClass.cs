@@ -128,12 +128,12 @@ internal class P2PClass : IDisposable, IP2PChannel, Interface24
         this.class18_0.method_0(string_2, (Interface26) this.object_0, this.emptyAgileLogger_0);
         this.class125_0 = new Class125();
         this.class125_0.method_0(string_2, int_0, (Interface26) this.object_0, this.p2PSessionMessageTypeRoom_0);
-        this.class125_0.Event_1 += new CbGeneric<string>(this.OnP2PChannelClosed);
+        this.class125_0.OnSomeOneDisconnected += new CbGeneric<string>(this.OnP2PChannelClosed);
         this.class125_0.SomeOneConnected += new CbGeneric<string, IPEndPoint, bool>(this.OnP2PChannelOpened);
         this.class18_0.Event_1 += new CbGeneric<string>(this.OnP2PChannelClosed);
         this.class18_0.SomeOneConnected += new CbGeneric<string, IPEndPoint, bool>(this.OnP2PChannelOpened);
         this.object_1 = 1;
-    }
+    } 
 
     private void OnP2PChannelOpened(string string_1, IPEndPoint ipendPoint_0, bool bool_1)
     {

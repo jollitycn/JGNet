@@ -19,7 +19,7 @@ internal class Class117
     private int int_3;
     private int int_4;
     private bool? nullable_0;
-    private object object_0;
+    private int object_0;
     protected string string_0;
     protected string string_1;
     protected string string_2;
@@ -81,9 +81,9 @@ internal class Class117
         {
             this.bool_0 = bool_4;
             this.bool_1 = bool_5;
-            if (this.cbGeneric_0 != null)
+            if (this.Event_0 != null)
             {
-                this.cbGeneric_0(this.bool_0, this.bool_1);
+                this.Event_0(this.bool_0, this.bool_1);
             }
         }
     }
@@ -181,11 +181,11 @@ internal class Class117
                 if (totalDays > this.int_3)
                 {
                     this.int_3 = totalDays;
-                    if (cbGeneric_1 != null)
+                    if (Event_1 != null)
                     {
                         try
                         {
-                            cbGeneric_1(Class30.int_0);
+                            Event_1(Class30.int_0);
                         }
                         catch
                         {

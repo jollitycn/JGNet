@@ -64,7 +64,7 @@ internal class Class124 : IFileTransHelper
         }
     }
 
-    public void Receive(FilePackage filePackage_1)
+    public void FileReceive(FilePackage filePackage_1)
     {
         if ((this.object_0 == null) && (this.stream_0 != null))
         {

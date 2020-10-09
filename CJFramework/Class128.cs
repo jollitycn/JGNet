@@ -6,7 +6,7 @@ internal static class Class128
     {
         if (enum6_0 == ((Enum6) 0))
         {
-            return new Class130((IStreamContract) object_0, int_0, string_0);
+            return new Class130((IStreamContractHelper1) object_0, int_0, string_0);
         }
         return new Class129((ITextContractHelper) object_0, int_0, string_0);
     }

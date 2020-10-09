@@ -20,9 +20,9 @@ internal class Class104 : Interface25
     {
     }
 
-    public IMessageHandler imethod_4(IMessageHandler interface37_0)
+    public IMessageHandler DispatchMessage(IMessageHandler interface37_0)
     {
         return null;
-    }
+    } 
 }
 

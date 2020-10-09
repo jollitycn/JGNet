@@ -1,2 +1,4 @@
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\CErp.Core\obj\Debug\JGNet.Core.csproj.CoreCompileInputs.cache
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\CErp.Core\obj\Debug\JGNet.Core.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.csproj.CoreCompileInputs.cache

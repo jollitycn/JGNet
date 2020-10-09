@@ -24,7 +24,7 @@ internal class Class25 : IEngineActor, IProcess, GInterface4
     private Interface40 interface40_0 = null;
     private IStreamContractHelper interface9_0 = null;
     private IUserManager iuserManager_0 = null;
-    private object object_0 = null;
+    private FriendsMessageTypeRoom object_0 = null;
 
     public Class25()
     {

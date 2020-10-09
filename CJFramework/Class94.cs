@@ -10,13 +10,13 @@ internal class Class94 : Interface36
 
     public Class94()
     {
-        this.class97_0 = new Class97();
+        this.class97_0 = new MessageForbiddenHandler2();
         this.class80_0 = new Class80();
     }
 
     public Class94(ICommitMessageToServer interface4_1, IMessageForbidden interface39_0, IP2PChannel interface23_0)
     {
-        this.class97_0 = new Class97();
+        this.class97_0 = new MessageForbiddenHandler2();
         this.class80_0 = new Class80();
         this.imethod_1(interface4_1);
         this.imethod_0(interface39_0);
@@ -25,7 +25,7 @@ internal class Class94 : Interface36
 
     public void imethod_0(IMessageForbidden interface39_0)
     {
-        this.class97_0 = interface39_0 ?? new Class97();
+        this.class97_0 = interface39_0 ?? new MessageForbiddenHandler2();
     }
 
     public void imethod_1(ICommitMessageToServer interface4_1)

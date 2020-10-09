@@ -144,7 +144,7 @@ internal class Class101<T> where T: class
             List<ulong> list = new List<ulong>();
             if (this.ulong_2 >= this.ulong_0)
             {
-                int index = (int) ((this.ulong_2 - this.ulong_0) % ((long) this.gparam_0.Length));
+                int index = (int) ((this.ulong_2 - this.ulong_0) % ((ulong) this.gparam_0.Length));
                 for (ulong i = this.ulong_2; i >= this.ulong_1; i -= (ulong) 1L)
                 {
                     if (this.gparam_0[index] == null)

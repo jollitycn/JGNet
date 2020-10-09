@@ -20,7 +20,7 @@ internal class Class116 : Interface17
     private IPv6 interface15_0;
     private IPEndPoint ipendPoint_0;
     private object object_0 = new object();
-    private bool object_1 = false;
+    private bool  object_1 = false;
     private object object_2 = new object();
     private SortedArray<ulong> sortedArray_0 = new SortedArray<ulong>();
     private SortedArray<ulong> sortedArray_1 = new SortedArray<ulong>();
@@ -80,7 +80,8 @@ internal class Class116 : Interface17
 
     private bool method_10(int int_5)
     {
-        return (this.method_11(int_5) || (((this.ulong_0 + int_5) - this.feedbackVacancyBody_0.MinIDInReceivedCache) >= this.int_0));
+        //   return (this.method_11(int_5) || (((( this.ulong_0 + int_5) - this.feedbackVacancyBody_0.MinIDInReceivedCache) >= this.int_0));
+        return false;
     }
 
     public bool method_11(int int_5)
@@ -130,7 +131,7 @@ internal class Class116 : Interface17
 
     public void method_16(int int_5)
     {
-        if (this.object_1 == 0)
+        if (this.object_1 ==false)
         {
             Class145 class2 = this.class161_0.method_10();
             if (class2 != null)
@@ -297,7 +298,7 @@ internal class Class116 : Interface17
 
     public void method_7(byte[] byte_0)
     {
-        if (this.object_1 == 0)
+        if (this.object_1 == false)
         {
             lock (this.object_0)
             {
@@ -332,12 +333,12 @@ internal class Class116 : Interface17
 
     private void method_9(byte[] byte_0, int int_5, int int_6, DataFragmentType enum8_0)
     {
-        if (this.object_1 == 0)
+        if (this.object_1 == false)
         {
             while (this.method_10(1))
             {
                 Thread.Sleep(2);
-                if (this.object_1 != 0)
+                if (this.object_1 != false)
                 {
                     return;
                 }

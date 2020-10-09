@@ -56,7 +56,7 @@ internal class Class161<T> where T: class
         int num = 0;
         for (ulong i = this.ulong_1; i <= this.ulong_2; i += (ulong) 1L)
         {
-            ulong num4 = (i - this.ulong_0) % ((long) this.gparam_0.Length);
+            ulong num4 = (i - this.ulong_0) % ((ulong) this.gparam_0.Length);
             if (this.gparam_0[(int) ((IntPtr) num4)] != null)
             {
                 num++;
@@ -73,9 +73,9 @@ internal class Class161<T> where T: class
             {
                 if (ulong_3 > this.ulong_2)
                 {
-                    if (this.peCrciKqHO != null)
+                    if (this.SessionResetted != null)
                     {
-                        this.peCrciKqHO();
+                        this.SessionResetted();
                     }
                     if (this.ulong_2 > 0L)
                     {
@@ -84,7 +84,7 @@ internal class Class161<T> where T: class
                 }
                 for (ulong i = this.ulong_1; i <= ulong_3; i += (ulong) 1L)
                 {
-                    ulong num2 = (i - this.ulong_0) % ((long) this.gparam_0.Length);
+                    ulong num2 = (i - this.ulong_0) % ((ulong) this.gparam_0.Length);
                     T local = default(T);
                     this.gparam_0[(int) ((IntPtr) num2)] = local;
                 }
@@ -99,7 +99,7 @@ internal class Class161<T> where T: class
         {
             if ((ulong_3 <= this.ulong_2) && (ulong_3 >= this.ulong_1))
             {
-                ulong num = (ulong_3 - this.ulong_0) % ((long) this.gparam_0.Length);
+                ulong num = (ulong_3 - this.ulong_0) % ((ulong)this.gparam_0.Length);
                 this.gparam_0[(int) ((IntPtr) num)] = default(T);
                 this.method_7();
             }
@@ -111,7 +111,7 @@ internal class Class161<T> where T: class
         // This item is obfuscated and can not be translated.
         while (this.ulong_1 > this.ulong_2)
         {
-        Label_0004:
+       // Label_0004:
             if (0 == 0)
             {
                 return;
@@ -119,7 +119,7 @@ internal class Class161<T> where T: class
             this.int_0 = (this.int_0 + 1) % this.gparam_0.Length;
             this.ulong_1 += (ulong) 1L;
         }
-        goto Label_0004;
+      //  goto Label_0004;
     }
 
     public T method_8(ulong ulong_3)
@@ -128,7 +128,7 @@ internal class Class161<T> where T: class
         {
             return default(T);
         }
-        ulong num = (ulong_3 - this.ulong_0) % ((long) this.gparam_0.Length);
+        ulong num = (ulong_3 - this.ulong_0) % ((ulong) this.gparam_0.Length);
         return this.gparam_0[(int) ((IntPtr) num)];
     }
 
@@ -138,7 +138,7 @@ internal class Class161<T> where T: class
         {
             return false;
         }
-        ulong num = (ulong_3 - this.ulong_0) % ((long) this.gparam_0.Length);
+        ulong num = (ulong_3 - this.ulong_0) % ((ulong) this.gparam_0.Length);
         return (this.gparam_0[(int) ((IntPtr) num)] != null);
     }
 
@@ -158,7 +158,7 @@ internal class Class161<T> where T: class
                 }
                 for (ulong i = ulong_3; i <= ulong_4; i += (ulong) 1L)
                 {
-                    ulong num2 = (i - this.ulong_0) % ((long) this.gparam_0.Length);
+                    ulong num2 = (i - this.ulong_0) % ((ulong) this.gparam_0.Length);
                     T local = default(T);
                     this.gparam_0[(int) ((IntPtr) num2)] = local;
                 }
@@ -171,7 +171,7 @@ internal class Class161<T> where T: class
     {
         lock (this.object_0)
         {
-            ulong num = (ulong_3 - this.ulong_0) % ((long) this.gparam_0.Length);
+            ulong num = (ulong_3 - this.ulong_0) % ((ulong) this.gparam_0.Length);
             this.gparam_0[(int) ((IntPtr) num)] = obj;
             if (ulong_3 > this.ulong_2)
             {

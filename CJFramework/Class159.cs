@@ -16,11 +16,11 @@ internal class Class159 : IProcess, IBasicController
     private bool bool_2 = true;
     private bool bool_3 = true;
     private IUserManager CvQxwfyNwa = null;
-    private EmptyBasicHandler emptyBasicHandler_0 = new EmptyBasicHandler();
+    private IBasicHandler emptyBasicHandler_0 = new EmptyBasicHandler();
     private GInterface8 ginterface8_0;
     private Interface40 interface40_0 = null;
     private IStreamContractHelper interface9_0 = null;
-    private object object_0 = null;
+    private BasicMessageTypeRoom object_0 = null;
 
     public event CbGeneric<string, IPEndPoint> Event_0;
 
@@ -238,9 +238,9 @@ internal class Class159 : IProcess, IBasicController
             }
             interface4 = this.interface9_0.imethod_2<ResLogonContract>(interface3, new ResLogonContract(succeed, failureCause, this.bool_3, this.bool_1, this.bool_2));
             this.interface40_0.SendMessage(interface4, interface37_0.imethod_0(), ActionTypeOnChannelIsBusy.Continue);
-            if ((succeed == LogonResult.Succeed) && (this.cbGeneric_0 != null))
+            if ((succeed == LogonResult.Succeed) && (this.Event_0 != null))
             {
-                this.cbGeneric_0(interface37_0.Header.UserID, interface37_0.imethod_0());
+                this.Event_0(interface37_0.Header.UserID, interface37_0.imethod_0());
             }
             return null;
         }
