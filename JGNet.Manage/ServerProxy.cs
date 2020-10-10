@@ -17,7 +17,7 @@ namespace JGNet.ForManage
 {
     public class ServerProxy: Common.ServerProxy
     {
-        public ServerProxy(IRapidPassiveEngine _engine) : base(_engine)
+        public ServerProxy(RapidPassiveEngine _engine) : base(_engine)
         {
         }
 

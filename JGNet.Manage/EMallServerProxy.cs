@@ -16,9 +16,9 @@ namespace JGNet.ForManage
 {
     public class EMallServerProxy
     {
-        protected IRapidPassiveEngine engine;
+        protected RapidPassiveEngine engine;
 
-        public EMallServerProxy(IRapidPassiveEngine _engine) 
+        public EMallServerProxy(RapidPassiveEngine _engine) 
         {
             this.engine = _engine;
         }

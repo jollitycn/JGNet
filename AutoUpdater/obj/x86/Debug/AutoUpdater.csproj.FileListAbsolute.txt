@@ -1,0 +1,17 @@
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\AutoUpdater.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\AutoUpdater.MainForm.resources
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\AutoUpdater.Properties.Resources.resources
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\AutoUpdater.csproj.GenerateResource.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\AutoUpdater.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\易联售自动升级系统.exe.config
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\易联售自动升级系统.exe
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\易联售自动升级系统.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\CJBasic.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\CJFramework.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\OAUS.Core.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\CJBasic.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\CJFramework.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\bin\Debug\OAUS.Core.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\AutoUpdater.csproj.CopyComplete
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\易联售自动升级系统.exe
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\AutoUpdater\obj\x86\Debug\易联售自动升级系统.pdb

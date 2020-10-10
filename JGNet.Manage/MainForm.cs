@@ -205,7 +205,7 @@ namespace JGNet.Manage
         ToolStripMenuItem earlyStageCostumeStoreMenu;
         ToolStripMenuItem earlyStageAccountRecordMenu;
 
-        public MainForm(IRapidPassiveEngine engine)
+        public MainForm(RapidPassiveEngine engine)
         {
             InitializeComponent();
             try

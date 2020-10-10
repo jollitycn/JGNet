@@ -52,7 +52,7 @@
     <Compile Include="CJPlus\Application\ResultHandler.cs" />
     <Compile Include="CJPlus\Application\CallbackHandler.cs" />
     <Compile Include="CJPlus\Rapid\IRapidEngine.cs" />
-    <Compile Include="CJPlus\Rapid\GInterface1.cs" />
+    <Compile Include="CJPlus\Rapid\IRapidPassiveEngine.cs" />
     <Compile Include="CJPlus\FileTransceiver\IFileTransferingEvents.cs" />
     <Compile Include="IFileTransferingEventsHelper.cs" />
     <Compile Include="Class2.cs" />
@@ -133,7 +133,7 @@
     <Compile Include="Class6.cs" />
     <Compile Include="Class38.cs" />
     <Compile Include="AgileTcpListener.cs" />
-    <Compile Include="Enum0.cs" />
+    <Compile Include="ClientTimeEnum.cs" />
     <Compile Include="CJPlus\Core\IServiceTypeNameMatcher.cs" />
     <Compile Include="Class40.cs" />
     <Compile Include="CJPlus\Core\DefaultServiceTypeNameMatcher.cs" />
@@ -259,10 +259,10 @@
     <Compile Include="Interface33.cs" />
     <Compile Include="Class91.cs" />
     <Compile Include="Class92.cs" />
-    <Compile Include="CJPlus\Rapid\GInterface7.cs" />
+    <Compile Include="CJPlus\Rapid\IServerEngine.cs" />
     <Compile Include="CJPlus\Rapid\WssOptions.cs" />
     <Compile Include="Interface34.cs" />
-    <Compile Include="Class93.cs" />
+    <Compile Include="ResumedProjectItemOutter.cs" />
     <Compile Include="CJPlus\FileTransceiver\ResumedProjectItem.cs" />
     <Compile Include="IFilePackageHelper.cs" />
     <Compile Include="Class69.cs" />
@@ -332,7 +332,7 @@
     <Compile Include="Class120.cs" />
     <Compile Include="Enum5.cs" />
     <Compile Include="RegularSender.cs" />
-    <Compile Include="IRapidPassiveEngine.cs" />
+    <Compile Include="RapidPassiveEngine.cs" />
     <Compile Include="CJPlus\Rapid\IP2PServer.cs" />
     <Compile Include="P2PServer.cs" />
     <Compile Include="Class124.cs" />
@@ -425,7 +425,7 @@
     <Compile Include="CJFramework\VersionType.cs" />
     <Compile Include="CJFramework\ActionTypeOnChannelIsBusy.cs" />
     <Compile Include="CJFramework\ClientType.cs" />
-    <Compile Include="Class158.cs" />
+    <Compile Include="CustomizeProcess.cs" />
     <Compile Include="Class159.cs" />
     <Compile Include="Class160.cs" />
     <Compile Include="CJFramework\PortListenerState.cs" />

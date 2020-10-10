@@ -32,10 +32,10 @@ namespace JGNet.Manage
         public static String CONFIG_PATH = CommonGlobalUtil.AgileConfiguration("Manage.LoginAgileConfiguration");
 
         //public static String PERMINSSON_CONFIG_PATH = System.Environment.CurrentDirectory + "//Manage/pc";
-        private IRapidPassiveEngine passiveEngine;
+        private RapidPassiveEngine passiveEngine;
 
         PermissonConfiguration permissonConfig = null;
-        public LoginForm(IRapidPassiveEngine rapidPassiveEngine)
+        public LoginForm(RapidPassiveEngine rapidPassiveEngine)
         {
             InitializeComponent();
             passiveEngine = rapidPassiveEngine;

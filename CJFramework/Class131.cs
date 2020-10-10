@@ -2,7 +2,7 @@
 using CJPlus.FileTransceiver;
 using System;
 
-internal class Class131 : IDisposable, Interface34
+internal class Class131 : IDisposable, IResumedProjectItemOutter
 {
     public void Dispose()
     {
@@ -25,7 +25,7 @@ internal class Class131 : IDisposable, Interface34
     {
     }
 
-    public void xkLlyBiUx8(IAgileLogger iagileLogger_0)
+    public void GetAgileLogger(IAgileLogger iagileLogger_0)
     {
     }
 

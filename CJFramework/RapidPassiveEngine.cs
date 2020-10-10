@@ -25,7 +25,7 @@ using CJPlus.Rapid;
 using System;
 using System.Threading;
 
-public class IRapidPassiveEngine : IRapidEngine, GInterface1
+public class RapidPassiveEngine : IRapidEngine, CJPlus.Rapid.IRapidPassiveEngine
 {
     private AdvancedOptions advancedOptions_0 = new AdvancedOptions();
     private AgileIPE agileIPE_0;

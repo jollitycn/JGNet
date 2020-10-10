@@ -9,12 +9,12 @@
             return new P2PServer();
         }
 
-        public static GInterface1 CreatePassiveEngine()
+        public static IRapidPassiveEngine CreatePassiveEngine()
         {
-            return new IRapidPassiveEngine();
+            return new RapidPassiveEngine();
         }
 
-        public static GInterface7 CreateServerEngine()
+        public static IServerEngine CreateServerEngine()
         {
             return new ServerEngine();
         }

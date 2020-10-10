@@ -16,7 +16,7 @@
     using CJPlus.Application.P2PSession.Passive;
     using System;
 
-    public interface GInterface1 : IRapidEngine
+    public interface IRapidPassiveEngine : IRapidEngine
     {
         event CbGeneric ConnectionInterrupted;
 

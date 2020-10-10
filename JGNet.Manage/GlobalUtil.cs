@@ -7,7 +7,7 @@ using JGNet.Core;
 using JGNet.Core.InteractEntity;
 using JGNet.Core.Tools;
 using CJBasic.Loggers;
-using ESPlus.Rapid;
+using CJPlus.Rapid;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
