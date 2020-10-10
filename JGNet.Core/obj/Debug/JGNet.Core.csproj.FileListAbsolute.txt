@@ -2,3 +2,16 @@ D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\CErp.Core\obj\Debug\JGNet.Core
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\CErp.Core\obj\Debug\JGNet.Core.csprojAssemblyReference.cache
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.csprojAssemblyReference.cache
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\JGNet.Core.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\JGNet.Core.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\CJBasic.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\CJFramework.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\Newtonsoft.Json.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\ESBasic.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\CJBasic.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\CJFramework.pdb
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\DataRabbit.xml
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\bin\Debug\ESBasic.xml
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.csproj.CopyComplete
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.dll
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\JGNet.Core\obj\Debug\JGNet.Core.pdb
