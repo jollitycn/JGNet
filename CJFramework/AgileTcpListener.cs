@@ -18,7 +18,7 @@ internal sealed class AgileTcpListener : BaseCycleEngine, IDisposable
     private static CbGeneric<NetworkStream, EndPoint> cbGeneric_1;
     private Class117 class117_0;
     private DateTime dateTime_0 = DateTime.Now;
-    private Enum0 enum0_0 = ((Enum0) 1);
+    private ClientTimeEnum enum0_0 = ((ClientTimeEnum) 1);
     private EventSafeTrigger eventSafeTrigger_0;
     private IAgileLogger iagileLogger_0;
     private IAgileLogger iagileLogger_1;
@@ -40,7 +40,7 @@ internal sealed class AgileTcpListener : BaseCycleEngine, IDisposable
 
     internal AgileTcpListener(int int_5, bool bool_3, string string_2, bool bool_4, bool bool_5, IAgileLogger iagileLogger_2, IAgileLogger iagileLogger_3, Class119 class119_0)
     {
-        if ((!bool_3 && ((this.enum0_0 == ((Enum0) 3)) || (this.enum0_0 == ((Enum0) 2)))) && smethod_0("ESF-" + this.string_0))
+        if ((!bool_3 && ((this.enum0_0 == ((ClientTimeEnum) 3)) || (this.enum0_0 == ((ClientTimeEnum) 2)))) && smethod_0("ESF-" + this.string_0))
         {
             throw new Exception("CJFramework Error : there's one CJFramework server instance running. AuthorizedUserID is " + this.string_0);
         }
@@ -208,7 +208,7 @@ internal sealed class AgileTcpListener : BaseCycleEngine, IDisposable
     private void method_6(bool bool_3, bool bool_4)
     {
         string str = !bool_4 ? " [ SecurityDog ]" : "";
-        if (!((!string.IsNullOrEmpty(str) || (this.enum0_0 != ((Enum0) 3))) || bool_3))
+        if (!((!string.IsNullOrEmpty(str) || (this.enum0_0 != ((ClientTimeEnum) 3))) || bool_3))
         {
             str = " [ SN Start Code Expired ]";
         }
@@ -231,12 +231,12 @@ internal sealed class AgileTcpListener : BaseCycleEngine, IDisposable
     {
         if (!this.bool_1)
         {
-            if ((this.enum0_0 == ((Enum0) 1)) && !this.class117_0.method_7())
+            if ((this.enum0_0 == ((ClientTimeEnum) 1)) && !this.class117_0.method_7())
             {
                 this.iagileLogger_1.LogWithTime("Current server instance must run on internet ! ");
                 return;
             }
-            if (this.enum0_0 == ((Enum0) 2))
+            if (this.enum0_0 == ((ClientTimeEnum) 2))
             {
                 string str = null;
                 if (!Class44.smethod_0(this.string_0, out str))
@@ -245,7 +245,7 @@ internal sealed class AgileTcpListener : BaseCycleEngine, IDisposable
                     return;
                 }
             }
-            if ((this.enum0_0 == ((Enum0) 3)) && !Class118.smethod_0(this.string_1))
+            if ((this.enum0_0 == ((ClientTimeEnum) 3)) && !Class118.smethod_0(this.string_1))
             {
                 this.iagileLogger_1.LogWithTime("SN of current server instance is invalid ! ");
                 return;

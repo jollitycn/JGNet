@@ -11,7 +11,7 @@ internal class Class117
     private bool bool_3;
     private Class119 class119_0;
     private DateTime dateTime_0;
-    private Enum0 enum0_0;
+    private ClientTimeEnum enum0_0;
     private IAgileLogger iagileLogger_0;
     private int int_0;
     private int int_1;
@@ -47,7 +47,7 @@ internal class Class117
         this.bool_3 = false;
     }
 
-    internal Class117(string string_3, Enum0 enum0_1, IAgileLogger iagileLogger_1, Class119 class119_1)
+    internal Class117(string string_3, ClientTimeEnum enum0_1, IAgileLogger iagileLogger_1, Class119 class119_1)
     {
         this.string_0 = "http://59.175.145.163/AuthorizeService.asmx";
         this.string_1 = "http://ws.oraycn.com/AuthorizeService.asmx";
@@ -147,11 +147,11 @@ internal class Class117
                 }
             }
             bool flag2 = true;
-            if (this.enum0_0 == ((Enum0) 2))
+            if (this.enum0_0 == ((ClientTimeEnum) 2))
             {
                 flag2 = this.method_6();
             }
-            if (this.enum0_0 == ((Enum0) 1))
+            if (this.enum0_0 == ((ClientTimeEnum) 1))
             {
                 span = (TimeSpan) (DateTime.Now - this.dateTime_0);
                 if (span.TotalDays >= 2.0)
@@ -163,7 +163,7 @@ internal class Class117
                     }
                 }
             }
-            if ((this.enum0_0 == ((Enum0) 3)) && (this.int_2 >= this.int_1))
+            if ((this.enum0_0 == ((ClientTimeEnum) 3)) && (this.int_2 >= this.int_1))
             {
                 if (!this.nullable_0.HasValue)
                 {
@@ -174,7 +174,7 @@ internal class Class117
                     flag = false;
                 }
             }
-            if (((this.enum0_0 == ((Enum0) 4)) || (this.enum0_0 == ((Enum0) 2))) && (Platform.string_0 == "CJFramework"))
+            if (((this.enum0_0 == ((ClientTimeEnum) 4)) || (this.enum0_0 == ((ClientTimeEnum) 2))) && (Platform.string_0 == "CJFramework"))
             {
                 span = (TimeSpan) (DateTime.Now - this.dateTime_0);
                 int totalDays = (int) span.TotalDays;
