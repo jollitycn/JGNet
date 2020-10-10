@@ -36,7 +36,7 @@ internal class ServerEngine : IRapidEngine, GInterface7, Interface41
     private GroupOutter class139_0 = new GroupOutter();
     private Class159 class159_0;
     private Class17 class17_0;
-    private Class2 class2_0;
+    private FileTransfering class2_0;
     private Class21 class21_0 = new Class21();
     private Class25 class25_0 = new Class25();
     private Parameterized class27_0;
@@ -198,7 +198,7 @@ internal class ServerEngine : IRapidEngine, GInterface7, Interface41
         class3.method_3(this.class98_0);
         class3.method_4(this.class135_0);
         class3.method_5(this.emptyAgileLogger_0);
-        this.class2_0 = new Class2();
+        this.class2_0 = new FileTransfering();
         this.class2_0.method_0(this.emptyAgileLogger_0);
         this.class13_0 = new FileHandler();
         this.class13_0.method_0(this.emptyAgileLogger_0);

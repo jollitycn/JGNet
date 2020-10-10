@@ -68,7 +68,7 @@ internal sealed class Class72 : IDisposable, IEngineActor, Interface13
         return true;
     }
 
-    public void method_0(IEngine interface3_0)
+    public void SetEngine(IEngine interface3_0)
     {
         this.interface26_0 = interface3_0 as Interface26;
     }

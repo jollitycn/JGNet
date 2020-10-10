@@ -155,7 +155,7 @@ internal abstract class FileTransfer : IDisposable, IEngineActor, IFile
         TransferingProject project = this.fblKqUhvkd.imethod_2(projectID);
         if (project == null)
         {
-            project = this.object_0.imethod_10(projectID);
+            project = this.object_0.GetTransferingProject(projectID);
         }
         if (project != null)
         {
@@ -187,7 +187,7 @@ internal abstract class FileTransfer : IDisposable, IEngineActor, IFile
         {
             destUserID = "_0";
         }
-        foreach (string str in this.object_0.imethod_12(destUserID))
+        foreach (string str in this.object_0.GetFileTransHelper(destUserID))
         {
             this.CancelTransfering(str);
         }
@@ -224,7 +224,7 @@ internal abstract class FileTransfer : IDisposable, IEngineActor, IFile
         {
             destUserID = "_0";
         }
-        List<string> list = this.object_0.imethod_12(destUserID);
+        List<string> list = this.object_0.GetFileTransHelper(destUserID);
         foreach (string str in this.fblKqUhvkd.imethod_4(destUserID))
         {
             list.Add(str);
@@ -237,7 +237,7 @@ internal abstract class FileTransfer : IDisposable, IEngineActor, IFile
         FileTransferingProgress progress = this.fblKqUhvkd.imethod_3(projectID);
         if (progress == null)
         {
-            progress = this.object_0.imethod_11(projectID);
+            progress = this.object_0.GetFileTransferingProgress(projectID);
         }
         return progress;
     }
@@ -247,7 +247,7 @@ internal abstract class FileTransfer : IDisposable, IEngineActor, IFile
         TransferingProject project = this.fblKqUhvkd.imethod_2(projectID);
         if (project == null)
         {
-            project = this.object_0.imethod_10(projectID);
+            project = this.object_0.GetTransferingProject(projectID);
         }
         return project;
     }
@@ -318,7 +318,7 @@ internal abstract class FileTransfer : IDisposable, IEngineActor, IFile
 
     private void SingleFileNotifyContract(string string_1)
     {
-        TransferingProject project = this.object_0.imethod_10(string_1);
+        TransferingProject project = this.object_0.GetTransferingProject(string_1);
         if (project != null)
         {
             SingleFileNotifyContract body = new SingleFileNotifyContract(string_1);

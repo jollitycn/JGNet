@@ -25,7 +25,7 @@ using CJPlus.Rapid;
 using System;
 using System.Threading;
 
-internal class IRapidPassiveEngine : IRapidEngine, GInterface1
+public class IRapidPassiveEngine : IRapidEngine, GInterface1
 {
     private AdvancedOptions advancedOptions_0 = new AdvancedOptions();
     private AgileIPE agileIPE_0;
@@ -42,7 +42,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
     private FileHandler class13_0;
     private Class141 class141_0;
     private GroupOutter2 class19_0;
-    private Class2 class2_0;
+    private FileTransfering class2_0;
     private Class28 class28_0;
     private Class43 class43_0;
     private P2PController class58_0;
@@ -167,7 +167,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
         this.object_0 = Class157.CreateInterface26((Enum6) 0);
         int num = (!this.advancedOptions_0.CheckResponseTTL4Query || !this.bool_4) ? 10 : 0;
         this.class72_0 = new Class72(num, this.int_1);
-        this.class72_0.method_0((IEngine) this.object_0);
+        this.class72_0.SetEngine((IEngine) this.object_0);
         Interface36 interface2 = new Class94((ICommitMessageToServer) this.object_0, class3, null);
         Class79 class4 = new Class79(this.class72_0, interface2);
         BasicMessageTypeRoom room = new BasicMessageTypeRoom();
@@ -203,19 +203,19 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
         this.class43_0.method_4(class2);
         this.class43_0.method_3(room2);
         this.class43_0.method_1(userID);
-        Class158 class10 = new Class158();
-        class10.method_0(class2);
-        class10.method_3(customizeHandler);
-        class10.method_2(room2);
-        class10.method_4(class4);
-        class10.Event_0 += new CbGeneric<string, int, byte[], string>(this.method_0);
+        CustomizeProcess class10 = new CustomizeProcess();
+        class10.SetStreamContractHelper(class2);
+        class10.SetCustomizeHandler(customizeHandler);
+        class10.SetCustomizeMessageTypeRoom(room2);
+        class10.SetActionType(class4);
+        class10.Event_0 += new CbGeneric<string, int, byte[], string>(this.OnMessageReceived);
         Class75 class7 = new Class75(class4, class2, room4);
         class7.method_1(userID);
         Class24 class8 = new Class24();
         class8.method_0(room4);
         class8.method_1(class2);
         class8.DaTyrcXefU(class7);
-        this.class2_0 = new Class2();
+        this.class2_0 = new FileTransfering();
         this.class2_0.method_0(this.emptyAgileLogger_0);
         this.class13_0 = new FileHandler();
         this.class13_0.method_0(this.emptyAgileLogger_0);
@@ -254,7 +254,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
         this.class19_0.method_0(class4);
         this.class19_0.uBkeyEkxPJ(class2);
         this.class19_0.Iibebiqvn1(room6);
-        this.class19_0.method_2((ICommitMessageToServer) this.object_0);
+        this.class19_0.SetCommitMessageToServer((ICommitMessageToServer) this.object_0);
         this.class19_0.GroupmateOffline += new CbGeneric<string>(this.method_7);
         this.class19_0.method_4(userID);
         Class140 class13 = new Class140();
@@ -265,7 +265,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
         this.ContactsOutter_0.method_2(class4);
         this.ContactsOutter_0.SetStreamContract(class2);
         this.ContactsOutter_0.SetMessageType(room7);
-        this.ContactsOutter_0.method_3((ICommitMessageToServer) this.object_0);
+        this.ContactsOutter_0.SetCommitMessageToServer((ICommitMessageToServer) this.object_0);
         this.ContactsOutter_0.ContactsOffline += new CbGeneric<string>(this.method_8);
         this.ContactsOutter_0.method_5(userID);
         Class20 class14 = new Class20();
@@ -339,7 +339,7 @@ internal class IRapidPassiveEngine : IRapidEngine, GInterface1
         return response;
     }
 
-    private void method_0(string string_4, int int_2, byte[] byte_0, string string_5)
+    private void OnMessageReceived(string string_4, int int_2, byte[] byte_0, string string_5)
     {
         if (this.MessageReceived != null)
         {

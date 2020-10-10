@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, IDisposable
+internal class FileTransfering : IFileTransferingEvents, IFileTransferingEventsHelper, IDisposable
 {
     [CompilerGenerated]
     private static CbFileSendedProgress cbFileSendedProgress_1;
@@ -19,7 +19,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
     private static CbGeneric<TransferingProject> cbGeneric_7;
     [CompilerGenerated]
     private static CbGeneric<TransferingProject, FileTransDisrupttedType> cbGeneric_8;
-    private Class93 class93_0 = new Class93();
+    private ResumedProjectItemOutter class93_0 = new ResumedProjectItemOutter();
     private IObjectManager<string, IFileTransHelper> iobjectManager_0 = new SafeDictionary<string, IFileTransHelper>();
     private IObjectManager<string, TransferingProject> iobjectManager_1 = new SafeDictionary<string, TransferingProject>();
     private IObjectManager<string, TransferingProject> iobjectManager_2 = new SafeDictionary<string, TransferingProject>();
@@ -38,31 +38,31 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
 
     public event CbGeneric<string> SingleFileRevFinished;
 
-    public Class2()
+    public FileTransfering()
     {
         if (cbGeneric_5 == null)
         {
-            cbGeneric_5 = new CbGeneric<TransferingProject>(Class2.smethod_0);
+            cbGeneric_5 = new CbGeneric<TransferingProject>(FileTransfering.smethod_0);
         }
         this.FileTransStarted += cbGeneric_5;
         if (cbGeneric_6 == null)
         {
-            cbGeneric_6 = new CbGeneric<TransferingProject>(Class2.smethod_1);
+            cbGeneric_6 = new CbGeneric<TransferingProject>(FileTransfering.smethod_1);
         }
         this.FileResumedTransStarted += cbGeneric_6;
         if (cbGeneric_7 == null)
         {
-            cbGeneric_7 = new CbGeneric<TransferingProject>(Class2.smethod_2);
+            cbGeneric_7 = new CbGeneric<TransferingProject>(FileTransfering.smethod_2);
         }
         this.FileTransCompleted += cbGeneric_7;
         if (cbGeneric_8 == null)
         {
-            cbGeneric_8 = new CbGeneric<TransferingProject, FileTransDisrupttedType>(Class2.smethod_3);
+            cbGeneric_8 = new CbGeneric<TransferingProject, FileTransDisrupttedType>(FileTransfering.smethod_3);
         }
         this.FileTransDisruptted += cbGeneric_8;
         if (cbFileSendedProgress_1 == null)
         {
-            cbFileSendedProgress_1 = new CbFileSendedProgress(Class2.smethod_4);
+            cbFileSendedProgress_1 = new CbFileSendedProgress(FileTransfering.smethod_4);
         }
         this.FileTransProgress += cbFileSendedProgress_1;
     }
@@ -74,7 +74,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
 
     public ResumedProjectItem imethod_0(TransferingProject transferingProject_0)
     {
-        return this.class93_0.imethod_1(transferingProject_0);
+        return this.class93_0.GetResumedProjectItem(transferingProject_0);
     }
 
     public void imethod_1(TransferingProject transferingProject_0)
@@ -82,7 +82,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
         this.iobjectManager_2.Add(transferingProject_0.ProjectID, transferingProject_0);
     }
 
-    public TransferingProject imethod_10(string string_1)
+    public TransferingProject GetTransferingProject(string string_1)
     {
         TransferingProject project = this.iobjectManager_1.Get(string_1);
         if (project == null)
@@ -92,7 +92,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
         return project;
     }
 
-    public FileTransferingProgress imethod_11(string string_1)
+    public FileTransferingProgress GetFileTransferingProgress(string string_1)
     {
         IFileTransHelper interface2 = this.iobjectManager_0.Get(string_1);
         if (interface2 == null)
@@ -102,7 +102,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
         return interface2.imethod_2();
     }
 
-    public List<string> imethod_12(string string_1)
+    public List<string> GetFileTransHelper(string string_1)
     {
         if (string_1 == null)
         {
@@ -134,7 +134,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
         {
             interface2.imethod_3();
         }
-        this.class93_0.DyscNjkZff();
+        this.class93_0.SetResumedProjectItem();
     }
 
     public void imethod_2(string string_1)
@@ -178,7 +178,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
             interface2.FileTransDisruptted += new CbFileTransDisruptted(this.method_3);
             interface2.FileTransProgress += new CbFileSendedProgress(this.OnFileTransProgress);
             this.iobjectManager_0.Add(transferingProject_0.ProjectID, interface2);
-            this.class93_0.imethod_2(resumedProjectItem_0, !flag);
+            this.class93_0.RemoveResumedProjectItem(resumedProjectItem_0, !flag);
             if (flag)
             {
                 this.FileTransStarted(transferingProject_0);
@@ -226,7 +226,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
 
     public void imethod_7(string string_1)
     {
-        foreach (string str in this.imethod_12(string_1))
+        foreach (string str in this.GetFileTransHelper(string_1))
         {
             this.imethod_5(str, FileTransDisrupttedType.DestOffline, null);
         }
@@ -234,7 +234,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
 
     public void imethod_8(string string_1)
     {
-        foreach (string str in this.imethod_12(string_1))
+        foreach (string str in this.GetFileTransHelper(string_1))
         {
             this.imethod_5(str, FileTransDisrupttedType.ReliableP2PChannelClosed, null);
         }
@@ -264,7 +264,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
     }
     private void OnFileTransCompleted(string string_1)
     {
-        TransferingProject project = this.imethod_10(string_1);
+        TransferingProject project = this.GetTransferingProject(string_1);
         this.iobjectManager_1.Remove(string_1);
         this.iobjectManager_0.Remove(string_1);
         this.FileTransCompleted(project);
@@ -273,7 +273,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
 
     private void method_3(string string_1, FileTransDisrupttedType fileTransDisrupttedType_0, string string_2)
     {
-        TransferingProject project = this.imethod_10(string_1);
+        TransferingProject project = this.GetTransferingProject(string_1);
         project.method_2(string_2);
         IFileTransHelper interface2 = this.iobjectManager_0.Get(string_1);
         ResumedProjectItem item = null;
@@ -286,7 +286,7 @@ internal class Class2 : IFileTransferingEvents, IFileTransferingEventsHelper, ID
         {
             item = new ResumedProjectItem(project.SenderID, project.OriginPath, project.TotalSize, project.OriginLastUpdateTime, interface2.imethod_8(), interface2.imethod_7(), interface2.imethod_9());
         }
-        this.class93_0.imethod_0(item);
+        this.class93_0.UpdateResumedProjectItem(item);
         this.iobjectManager_1.Remove(string_1);
         this.iobjectManager_0.Remove(string_1);
         this.FileTransDisruptted(project, fileTransDisrupttedType_0);

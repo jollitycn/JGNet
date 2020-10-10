@@ -149,7 +149,7 @@ internal class ContactsOutter : IContactsOutter
         this.interface31_0 = interface31_1;
     }
 
-    public void method_3(ICommitMessageToServer interface4_1)
+    public void SetCommitMessageToServer(ICommitMessageToServer interface4_1)
     {
         this.interface4_0 = interface4_1;
     }

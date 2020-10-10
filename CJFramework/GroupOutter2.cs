@@ -103,7 +103,7 @@ internal class GroupOutter2 : IGroupOutter
         this.gclass0_0 = ip2PController_0 ?? new GClass0();
     }
 
-    public void method_2(ICommitMessageToServer interface4_1)
+    public void SetCommitMessageToServer(ICommitMessageToServer interface4_1)
     {
         this.interface4_0 = interface4_1;
     }

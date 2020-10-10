@@ -8,20 +8,20 @@ internal class Class131 : IDisposable, Interface34
     {
     }
 
-    public void DyscNjkZff()
+    public void SetResumedProjectItem()
     {
     }
 
-    public void imethod_0(ResumedProjectItem resumedProjectItem_0)
+    public void UpdateResumedProjectItem(ResumedProjectItem resumedProjectItem_0)
     {
     }
 
-    public ResumedProjectItem imethod_1(TransferingProject transferingProject_0)
+    public ResumedProjectItem GetResumedProjectItem(TransferingProject transferingProject_0)
     {
         return null;
     }
 
-    public void imethod_2(ResumedProjectItem resumedProjectItem_0, bool bool_0)
+    public void RemoveResumedProjectItem(ResumedProjectItem resumedProjectItem_0, bool bool_0)
     {
     }
 
