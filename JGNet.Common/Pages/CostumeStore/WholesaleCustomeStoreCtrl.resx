@@ -160,7 +160,7 @@
         MmzALuzBvoe4m/vZgT2qawlWYBXWYN0j3Mvd3I8OQfAHZ844suCtTpMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAAD3AW1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAs
@@ -192,8 +192,8 @@
         T3wOgCS91ogJBQAAAAAJBQAAAAABMAEwCQUAAAAKT3wOgCS91ogAAAAAT3wOgCS91ogAAAAAT3wOgCS9
         1ohPfA6AJL3WiAAJBQAAAAkFAAAACQUAAAAAAAAAAAAAAAs=
 </value>
-  </data>
-  <data name="supllierComboBox1.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
+  </data>-->
+  <!--<data name="supllierComboBox1.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAACPAUNFcnAuQ29yZSwgVmVyc2lvbj0xLjAuMC4w
@@ -209,7 +209,7 @@
         c2l6ZQhfdmVyc2lvbgQAAAxDRXJwLkJyYW5kW10CAAAACAgDAAAACQgAAAAAAAAAAAAAAAcIAAAAAAEA
         AAAAAAAABApDRXJwLkJyYW5kAgAAAAs=
 </value>
-  </data>
+  </data>-->
   <data name="BaseButton1.DownBack" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEUAAAAYCAYAAACsnTAAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

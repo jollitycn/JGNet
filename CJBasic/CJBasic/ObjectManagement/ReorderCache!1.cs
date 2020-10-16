@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement
 {
-    using CJBasic.ObjectManagement.Managers;
+    using global::CJBasic.ObjectManagement.Managers;
     using System;
 
     public class ReorderCache<T> where T: class

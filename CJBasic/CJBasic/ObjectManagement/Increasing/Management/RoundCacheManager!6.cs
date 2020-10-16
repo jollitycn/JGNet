@@ -1,8 +1,8 @@
 ﻿namespace CJBasic.ObjectManagement.Increasing.Management
 {
-    using CJBasic;
-    using CJBasic.Collections;
-    using CJBasic.ObjectManagement.Increasing;
+    using global::CJBasic;
+     using global::CJBasic.Collections;
+    using global::CJBasic.ObjectManagement.Increasing;
     using System;
     using System.Collections.Generic;
     using System.Threading;

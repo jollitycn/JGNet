@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement
 {
-    using CJBasic.Collections;
+     using global::CJBasic.Collections;
     using System;
     using System.Collections.Generic;
 

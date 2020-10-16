@@ -120,7 +120,7 @@
   <metadata name="GuideDayAchievementBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>183, 17</value>
   </metadata>
-  <data name="guideComboBox1.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
+	<!--<data name="guideComboBox1.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAI8BQ0VycC5Db3JlLCBWZXJzaW9uPTEuMC4wLjAsIEN1bHR1cmU9
         bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbF1dLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBD
@@ -130,7 +130,7 @@
         X3NpemUIX3ZlcnNpb24EAAAMQ0VycC5HdWlkZVtdAwAAAAgIAgAAAAkEAAAAAAAAAAEAAAAHBAAAAAAB
         AAAAAAAAAAQKQ0VycC5HdWlkZQMAAAAL
 </value>
-  </data>
+  </data>-->
   <metadata name="SalesActualRecvSum.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

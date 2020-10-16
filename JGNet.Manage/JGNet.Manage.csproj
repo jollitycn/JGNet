@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>http://localhost/CErp.Manage/</UpdateUrl>
+    <UpdateUrl>http://localhost/JGNet.Manage/</UpdateUrl>
     <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -56,16 +56,16 @@
     <ApplicationIcon>Resources\logoGray.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>3087EFE21F689AB6CBD4AE57D397DD75CA7F3FF2</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>505C08CBA2080BABB897EC42CFE5E23D64346DB4</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>CErp.Manage_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>JGNet.Manage_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>false</GenerateManifests>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
@@ -1754,6 +1754,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EMall\Costume\SaveEmCostumeForm.resx">
       <DependentUpon>SaveEmCostumeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EMall\Order\EmOrderDeliverForm.resx">
       <DependentUpon>EmOrderDeliverForm.cs</DependentUpon>
@@ -1960,6 +1961,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ReturnOrder\GetPurchaseSummaryCtrl.resx">
       <DependentUpon>GetPurchaseSummaryCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ReturnOrder\PurchaseSummaryTypeForm1.resx">
       <DependentUpon>PurchaseSummaryTypeForm1.cs</DependentUpon>
@@ -2077,6 +2079,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\GiftTicketTemplateCostumeSelectForm.resx">
       <DependentUpon>GiftTicketTemplateCostumeSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Setting\RuleSettings\GiftTicket\SaveGiftTicketTemplateCtrl.resx">
       <DependentUpon>SaveGiftTicketTemplateCtrl.cs</DependentUpon>
@@ -2374,112 +2377,113 @@
     <EmbeddedResource Include="Pages\SupplierAccountRecord\SupplierAccountRecordOrderDetailForm.resx">
       <DependentUpon>SupplierAccountRecordOrderDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\CErp.AdminUser.datasource" />
-    <None Include="Properties\DataSources\CErp.AllocateOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.BarCode.datasource" />
-    <None Include="Properties\DataSources\CErp.BoundDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.Brand.datasource" />
-    <None Include="Properties\DataSources\CErp.BrandBenefitDayReport.datasource" />
-    <None Include="Properties\DataSources\CErp.BrandBenefitMonthReport.datasource" />
-    <None Include="Properties\DataSources\CErp.BusinessAccount.datasource" />
-    <None Include="Properties\DataSources\CErp.CashRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.CheckStoreDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.CheckStoreOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.CheckStoreSummary.datasource" />
-    <None Include="Properties\DataSources\CErp.CheckStoreTask.datasource" />
-    <None Include="Properties\DataSources\CErp.CommissionTemplate.datasource" />
-    <None Include="Properties\DataSources\CErp.Common.Entitys.MonthTaskSearch.datasource" />
-    <None Include="Properties\DataSources\CErp.Common.Models.CarriageCost.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeDistribution.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeDistributionDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeRetailAnalysis.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.CostumeStoreAnalysisData.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.DistributorCommissionPage.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.EmCostume.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.EmOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.GetEmOrderPagePara.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.GuideAchievementSummary.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.GuideReturnVisitPara.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.OrderInfo.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.PrintColumnsInfo.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.PrintSysInfo.datasource" />
-    <None Include="Properties\DataSources\CErp.Core.InteractEntity.PrintTemplateInfo.datasource" />
-    <None Include="Properties\DataSources\CErp.Costume.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeClass.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeColor.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeItem.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeStore.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeStoreListPara.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeStoreSummary.datasource" />
-    <None Include="Properties\DataSources\CErp.CostumeStoreTrack.datasource" />
-    <None Include="Properties\DataSources\CErp.DayBenefitReport.datasource" />
-    <None Include="Properties\DataSources\CErp.DayReport.datasource" />
-    <None Include="Properties\DataSources\CErp.DifferenceDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.DifferenceOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.DiscountPromotionRule.datasource" />
-    <None Include="Properties\DataSources\CErp.Distributor.datasource" />
-    <None Include="Properties\DataSources\CErp.DistributorCommissionRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.DistributorWithdrawRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.EmCarriageCostTemplate.datasource" />
-    <None Include="Properties\DataSources\CErp.EmExpressCompany.datasource" />
-    <None Include="Properties\DataSources\CErp.EmRefundDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.EmRefundOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.EmRetailDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.EmRetailOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.GiftTicketTemplate.datasource" />
-    <None Include="Properties\DataSources\CErp.Guide.datasource" />
-    <None Include="Properties\DataSources\CErp.GuideAchievement.datasource" />
-    <None Include="Properties\DataSources\CErp.GuideDayAchievement.datasource" />
-    <None Include="Properties\DataSources\CErp.GuideMonthAchievement.datasource" />
-    <None Include="Properties\DataSources\CErp.InboundDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.InboundOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.InventoryDayReport.datasource" />
-    <None Include="Properties\DataSources\CErp.IPromotionRule.datasource" />
-    <None Include="Properties\DataSources\CErp.Member.datasource" />
-    <None Include="Properties\DataSources\CErp.MemberListPage.datasource" />
-    <None Include="Properties\DataSources\CErp.MemberListPagePara.datasource" />
-    <None Include="Properties\DataSources\CErp.MJPromotionRule.datasource" />
-    <None Include="Properties\DataSources\CErp.MonthBenefitReport.datasource" />
-    <None Include="Properties\DataSources\CErp.MonthReport.datasource" />
-    <None Include="Properties\DataSources\CErp.MonthTask.datasource" />
-    <None Include="Properties\DataSources\CErp.OutboundDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.OutboundOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.ParameterConfig.datasource" />
-    <None Include="Properties\DataSources\CErp.PaymentRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.PfAccountRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomer.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomerBalanceRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomerDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomerOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomerRetailDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomerRetailOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.PfCustomerStore.datasource" />
-    <None Include="Properties\DataSources\CErp.PfOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.PfOrderDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.PosInformationTypes.datasource" />
-    <None Include="Properties\DataSources\CErp.PurchaseOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.RechargeDonateRule.datasource" />
-    <None Include="Properties\DataSources\CErp.RechargeRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.ReplenishDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.ReplenishOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.RetailCostume.datasource" />
-    <None Include="Properties\DataSources\CErp.RetailDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.RetailOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.ReturnOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.Role.datasource" />
-    <None Include="Properties\DataSources\CErp.Rule.datasource" />
-    <None Include="Properties\DataSources\CErp.SalesPromotion.datasource" />
-    <None Include="Properties\DataSources\CErp.SalesQuantityDayReport.datasource" />
-    <None Include="Properties\DataSources\CErp.ScrapDetail.datasource" />
-    <None Include="Properties\DataSources\CErp.ScrapOrder.datasource" />
-    <None Include="Properties\DataSources\CErp.SeasonClass.datasource" />
-    <None Include="Properties\DataSources\CErp.SerializeHelper.datasource" />
-    <None Include="Properties\DataSources\CErp.Shop.datasource" />
-    <None Include="Properties\DataSources\CErp.SignRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.SizeGroup.datasource" />
-    <None Include="Properties\DataSources\CErp.Supplier.datasource" />
-    <None Include="Properties\DataSources\CErp.SupplierAccountRecord.datasource" />
-    <None Include="Properties\DataSources\CErp.WxShopMan.datasource" />
+    <None Include="JGNet.Manage_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\JGNet.AdminUser.datasource" />
+    <None Include="Properties\DataSources\JGNet.AllocateOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.BarCode.datasource" />
+    <None Include="Properties\DataSources\JGNet.BoundDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.Brand.datasource" />
+    <None Include="Properties\DataSources\JGNet.BrandBenefitDayReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.BrandBenefitMonthReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.BusinessAccount.datasource" />
+    <None Include="Properties\DataSources\JGNet.CashRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.CheckStoreDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.CheckStoreOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.CheckStoreSummary.datasource" />
+    <None Include="Properties\DataSources\JGNet.CheckStoreTask.datasource" />
+    <None Include="Properties\DataSources\JGNet.CommissionTemplate.datasource" />
+    <None Include="Properties\DataSources\JGNet.Common.Entitys.MonthTaskSearch.datasource" />
+    <None Include="Properties\DataSources\JGNet.Common.Models.CarriageCost.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.CostumeDistribution.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.CostumeDistributionDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.CostumeRetailAnalysis.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.CostumeStoreAnalysisData.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.DistributorCommissionPage.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.EmCostume.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.EmOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.GetEmOrderPagePara.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.GuideAchievementSummary.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.GuideReturnVisitPara.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.OrderInfo.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.PrintColumnsInfo.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.PrintSysInfo.datasource" />
+    <None Include="Properties\DataSources\JGNet.Core.InteractEntity.PrintTemplateInfo.datasource" />
+    <None Include="Properties\DataSources\JGNet.Costume.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeClass.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeColor.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeItem.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeStore.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeStoreListPara.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeStoreSummary.datasource" />
+    <None Include="Properties\DataSources\JGNet.CostumeStoreTrack.datasource" />
+    <None Include="Properties\DataSources\JGNet.DayBenefitReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.DayReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.DifferenceDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.DifferenceOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.DiscountPromotionRule.datasource" />
+    <None Include="Properties\DataSources\JGNet.Distributor.datasource" />
+    <None Include="Properties\DataSources\JGNet.DistributorCommissionRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.DistributorWithdrawRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.EmCarriageCostTemplate.datasource" />
+    <None Include="Properties\DataSources\JGNet.EmExpressCompany.datasource" />
+    <None Include="Properties\DataSources\JGNet.EmRefundDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.EmRefundOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.EmRetailDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.EmRetailOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.GiftTicketTemplate.datasource" />
+    <None Include="Properties\DataSources\JGNet.Guide.datasource" />
+    <None Include="Properties\DataSources\JGNet.GuideAchievement.datasource" />
+    <None Include="Properties\DataSources\JGNet.GuideDayAchievement.datasource" />
+    <None Include="Properties\DataSources\JGNet.GuideMonthAchievement.datasource" />
+    <None Include="Properties\DataSources\JGNet.InboundDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.InboundOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.InventoryDayReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.IPromotionRule.datasource" />
+    <None Include="Properties\DataSources\JGNet.Member.datasource" />
+    <None Include="Properties\DataSources\JGNet.MemberListPage.datasource" />
+    <None Include="Properties\DataSources\JGNet.MemberListPagePara.datasource" />
+    <None Include="Properties\DataSources\JGNet.MJPromotionRule.datasource" />
+    <None Include="Properties\DataSources\JGNet.MonthBenefitReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.MonthReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.MonthTask.datasource" />
+    <None Include="Properties\DataSources\JGNet.OutboundDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.OutboundOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.ParameterConfig.datasource" />
+    <None Include="Properties\DataSources\JGNet.PaymentRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfAccountRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomer.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomerBalanceRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomerDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomerOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomerRetailDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomerRetailOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfCustomerStore.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.PfOrderDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.PosInformationTypes.datasource" />
+    <None Include="Properties\DataSources\JGNet.PurchaseOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.RechargeDonateRule.datasource" />
+    <None Include="Properties\DataSources\JGNet.RechargeRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.ReplenishDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.ReplenishOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.RetailCostume.datasource" />
+    <None Include="Properties\DataSources\JGNet.RetailDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.RetailOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.ReturnOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.Role.datasource" />
+    <None Include="Properties\DataSources\JGNet.Rule.datasource" />
+    <None Include="Properties\DataSources\JGNet.SalesPromotion.datasource" />
+    <None Include="Properties\DataSources\JGNet.SalesQuantityDayReport.datasource" />
+    <None Include="Properties\DataSources\JGNet.ScrapDetail.datasource" />
+    <None Include="Properties\DataSources\JGNet.ScrapOrder.datasource" />
+    <None Include="Properties\DataSources\JGNet.SeasonClass.datasource" />
+    <None Include="Properties\DataSources\JGNet.SerializeHelper.datasource" />
+    <None Include="Properties\DataSources\JGNet.Shop.datasource" />
+    <None Include="Properties\DataSources\JGNet.SignRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.SizeGroup.datasource" />
+    <None Include="Properties\DataSources\JGNet.Supplier.datasource" />
+    <None Include="Properties\DataSources\JGNet.SupplierAccountRecord.datasource" />
+    <None Include="Properties\DataSources\JGNet.WxShopMan.datasource" />
     <None Include="Properties\DataSources\GuideReturnVisit.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

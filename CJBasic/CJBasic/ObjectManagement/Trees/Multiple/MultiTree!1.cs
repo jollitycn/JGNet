@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.ObjectManagement.Trees.Multiple
 {
-    using CJBasic;
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
 
@@ -9,7 +9,7 @@
     public class MultiTree<TVal> : IMultiTree<TVal> where TVal: IMTreeVal
     {
         [NonSerialized]
-        private CJBasic.Threading.Synchronize.SmartRWLocker _smartRWLocker;
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker _smartRWLocker;
         private MNode<TVal> root;
 
         public MultiTree()
@@ -364,13 +364,13 @@
             }
         }
 
-        protected CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
+        protected global::CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
         {
             get
             {
                 if (this._smartRWLocker == null)
                 {
-                    this._smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+                    this._smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
                 }
                 return this._smartRWLocker;
             }

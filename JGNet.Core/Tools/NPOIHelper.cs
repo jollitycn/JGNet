@@ -6,16 +6,17 @@ using NPOI.HSSF.UserModel;
 using System.Data;
 using NPOI.HSSF.Util;
 using NPOI.SS.UserModel;
+using System.Data.OleDb;
 
 namespace JieXi.Common
 {
     public class NPOIHelper
-    {
+    { 
         /// <summary>
         /// 导出列名
         /// </summary>
-         
-     //   public static System.Collections.SortedList  ListColumnsName;
+
+        //   public static System.Collections.SortedList  ListColumnsName;
 
         public static String[] Keys = null;
         public static String[] Values = null; 
@@ -63,6 +64,7 @@ namespace JieXi.Common
             InsertRow(dtSource, excelWorkbook);
             SaveExcelFile(excelWorkbook, excelStream);
         }
+
         /// <summary>
         /// 保存Excel文件
         /// </summary>
@@ -459,11 +461,11 @@ namespace JieXi.Common
         /// <param name="hssfworkbook"></param>
         /// <param name="sheetIndex"></param>
         /// <returns></returns>
-        public static DataTable FormatToDatatable(HSSFWorkbook hssfworkbook, int sheetIndex)
+        public static DataTable FormatToDatatable(IWorkbook hssfworkbook, int sheetIndex)
         {
             DataTable dtPL = new DataTable();
             
-            HSSFSheet sheet = (HSSFSheet)hssfworkbook.GetSheetAt(0);
+           ISheet sheet =  hssfworkbook.GetSheetAt(0);
             System.Collections.IEnumerator rows = sheet.GetRowEnumerator();
            
             int rowIndex = 0;
@@ -473,14 +475,14 @@ namespace JieXi.Common
             }*/
             while (rows.MoveNext())
             {
-                HSSFRow row = (HSSFRow)rows.Current;
+                IRow row = (IRow)rows.Current;
 
                 if (rowIndex == 0)
                 {
                     for (int i = 0; i < row.LastCellNum; i++)
                     {
                         //首行作为datatable的表头
-                        HSSFCell cell = (HSSFCell)row.GetCell(i);
+                        ICell cell = (ICell)row.GetCell(i);
                         if (cell != null)
                         {
                             object obj = GetCellText(cell);
@@ -490,7 +492,7 @@ namespace JieXi.Common
                             }
                             else
                             {
-                                dtPL.Columns.Add(obj.ToString().Trim());
+                                NewMethod(dtPL, obj);
                             }
                         }
                     }
@@ -500,7 +502,7 @@ namespace JieXi.Common
                     DataRow dr = dtPL.NewRow();
                     for (int i = 0; i < row.LastCellNum; i++)
                     {
-                        HSSFCell cell = (HSSFCell)row.GetCell(i);
+                        ICell cell = (ICell)row.GetCell(i);
 
                         if (dr.Table.Columns.Count > i)
                         {
@@ -522,7 +524,27 @@ namespace JieXi.Common
             }
             return dtPL;
         }
-        private static object GetCellText(HSSFCell cell)
+
+        private static void NewMethod(DataTable dtPL, object obj)
+        {
+            try
+            {
+                if (dtPL.Columns.Contains(obj.ToString()))
+            {
+                dtPL.Columns.Add(obj.ToString() + " ");
+            }
+            else
+            {
+                    dtPL.Columns.Add(obj.ToString());
+                }
+            }
+            catch
+            {
+                NewMethod(dtPL, obj + " ");
+            }
+        }
+
+        private static object GetCellText(ICell cell)
         {
             object obj = new object();
             switch (cell.CellType)

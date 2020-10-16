@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Widget
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
     using System.ComponentModel;
     using System.Drawing;
@@ -117,7 +117,7 @@
             this.skinToolStrip1.Text = "skinToolStrip1";
             this.toolStripButton4.Alignment = ToolStripItemAlignment.Right;
             this.toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = (Image) manager.GetObject("toolStripButton4.Image");
+            //this.toolStripButton4.Image = (Image) manager.GetObject("toolStripButton4.Image");
             this.toolStripButton4.ImageTransparentColor = Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new Size(0x17, 0x16);
@@ -125,7 +125,7 @@
             this.toolStripButton4.Click += new EventHandler(this.toolStripButton4_Click);
             this.toolStripButton3.Alignment = ToolStripItemAlignment.Right;
             this.toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = (Image) manager.GetObject("toolStripButton3.Image");
+           // this.toolStripButton3.Image = (Image) manager.GetObject("toolStripButton3.Image");
             this.toolStripButton3.ImageTransparentColor = Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new Size(0x17, 0x16);
@@ -146,7 +146,7 @@
             this.toolStripLabel_title.Text = "页码：";
             this.toolStripButton2.Alignment = ToolStripItemAlignment.Right;
             this.toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = (Image) manager.GetObject("toolStripButton2.Image");
+            //this.toolStripButton2.Image = (Image) manager.GetObject("toolStripButton2.Image");
             this.toolStripButton2.ImageTransparentColor = Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new Size(0x17, 0x16);
@@ -154,7 +154,7 @@
             this.toolStripButton2.Click += new EventHandler(this.toolStripButton2_Click);
             this.toolStripButton1.Alignment = ToolStripItemAlignment.Right;
             this.toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = (Image) manager.GetObject("toolStripButton1.Image");
+            //this.toolStripButton1.Image = (Image) manager.GetObject("toolStripButton1.Image");
             this.toolStripButton1.ImageTransparentColor = Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new Size(0x17, 0x16);

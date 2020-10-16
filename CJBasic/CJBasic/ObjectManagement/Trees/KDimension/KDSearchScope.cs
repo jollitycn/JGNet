@@ -5,7 +5,7 @@
     public class KDSearchScope
     {
         private string columnName;
-        private CJBasic.ObjectManagement.Trees.KDimension.KDSearchType kDSearchType;
+        private  KDSearchType kDSearchType;
         private string matchString;
         private bool maxClosed;
         private IComparable maxValue;
@@ -15,15 +15,15 @@
         public KDSearchScope()
         {
             this.columnName = "";
-            this.kDSearchType = CJBasic.ObjectManagement.Trees.KDimension.KDSearchType.Default;
+            this.kDSearchType =  KDSearchType.Default;
             this.minClosed = false;
             this.maxClosed = false;
         }
 
-        public KDSearchScope(string column, CJBasic.ObjectManagement.Trees.KDimension.KDSearchType searchType, string _matchString)
+        public KDSearchScope(string column, KDSearchType searchType, string _matchString)
         {
             this.columnName = "";
-            this.kDSearchType = CJBasic.ObjectManagement.Trees.KDimension.KDSearchType.Default;
+            this.kDSearchType = KDSearchType.Default;
             this.minClosed = false;
             this.maxClosed = false;
             this.columnName = column;
@@ -34,7 +34,7 @@
         public KDSearchScope(string column, IComparable min, bool _minClosed, IComparable max, bool _maxClosed)
         {
             this.columnName = "";
-            this.kDSearchType = CJBasic.ObjectManagement.Trees.KDimension.KDSearchType.Default;
+            this.kDSearchType = KDSearchType.Default;
             this.minClosed = false;
             this.maxClosed = false;
             this.columnName = column;
@@ -56,7 +56,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.KDimension.KDSearchType KDSearchType
+        public KDSearchType KDSearchType
         {
             get
             {

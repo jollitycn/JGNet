@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Widget
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     public interface IPageController

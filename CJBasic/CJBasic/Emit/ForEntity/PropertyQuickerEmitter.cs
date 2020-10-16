@@ -1,13 +1,14 @@
 ﻿namespace CJBasic.Emit.ForEntity
 {
-    using CJBasic.Collections;
-    using CJBasic.Emit;
-    using CJBasic.Helpers;
+     using global::CJBasic.Collections;
+    using global::CJBasic.Emit;
+    using global::CJBasic.Helpers;
     using System;
     using System.Collections.Generic;
     using System.Reflection;
     using System.Reflection.Emit;
     using System.Threading;
+    using global::CJBasic.Helpers;
 
     public class PropertyQuickerEmitter
     {

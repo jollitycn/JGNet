@@ -160,7 +160,7 @@
         MmzALuzBvoe4m/vZgT2qawlWYBXWYN0j3Mvd3I8OQfAHZ844suCtTpMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAAD3AW1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAs
@@ -192,7 +192,7 @@
         b8Yv0LzWiAkFAAAAAAkFAAAAAAEwATAJBQAAAPZvxi/QvNaIAAAAAPZvxi/QvNaIAAAAAPZvxi/QvNaI
         9m/GL9C81ogACgoKAAAAAAAAAAAL
 </value>
-  </data>
+  </data>-->
   <metadata name="quickDateSelector1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>14, 19</value>
   </metadata>

@@ -26,6 +26,7 @@ namespace JGNet.Common.Components
         {
             InitializeComponent();
             List<ToolStripItem> stripItems = new List<ToolStripItem>();
+            if (CommonGlobalCache.SizeGroupList != null) { 
             foreach (var item in CommonGlobalCache.SizeGroupList)
             {
                 if (item.Enabled)
@@ -35,6 +36,7 @@ namespace JGNet.Common.Components
             }
             toolStripMenuItem1.DropDownItems.AddRange(stripItems.ToArray());
             toolStripMenuItem1.Visible = false;
+        }
         }
 
         internal void ChangeSizeGroup(SizeGroup group)

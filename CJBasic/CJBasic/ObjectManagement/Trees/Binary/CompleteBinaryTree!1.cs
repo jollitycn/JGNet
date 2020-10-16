@@ -1,29 +1,29 @@
 ﻿namespace CJBasic.ObjectManagement.Trees.Binary
 {
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
 
     public class CompleteBinaryTree<TVal> : IBinaryTree<TVal> where TVal: IComparable
     {
         [NonSerialized]
-        protected CJBasic.Threading.Synchronize.SmartRWLocker _smartRWLocker;
-        protected List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> allNode;
+        protected global::CJBasic.Threading.Synchronize.SmartRWLocker _smartRWLocker;
+        protected List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> allNode;
         protected int count;
-        protected CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root;
+        protected global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root;
 
         public CompleteBinaryTree()
         {
-            this.allNode = new List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
+            this.allNode = new List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
             this._smartRWLocker = null;
             this.count = 0;
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Get(TVal val)
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Get(TVal val)
         {
             using (this.SmartRWLocker.Lock(AccessMode.Read))
             {
-                foreach (CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node in this.allNode)
+                foreach (global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node in this.allNode)
                 {
                     if (node.TheValue.CompareTo(val) == 0)
                     {
@@ -83,7 +83,7 @@
         {
             using (this.SmartRWLocker.Lock(AccessMode.Write))
             {
-                CJBasic.ObjectManagement.Trees.Binary.Node<TVal> item = new CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(val, null);
+                global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> item = new global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(val, null);
                 if (this.root == null)
                 {
                     this.root = item;
@@ -162,7 +162,7 @@
             }
         }
 
-        public void SwapValueOfTwoNode(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node1, CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node2)
+        public void SwapValueOfTwoNode(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node1, global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node2)
         {
             using (this.SmartRWLocker.Lock(AccessMode.Write))
             {
@@ -188,7 +188,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Root
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Root
         {
             get
             {
@@ -196,13 +196,13 @@
             }
         }
 
-        protected CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
+        protected global::CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
         {
             get
             {
                 if (this._smartRWLocker == null)
                 {
-                    this._smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+                    this._smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
                 }
                 return this._smartRWLocker;
             }

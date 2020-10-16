@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Collections
 {
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
     using System.Reflection;
@@ -14,7 +14,7 @@
         private List<TVal> lazyCopy;
         private int minCapacityForShrink;
         [NonSerialized]
-        private CJBasic.Threading.Synchronize.SmartRWLocker smartRWLocker;
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker smartRWLocker;
         private TVal[] valArray;
         private int validCount;
 
@@ -26,7 +26,7 @@
             this.keyArray = new TKey[0x20];
             this.valArray = new TVal[0x20];
             this.validCount = 0;
-            this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+            this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
         }
 
         public SortedArray2(IComparer<TKey> _comparer4Key) : this(_comparer4Key, null)
@@ -41,7 +41,7 @@
             this.keyArray = new TKey[0x20];
             this.valArray = new TVal[0x20];
             this.validCount = 0;
-            this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+            this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
             this.comparer4Key = _comparer4Key;
             this.Rebuild(dictionary);
         }
@@ -712,13 +712,13 @@
             }
         }
 
-        private CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
         {
             get
             {
                 if (this.smartRWLocker == null)
                 {
-                    this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+                    this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
                 }
                 return this.smartRWLocker;
             }

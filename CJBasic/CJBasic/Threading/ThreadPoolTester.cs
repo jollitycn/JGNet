@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.Threading
 {
-    using CJBasic;
-    using CJBasic.Loggers;
+    using global::CJBasic;
+     using global::CJBasic.Loggers;
     using System;
     using System.Threading;
 

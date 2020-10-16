@@ -43,6 +43,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Management" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CJBasic\Helpers\ManagementHelper.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="CJBasic\Widget\YearMonthPicker.cs">
       <SubType>Component</SubType>

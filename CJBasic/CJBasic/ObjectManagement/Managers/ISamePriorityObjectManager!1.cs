@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement.Managers
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     public interface ISamePriorityObjectManager<T>
@@ -15,7 +15,7 @@
         T PopNextWaiter();
         void RemoveWaiter(T waiter);
 
-        CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow ActionTypeOnAddOverflow { get; }
+        global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow ActionTypeOnAddOverflow { get; }
 
         int Capacity { get; }
 

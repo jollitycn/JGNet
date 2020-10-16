@@ -1,4 +1,4 @@
-﻿namespace CErp.Common
+﻿namespace JGNet.Common
 {
     partial class CostumeMessageTextBox
     {

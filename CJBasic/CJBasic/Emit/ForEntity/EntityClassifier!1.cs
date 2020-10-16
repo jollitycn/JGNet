@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Emit.ForEntity
 {
-    using CJBasic.Collections;
+     using global::CJBasic.Collections;
     using System;
     using System.Collections;
     using System.Collections.Generic;

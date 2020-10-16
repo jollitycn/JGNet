@@ -5,7 +5,7 @@
 
     public static class DynamicDispatcherFactory
     {
-        private static CJBasic.Emit.DynamicDispatcher.DynamicDispatcherEmitter DynamicDispatcherEmitter = new CJBasic.Emit.DynamicDispatcher.DynamicDispatcherEmitter();
+        private static global::CJBasic.Emit.DynamicDispatcher.DynamicDispatcherEmitter DynamicDispatcherEmitter = new global::CJBasic.Emit.DynamicDispatcher.DynamicDispatcherEmitter();
 
         public static TIDispatch CreateDispatcher<TIDispatch>(IEnumerable<TIDispatch> excuters)
         {

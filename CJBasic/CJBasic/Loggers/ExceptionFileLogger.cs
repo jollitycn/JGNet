@@ -6,20 +6,20 @@
     public class ExceptionFileLogger : IExceptionLogger
     {
         protected IAgileLogger agileLogger;
-        protected CJBasic.Loggers.ErrorLevel errorLevel;
+        protected global::CJBasic.Loggers.ErrorLevel errorLevel;
 
         public ExceptionFileLogger()
         {
-            this.errorLevel = CJBasic.Loggers.ErrorLevel.Standard;
+            this.errorLevel = global::CJBasic.Loggers.ErrorLevel.Standard;
         }
 
-        public ExceptionFileLogger(IAgileLogger logger) : this(logger, CJBasic.Loggers.ErrorLevel.Standard)
+        public ExceptionFileLogger(IAgileLogger logger) : this(logger, global::CJBasic.Loggers.ErrorLevel.Standard)
         {
         }
 
-        public ExceptionFileLogger(IAgileLogger logger, CJBasic.Loggers.ErrorLevel _errorLevel)
+        public ExceptionFileLogger(IAgileLogger logger, global::CJBasic.Loggers.ErrorLevel _errorLevel)
         {
-            this.errorLevel = CJBasic.Loggers.ErrorLevel.Standard;
+            this.errorLevel = global::CJBasic.Loggers.ErrorLevel.Standard;
             this.agileLogger = logger;
             this.errorLevel = _errorLevel;
         }
@@ -63,7 +63,7 @@
             }
         }
 
-        public CJBasic.Loggers.ErrorLevel ErrorLevel
+        public global::CJBasic.Loggers.ErrorLevel ErrorLevel
         {
             set
             {

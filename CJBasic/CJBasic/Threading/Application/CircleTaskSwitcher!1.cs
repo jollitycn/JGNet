@@ -1,8 +1,8 @@
 ﻿namespace CJBasic.Threading.Application
 {
-    using CJBasic;
-    using CJBasic.ObjectManagement;
-    using CJBasic.Threading.Engines;
+    using global::CJBasic;
+    using global::CJBasic.ObjectManagement;
+     using global::CJBasic.Threading.Engines;
     using System;
     using System.Collections.Generic;
     using System.Threading;

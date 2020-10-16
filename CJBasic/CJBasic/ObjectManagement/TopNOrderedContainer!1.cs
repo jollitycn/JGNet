@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement
 {
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
 

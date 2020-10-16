@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Loggers
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
     using System.Threading;
 

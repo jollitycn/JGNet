@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Widget.Internals
 {
-    using CJBasic.Widget;
+    using global::CJBasic.Widget;
     using System;
     using System.Collections.Generic;
     using System.Drawing;
@@ -11,7 +11,7 @@
     internal class RichEditOle
     {
         private AgileRichTextBox agileRichTextBox;
-        private CJBasic.Widget.Internals.IRichEditOle richEditOle;
+        private global::CJBasic.Widget.Internals.IRichEditOle richEditOle;
 
         public RichEditOle(AgileRichTextBox _richEdit)
         {
@@ -52,12 +52,12 @@
         {
             if (control != null)
             {
-                CJBasic.Widget.Internals.ILockBytes bytes;
-                CJBasic.Widget.Internals.IStorage storage;
-                CJBasic.Widget.Internals.IOleClientSite site;
+                global::CJBasic.Widget.Internals.ILockBytes bytes;
+                global::CJBasic.Widget.Internals.IStorage storage;
+                global::CJBasic.Widget.Internals.IOleClientSite site;
                 Guid guid = Marshal.GenerateGuidForType(control.GetType());
-                CJBasic.Widget.Internals.NativeMethods.CreateILockBytesOnHGlobal(IntPtr.Zero, true, out bytes);
-                CJBasic.Widget.Internals.NativeMethods.StgCreateDocfileOnILockBytes(bytes, 0x1012, 0, out storage);
+                global::CJBasic.Widget.Internals.NativeMethods.CreateILockBytesOnHGlobal(IntPtr.Zero, true, out bytes);
+                global::CJBasic.Widget.Internals.NativeMethods.StgCreateDocfileOnILockBytes(bytes, 0x1012, 0, out storage);
                 this.IRichEditOle.GetClientSite(out site);
                 REOBJECT lpreobject = new REOBJECT();
                 lpreobject.posistion = position;
@@ -82,12 +82,12 @@
 
         public bool InsertImageFromFile(string strFilename, int position)
         {
-            CJBasic.Widget.Internals.ILockBytes bytes;
-            CJBasic.Widget.Internals.IStorage storage;
-            CJBasic.Widget.Internals.IOleClientSite site;
+            global::CJBasic.Widget.Internals.ILockBytes bytes;
+            global::CJBasic.Widget.Internals.IStorage storage;
+            global::CJBasic.Widget.Internals.IOleClientSite site;
             object obj2;
-            CJBasic.Widget.Internals.NativeMethods.CreateILockBytesOnHGlobal(IntPtr.Zero, true, out bytes);
-            CJBasic.Widget.Internals.NativeMethods.StgCreateDocfileOnILockBytes(bytes, 0x1012, 0, out storage);
+            global::CJBasic.Widget.Internals.NativeMethods.CreateILockBytesOnHGlobal(IntPtr.Zero, true, out bytes);
+            global::CJBasic.Widget.Internals.NativeMethods.StgCreateDocfileOnILockBytes(bytes, 0x1012, 0, out storage);
             this.IRichEditOle.GetClientSite(out site);
             FORMATETC pFormatEtc = new FORMATETC();
             pFormatEtc.cfFormat = (CLIPFORMAT) 0;
@@ -97,7 +97,7 @@
             pFormatEtc.tymed = TYMED.TYMED_NULL;
             Guid riid = new Guid("{00000112-0000-0000-C000-000000000046}");
             Guid rclsid = new Guid("{00000000-0000-0000-0000-000000000000}");
-            CJBasic.Widget.Internals.NativeMethods.OleCreateFromFile(ref rclsid, strFilename, ref riid, 1, ref pFormatEtc, site, storage, out obj2);
+            global::CJBasic.Widget.Internals.NativeMethods.OleCreateFromFile(ref rclsid, strFilename, ref riid, 1, ref pFormatEtc, site, storage, out obj2);
             if (obj2 == null)
             {
                 Marshal.ReleaseComObject(bytes);
@@ -105,10 +105,10 @@
                 Marshal.ReleaseComObject(storage);
                 return false;
             }
-            CJBasic.Widget.Internals.IOleObject pUnk = (CJBasic.Widget.Internals.IOleObject) obj2;
+            global::CJBasic.Widget.Internals.IOleObject pUnk = (global::CJBasic.Widget.Internals.IOleObject) obj2;
             Guid pClsid = new Guid();
             pUnk.GetUserClassID(ref pClsid);
-            CJBasic.Widget.Internals.NativeMethods.OleSetContainedObject(pUnk, true);
+            global::CJBasic.Widget.Internals.NativeMethods.OleSetContainedObject(pUnk, true);
             REOBJECT lpreobject = new REOBJECT();
             lpreobject.posistion = position;
             lpreobject.clsid = pClsid;
@@ -126,26 +126,26 @@
             return true;
         }
 
-        public REOBJECT InsertOleObject(CJBasic.Widget.Internals.IOleObject oleObject, int index)
+        public REOBJECT InsertOleObject(global::CJBasic.Widget.Internals.IOleObject oleObject, int index)
         {
             return this.InsertOleObject(oleObject, index, this.agileRichTextBox.TextLength);
         }
 
-        public REOBJECT InsertOleObject(CJBasic.Widget.Internals.IOleObject oleObject, int index, int pos)
+        public REOBJECT InsertOleObject(global::CJBasic.Widget.Internals.IOleObject oleObject, int index, int pos)
         {
-            CJBasic.Widget.Internals.ILockBytes bytes;
-            CJBasic.Widget.Internals.IStorage storage;
-            CJBasic.Widget.Internals.IOleClientSite site;
+            global::CJBasic.Widget.Internals.ILockBytes bytes;
+            global::CJBasic.Widget.Internals.IStorage storage;
+            global::CJBasic.Widget.Internals.IOleClientSite site;
             if (oleObject == null)
             {
                 return null;
             }
-            CJBasic.Widget.Internals.NativeMethods.CreateILockBytesOnHGlobal(IntPtr.Zero, true, out bytes);
-            CJBasic.Widget.Internals.NativeMethods.StgCreateDocfileOnILockBytes(bytes, 0x1012, 0, out storage);
+            global::CJBasic.Widget.Internals.NativeMethods.CreateILockBytesOnHGlobal(IntPtr.Zero, true, out bytes);
+            global::CJBasic.Widget.Internals.NativeMethods.StgCreateDocfileOnILockBytes(bytes, 0x1012, 0, out storage);
             this.IRichEditOle.GetClientSite(out site);
             Guid pClsid = new Guid();
             oleObject.GetUserClassID(ref pClsid);
-            CJBasic.Widget.Internals.NativeMethods.OleSetContainedObject(oleObject, true);
+            global::CJBasic.Widget.Internals.NativeMethods.OleSetContainedObject(oleObject, true);
             REOBJECT lpreobject = new REOBJECT();
             lpreobject.posistion = pos;
             lpreobject.clsid = pClsid;
@@ -190,13 +190,13 @@
             this.UpdateObjects(lpreobject);
         }
 
-        public CJBasic.Widget.Internals.IRichEditOle IRichEditOle
+        public global::CJBasic.Widget.Internals.IRichEditOle IRichEditOle
         {
             get
             {
                 if (this.richEditOle == null)
                 {
-                    this.richEditOle = CJBasic.Widget.Internals.NativeMethods.SendMessage(this.agileRichTextBox.Handle, 0x43c, 0);
+                    this.richEditOle = global::CJBasic.Widget.Internals.NativeMethods.SendMessage(this.agileRichTextBox.Handle, 0x43c, 0);
                 }
                 return this.richEditOle;
             }

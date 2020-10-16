@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Threading.Timers
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     public class CallbackTask<T>

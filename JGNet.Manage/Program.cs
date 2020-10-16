@@ -87,7 +87,7 @@ namespace JGNet.Manage
                 }
                 loadingForm.Close();
                 CJPlus.GlobalUtil.SetMaxLengthOfMessage(1024 * 1024 * 10);
-                CJPlus.Rapid.IRapidPassiveEngine rapidPassiveEngine = CJPlus.Rapid.RapidEngineFactory.CreatePassiveEngine();
+                RapidPassiveEngine rapidPassiveEngine = CJPlus.Rapid.RapidEngineFactory.CreatePassiveEngine();
                 rapidPassiveEngine.WaitResponseTimeoutInSecs = 30;
                 rapidPassiveEngine.SystemToken = SystemToken.Manage;
 

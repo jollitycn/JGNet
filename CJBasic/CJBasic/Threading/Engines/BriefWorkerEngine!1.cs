@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Threading.Engines
 {
-    using CJBasic.Collections;
+     using global::CJBasic.Collections;
     using System;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;

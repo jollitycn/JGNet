@@ -9,13 +9,13 @@
     {
         int Seek(ulong dlibMove, uint dwOrigin, out ulong plibNewPosition);
         int SetSize(ulong libNewSize);
-        int CopyTo([In] CJBasic.Widget.Internals.IStream pstm, ulong cb, out ulong pcbRead, out ulong pcbWritten);
+        int CopyTo([In] global::CJBasic.Widget.Internals.IStream pstm, ulong cb, out ulong pcbRead, out ulong pcbWritten);
         int Commit(uint grfCommitFlags);
         int Revert();
         int LockRegion(ulong libOffset, ulong cb, uint dwLockType);
         int UnlockRegion(ulong libOffset, ulong cb, uint dwLockType);
         int Stat(out System.Runtime.InteropServices.ComTypes.STATSTG pstatstg, uint grfStatFlag);
-        int Clone(out CJBasic.Widget.Internals.IStream ppstm);
+        int Clone(out global::CJBasic.Widget.Internals.IStream ppstm);
     }
 }
 

@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.Widget
 {
-    using CJBasic;
-    using CJBasic.Helpers;
+    using global::CJBasic;
+    using global::CJBasic.Helpers;
     using System;
     using System.ComponentModel;
     using System.Drawing;

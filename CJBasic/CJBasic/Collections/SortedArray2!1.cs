@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Collections
 {
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
     using System.Reflection;
@@ -14,7 +14,7 @@
         private List<T> lazyCopy;
         private int minCapacityForShrink;
         [NonSerialized]
-        private CJBasic.Threading.Synchronize.SmartRWLocker smartRWLocker;
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker smartRWLocker;
         private int validCount;
 
         protected SortedArray2()
@@ -24,7 +24,7 @@
             this.array = new T[0x20];
             this.validCount = 0;
             this.comparer4Key = null;
-            this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+            this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
         }
 
         public SortedArray2(IComparer<T> comparer)
@@ -34,7 +34,7 @@
             this.array = new T[0x20];
             this.validCount = 0;
             this.comparer4Key = null;
-            this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+            this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
             this.comparer4Key = comparer;
         }
 
@@ -45,7 +45,7 @@
             this.array = new T[0x20];
             this.validCount = 0;
             this.comparer4Key = null;
-            this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+            this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
             this.comparer4Key = comparer;
             this.Rebuild(collection);
         }
@@ -370,13 +370,13 @@
             }
         }
 
-        private CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
         {
             get
             {
                 if (this.smartRWLocker == null)
                 {
-                    this.smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+                    this.smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
                 }
                 return this.smartRWLocker;
             }

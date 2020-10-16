@@ -196,7 +196,7 @@
         MmzALuzBvoe4m/vZgT2qawlWYBXWYN0j3Mvd3I8OQfAHZ844suCtTpMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAAD3AW1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAs
@@ -228,7 +228,7 @@
         lK9JMNLWiAkFAAAAAAkFAAAAAAEwATAJBQAAANaUr0kw0taIAAAAANaUr0kw0taIAAAAANaUr0kw0taI
         1pSvSTDS1ogACQUAAAAJBQAAAAkFAAAAAAAAAAAAAAAL
 </value>
-  </data>
+  </data>-->
   <metadata name="quickDateSelector1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>90, 80</value>
   </metadata>
@@ -252,7 +252,7 @@
         18gP/RYKq1L7Bw8AN9TW9zQtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="skinComboBoxSupplier.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxSupplier.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAACPAUNFcnAuQ29yZSwgVmVyc2lvbj0xLjAuMC4w
@@ -268,7 +268,7 @@
         c2l6ZQhfdmVyc2lvbgQAAAxDRXJwLkJyYW5kW10CAAAACAgDAAAACQgAAAAAAAAAAAAAAAcIAAAAAAEA
         AAAAAAAABApDRXJwLkJyYW5kAgAAAAs=
 </value>
-  </data>
+  </data>-->
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>100</value>
   </metadata>

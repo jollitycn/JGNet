@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Threading.Timers
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     [EnumDescription("定时任务的类型")]

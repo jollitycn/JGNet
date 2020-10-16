@@ -1,15 +1,16 @@
 ﻿namespace CJBasic.Emit.ForEntity
 {
-    using CJBasic.Emit.Management;
-    using CJBasic.Helpers;
+    using global::CJBasic.Emit.Management;
+    using global::CJBasic.Helpers;
     using System;
     using System.Collections.Generic;
     using System.Reflection;
+    using global::CJBasic.Helpers;
 
     public static class DynamicObjectClassifierFactory
     {
         private static DynamicAssemblyManager dynamicAssemblyManager = new DynamicAssemblyManager();
-        private static CJBasic.Emit.ForEntity.DynamicObjectClassifierEmitter DynamicObjectClassifierEmitter = new CJBasic.Emit.ForEntity.DynamicObjectClassifierEmitter();
+        private static global::CJBasic.Emit.ForEntity.DynamicObjectClassifierEmitter DynamicObjectClassifierEmitter = new global::CJBasic.Emit.ForEntity.DynamicObjectClassifierEmitter();
         private static IDictionary<string, Type> NTierDictionaryTypeDic = new Dictionary<string, Type>();
 
         public static IObjectClassifier<TObject> CreateObjectClassifier<TObject>(params string[] properties4Classify)

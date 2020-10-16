@@ -13,7 +13,7 @@
     using CJPlus.Core;
     using System;
 
-    public interface IServerEngine : IRapidEngine
+    public interface IRapidServerEngine : IRapidEngine
     {
         event CbGeneric<string, int, byte[], string> MessageReceived;
 

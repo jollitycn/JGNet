@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.Emit.DynamicProxy
 {
-    using CJBasic.Loggers;
-    using CJBasic.ObjectManagement.Pool;
+     using global::CJBasic.Loggers;
+    using global::CJBasic.ObjectManagement.Pool;
     using System;
 
     public sealed class MethodTimeInterceptor : IAopInterceptor, IPooledObjectCreator<TimeLogArounder>

@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Loggers
 {
-    using CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
     using System.IO;
 

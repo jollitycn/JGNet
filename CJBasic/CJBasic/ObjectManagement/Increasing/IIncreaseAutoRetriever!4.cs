@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement.Increasing
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     public interface IIncreaseAutoRetriever<TSourceToken, TRoundID, TKey, TObject>

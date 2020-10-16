@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.Widget
 {
-    using CJBasic;
-    using CJBasic.Threading.Timers.RichTimer;
+    using global::CJBasic;
+    using global::CJBasic.Threading.Timers.RichTimer;
     using System;
     using System.ComponentModel;
     using System.Drawing;
@@ -141,30 +141,30 @@
             }
         }
 
-        private CJBasic.Threading.Timers.RichTimer.TimerConfiguration GetTimerConfiguration()
+        private global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration GetTimerConfiguration()
         {
-            CJBasic.Threading.Timers.RichTimer.TimerConfiguration configuration = null;
+            global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration configuration = null;
             switch (((RichTimerType) this.enumComboBox_timerType.SelectedValue))
             {
                 case RichTimerType.None:
                     return null;
 
                 case RichTimerType.PerHour:
-                    configuration = new CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
+                    configuration = new global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
                     configuration.RichTimerType = RichTimerType.PerHour;
                     configuration.Hour = (int) this.numericUpDown_hours.Value;
                     configuration.Minute = (int) this.numericUpDown_mins.Value;
                     return configuration;
 
                 case RichTimerType.PerDay:
-                    configuration = new CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
+                    configuration = new global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
                     configuration.RichTimerType = RichTimerType.PerDay;
                     configuration.Hour = (int) this.numericUpDown_hours.Value;
                     configuration.Minute = (int) this.numericUpDown_mins.Value;
                     return configuration;
 
                 case RichTimerType.PerWeek:
-                    configuration = new CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
+                    configuration = new global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
                     configuration.RichTimerType = RichTimerType.PerWeek;
                     configuration.DayOfWeek = this.comboBox_week.SelectedIndex;
                     configuration.Hour = (int) this.numericUpDown_hours.Value;
@@ -172,7 +172,7 @@
                     return configuration;
 
                 case RichTimerType.PerMonth:
-                    configuration = new CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
+                    configuration = new global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
                     configuration.RichTimerType = RichTimerType.PerMonth;
                     configuration.Day = (int) this.numericUpDown_day.Value;
                     configuration.Hour = (int) this.numericUpDown_hours.Value;
@@ -180,7 +180,7 @@
                     return configuration;
 
                 case RichTimerType.EverySpan:
-                    configuration = new CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
+                    configuration = new global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration();
                     configuration.RichTimerType = RichTimerType.EverySpan;
                     configuration.Hour = (int) this.numericUpDown_spanhour.Value;
                     configuration.Minute = (int) this.numericUpDown_spanmins.Value;
@@ -350,7 +350,7 @@
             base.ResumeLayout(false);
         }
 
-        private void LoadConfig(CJBasic.Threading.Timers.RichTimer.TimerConfiguration config)
+        private void LoadConfig(global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration config)
         {
             if (config == null)
             {
@@ -468,7 +468,7 @@
         }
 
         [Browsable(false)]
-        public CJBasic.Threading.Timers.RichTimer.TimerConfiguration TimerConfiguration
+        public global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration TimerConfiguration
         {
             get
             {
@@ -479,6 +479,8 @@
                 this.LoadConfig(value);
             }
         }
+
+        global::CJBasic.Threading.Timers.RichTimer.TimerConfiguration ITimerConfigure.TimerConfiguration { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
 

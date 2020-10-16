@@ -71,7 +71,7 @@
             int upRows = 0;
             int downRows = 0;
             int count = 0;
-            if (this.MergeColumnNames.Contains(base.Columns[e.ColumnIndex].Name) && (e.RowIndex != -1))
+            if (this.MergeColumnNames!=null && this.MergeColumnNames.Contains(base.Columns[e.ColumnIndex].Name) && (e.RowIndex != -1))
             {
                 int width = e.CellBounds.Width;
                 Pen pen = new Pen(brush);

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using JGNet.Core.RemotingEntity;
+using System;
 using System.Collections.Generic;
 
-using System.Text;
-using JGNet.Core.RemotingEntity;
+using System.Text; 
 
 namespace JGNet.Common
 {

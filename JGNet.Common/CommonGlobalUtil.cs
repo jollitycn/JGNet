@@ -35,7 +35,6 @@ namespace JGNet.Common
 {
     public class CommonGlobalUtil
     {
-      
 
         public static BaseForm MainForm { get; set; }
         public static string GetArrayString(String[] arrs, char appendChar)
@@ -300,7 +299,7 @@ namespace JGNet.Common
             }
             else
             {
-
+                if(CommonGlobalUtil.Engine!=null)
                 if (CommonGlobalUtil.Engine.Connected)
                 {
                     value = false;
@@ -333,7 +332,7 @@ namespace JGNet.Common
             return unValidate;
         }
 
-      
+
         public static string GetSizeDisplayNames(SizeGroup sizeGroup, String sizeNames)
         {
             String displayNames = string.Empty;
@@ -677,7 +676,7 @@ namespace JGNet.Common
         public static readonly Font DEFAULT_FONT = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
         public static string SystemDir = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\ELinkShop\\";
         public static string EmallDir = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\ELinkShop\\" + "emall\\";
-        public static FileAgileLogger logger;
+        public static FileAgileLogger logger;//CommonGlobalUtil.Initialize("Common.log");
         /// <summary>
         /// 给充值规则按充值金额排序
         /// </summary>
@@ -689,7 +688,9 @@ namespace JGNet.Common
             }
         }
 
-        public static void Initialize(bool isPos)
+     
+
+    public static void Initialize(bool isPos)
         {
             string logName = "ManageLog.txt";
             if (isPos)
@@ -1569,6 +1570,10 @@ namespace JGNet.Common
         {
             try
             {
+
+                if (CommonGlobalUtil.logger == null) {
+                    Initialize("Common.log");
+                }
                 //StackTrace trace = new StackTrace();
                 //StackFrame frame = trace.GetFrame(1);//1代表上级，2代表上上级，以此类推  
                 //MethodBase method = frame.GetMethod();
@@ -1580,6 +1585,10 @@ namespace JGNet.Common
         {
             try
             {
+                if (CommonGlobalUtil.logger == null)
+                {
+                    Initialize("Common.log");
+                }
                 StackTrace trace = new StackTrace();
                 StackFrame frame = trace.GetFrame(1);//1代表上级，2代表上上级，以此类推  
                 MethodBase method = frame.GetMethod();
@@ -1642,7 +1651,7 @@ namespace JGNet.Common
                 //StackTrace trace = new StackTrace();
                 //StackFrame frame = trace.GetFrame(1);//1代表上级，2代表上上级，以此类推  
                 //MethodBase method = frame.GetMethod();
-                CommonGlobalUtil.logger.Log(ex,string.Empty, ErrorLevel.Standard);
+                CommonGlobalUtil.WriteLog(ex);
                 if (showMessage)
                 {
                     if (ex is TimeoutException)

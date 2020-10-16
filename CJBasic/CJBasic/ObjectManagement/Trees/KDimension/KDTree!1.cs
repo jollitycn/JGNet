@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement.Trees.KDimension
 {
-    using CJBasic.Arithmetic;
+    using global::CJBasic.Arithmetic;
     using System;
     using System.Collections.Generic;
 

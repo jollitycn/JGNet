@@ -1,4 +1,4 @@
-﻿namespace CErp.Common
+﻿namespace JGNet.Common
 {
     partial class DayBrandBenefitReportManageCtrl
     {
@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skinPanel1 = new System.Windows.Forms.Panel();
-            this.BaseButton1 = new CErp.Common.Components.BaseButton();
-            this.skinComboBox_Brand = new CErp.Common.BrandComboBox();
+            this.BaseButton1 = new JGNet.Common.Components.BaseButton();
+            this.skinComboBox_Brand = new JGNet.Common.BrandComboBox();
             this.skinLabel11 = new CCWin.SkinControl.SkinLabel();
             this.dateTimePicker_End = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Start = new System.Windows.Forms.DateTimePicker();
@@ -82,13 +82,13 @@
             // 
             this.BaseButton1.BackColor = System.Drawing.Color.Transparent;
             this.BaseButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.BaseButton1.DownBack = global::CErp.Common.Properties.Resources.btnDownBack;
+            this.BaseButton1.DownBack = global::JGNet.Common.Properties.Resources.btnDownBack;
             this.BaseButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.BaseButton1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.BaseButton1.Location = new System.Drawing.Point(549, 1);
-            this.BaseButton1.MouseBack = global::CErp.Common.Properties.Resources.btnMouseBack;
+            this.BaseButton1.MouseBack = global::JGNet.Common.Properties.Resources.btnMouseBack;
             this.BaseButton1.Name = "BaseButton1";
-            this.BaseButton1.NormlBack = global::CErp.Common.Properties.Resources.btnNormlBack;
+            this.BaseButton1.NormlBack = global::JGNet.Common.Properties.Resources.btnNormlBack;
             this.BaseButton1.Size = new System.Drawing.Size(75, 32);
             this.BaseButton1.TabIndex = 3;
             this.BaseButton1.Text = "查询";
@@ -210,7 +210,7 @@
             // 
             // reportBindingSource
             // 
-            this.reportBindingSource.DataSource = typeof(CErp.BrandBenefitDayReport);
+            this.reportBindingSource.DataSource = typeof(JGNet.BrandBenefitDayReport);
             // 
             // brandNameDataGridViewTextBoxColumn
             // 

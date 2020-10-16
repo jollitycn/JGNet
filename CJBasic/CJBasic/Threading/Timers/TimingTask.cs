@@ -1,6 +1,6 @@
-﻿namespace CJBasic.Threading.Timers
+﻿namespace  CJBasic.Threading.Timers
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     [Serializable]
@@ -12,7 +12,7 @@
         [NonSerialized]
         private DateTime lastRightTime = DateTime.Parse("2000-01-01 00:00:00");
         private ITimingTaskExcuter timingTaskExcuter;
-        private CJBasic.Threading.Timers.TimingTaskType timingTaskType = CJBasic.Threading.Timers.TimingTaskType.PerDay;
+        private global::CJBasic.Threading.Timers.TimingTaskType timingTaskType = global::CJBasic.Threading.Timers.TimingTaskType.PerDay;
 
         public bool IsOnTime(int checkSpanSeconds, DateTime now)
         {
@@ -24,7 +24,7 @@
             bool flag = false;
             switch (this.timingTaskType)
             {
-                case CJBasic.Threading.Timers.TimingTaskType.PerHour:
+                case global::CJBasic.Threading.Timers.TimingTaskType.PerHour:
                     flag = new ShortTime(now.Hour, this.excuteTime.Minute, this.excuteTime.Second).IsOnTime(now, checkSpanSeconds);
                     if (!flag)
                     {
@@ -36,11 +36,11 @@
                     }
                     break;
 
-                case CJBasic.Threading.Timers.TimingTaskType.PerDay:
+                case global::CJBasic.Threading.Timers.TimingTaskType.PerDay:
                     flag = this.excuteTime.IsOnTime(now, checkSpanSeconds);
                     break;
 
-                case CJBasic.Threading.Timers.TimingTaskType.PerWeek:
+                case global::CJBasic.Threading.Timers.TimingTaskType.PerWeek:
                     if (now.DayOfWeek == this.dayOfWeek)
                     {
                         flag = this.excuteTime.IsOnTime(now, checkSpanSeconds);
@@ -49,7 +49,7 @@
                     flag = false;
                     break;
 
-                case CJBasic.Threading.Timers.TimingTaskType.PerMonth:
+                case global::CJBasic.Threading.Timers.TimingTaskType.PerMonth:
                     if (now.Day == this.day)
                     {
                         flag = this.excuteTime.IsOnTime(now, checkSpanSeconds);
@@ -113,7 +113,7 @@
             }
         }
 
-        public CJBasic.Threading.Timers.TimingTaskType TimingTaskType
+        public global::CJBasic.Threading.Timers.TimingTaskType TimingTaskType
         {
             get
             {

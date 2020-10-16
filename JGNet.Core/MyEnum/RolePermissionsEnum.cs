@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace CErp.Core.MyEnum
+namespace JGNet.Core.MyEnum
 {
     public enum RolePermissionsEnum
     {

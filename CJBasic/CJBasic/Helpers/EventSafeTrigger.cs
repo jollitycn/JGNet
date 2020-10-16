@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Helpers
 {
-    using CJBasic.Loggers;
+     using global::CJBasic.Loggers;
     using System;
 
     public class EventSafeTrigger

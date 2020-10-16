@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Threading.Timers.RichTimer
 {
-    using CJBasic.Loggers;
+     using global::CJBasic.Loggers;
     using System;
     using System.Collections.Generic;
 

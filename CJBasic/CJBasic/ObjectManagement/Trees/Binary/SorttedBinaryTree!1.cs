@@ -5,17 +5,17 @@
 
     public class SorttedBinaryTree<TVal> : ISorttedBinaryTree<TVal>, IBinaryTree<TVal> where TVal: IComparable
     {
-        protected CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root;
+        protected global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root;
 
         public SorttedBinaryTree()
         {
             this.root = null;
         }
 
-        private int ComputeDepth(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leaf)
+        private int ComputeDepth(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leaf)
         {
             int num = 1;
-            for (CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node = leaf; node.Parent != null; node = node.Parent)
+            for (global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node = leaf; node.Parent != null; node = node.Parent)
             {
                 num++;
             }
@@ -27,7 +27,7 @@
             return (this.Get(var) != null);
         }
 
-        private void CountAllNodes(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTreeRoot, ref int count)
+        private void CountAllNodes(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTreeRoot, ref int count)
         {
             if (childTreeRoot != null)
             {
@@ -37,7 +37,7 @@
             }
         }
 
-        private void DoGetAllNodes(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTreeRoot, bool ascend, ref IList<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> list, TraverseMode mode)
+        private void DoGetAllNodes(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTreeRoot, bool ascend, ref IList<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> list, TraverseMode mode)
         {
             if (childTreeRoot != null)
             {
@@ -71,7 +71,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Get(TVal theValue)
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Get(TVal theValue)
         {
             if (this.root != null)
             {
@@ -79,7 +79,7 @@
                 {
                     return this.root;
                 }
-                CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root = this.root;
+                global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root = this.root;
                 while (root != null)
                 {
                     int num = theValue.CompareTo(root.TheValue);
@@ -100,22 +100,22 @@
             return null;
         }
 
-        public IList<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> GetAllNodesAscend(bool ascend)
+        public IList<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> GetAllNodesAscend(bool ascend)
         {
-            IList<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> list = new List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
+            IList<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> list = new List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
             this.DoGetAllNodes(this.root, ascend, ref list, TraverseMode.MidOrder);
             return list;
         }
 
         private int GetDepth()
         {
-            IList<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> allNodesAscend = this.GetAllNodesAscend(true);
+            IList<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> allNodesAscend = this.GetAllNodesAscend(true);
             if (allNodesAscend == null)
             {
                 return 0;
             }
             IList<int> list2 = new List<int>();
-            foreach (CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node in allNodesAscend)
+            foreach (global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node in allNodesAscend)
             {
                 if (node.IsLeaf)
                 {
@@ -133,9 +133,9 @@
             return num;
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> GetMaxNode(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTree)
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> GetMaxNode(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTree)
         {
-            CJBasic.ObjectManagement.Trees.Binary.Node<TVal> rightChild = childTree;
+            global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> rightChild = childTree;
             if (childTree.RightChild != null)
             {
                 rightChild = childTree.RightChild;
@@ -143,9 +143,9 @@
             return rightChild;
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> GetMinNode(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTree)
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> GetMinNode(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> childTree)
         {
-            CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leftChild = childTree;
+            global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leftChild = childTree;
             if (childTree.LeftChild != null)
             {
                 leftChild = childTree.LeftChild;
@@ -157,11 +157,11 @@
         {
             if (this.root == null)
             {
-                this.root = new CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(theValue, null);
+                this.root = new global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(theValue, null);
             }
             else
             {
-                CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root = this.root;
+                global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root = this.root;
                 while (true)
                 {
                     int num = theValue.CompareTo(root.TheValue);
@@ -173,7 +173,7 @@
                     {
                         if (root.RightChild == null)
                         {
-                            root.RightChild = new CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(theValue, root);
+                            root.RightChild = new global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(theValue, root);
                             return;
                         }
                         root = root.RightChild;
@@ -182,7 +182,7 @@
                     {
                         if (root.LeftChild == null)
                         {
-                            root.LeftChild = new CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(theValue, root);
+                            root.LeftChild = new global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(theValue, root);
                             return;
                         }
                         root = root.LeftChild;
@@ -196,16 +196,16 @@
             this.Remove(theValue, ref this.root);
         }
 
-        private void Remove(TVal theValue, ref CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node)
+        private void Remove(TVal theValue, ref global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node)
         {
             if (node != null)
             {
                 if (node.TheValue.CompareTo(theValue) == 0)
                 {
-                    CJBasic.ObjectManagement.Trees.Binary.Node<TVal> parent;
+                    global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> parent;
                     if ((node.LeftChild != null) && (node.RightChild != null))
                     {
-                        CJBasic.ObjectManagement.Trees.Binary.Node<TVal> minNode = this.GetMinNode(node.RightChild);
+                        global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> minNode = this.GetMinNode(node.RightChild);
                         if (minNode.Parent.TheValue.CompareTo(theValue) == 0)
                         {
                             parent = node.Parent;
@@ -242,22 +242,22 @@
                 }
                 else if (theValue.CompareTo(node.TheValue) < 0)
                 {
-                    CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leftChild = node.LeftChild;
+                    global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leftChild = node.LeftChild;
                     this.Remove(theValue, ref leftChild);
                     node.LeftChild = leftChild;
                 }
                 else
                 {
-                    CJBasic.ObjectManagement.Trees.Binary.Node<TVal> rightChild = node.RightChild;
+                    global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> rightChild = node.RightChild;
                     this.Remove(theValue, ref rightChild);
                     node.RightChild = rightChild;
                 }
             }
         }
 
-        public IList<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> Traverse(TraverseMode mode)
+        public IList<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> Traverse(TraverseMode mode)
         {
-            IList<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> list = new List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
+            IList<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> list = new List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
             switch (mode)
             {
                 case TraverseMode.PreOrder:
@@ -273,6 +273,12 @@
                     return list;
             }
             throw new Exception("Error TraverseMode !");
+        }
+          
+
+        IList<Node<TVal>> ISorttedBinaryTree<TVal>.Traverse(TraverseMode mode)
+        {
+            throw new NotImplementedException();
         }
 
         public int Count
@@ -297,7 +303,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Root
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Root
         {
             get
             {

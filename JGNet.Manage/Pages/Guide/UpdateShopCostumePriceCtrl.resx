@@ -126,7 +126,7 @@
   <metadata name="outboundDetailBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>720, 21</value>
   </metadata>
-  <data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
+	<!--<data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAAD3AW1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAs
@@ -158,7 +158,7 @@
         QS/iCoq+1ogJBQAAAAAJBQAAAAABMAEwCQUAAAAKQS/iCoq+1ogAAAAAQS/iCoq+1ogAAAAAQS/iCoq+
         1ohBL+IKir7WiAAJBQAAAAkFAAAACQUAAAAAAAAAAAAAAAs=
 </value>
-  </data>
+  </data>-->
   <metadata name="CostPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

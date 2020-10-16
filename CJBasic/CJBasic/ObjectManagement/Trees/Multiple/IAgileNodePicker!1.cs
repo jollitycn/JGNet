@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement.Trees.Multiple
 {
-    using CJBasic.ObjectManagement;
+    using global::CJBasic.ObjectManagement;
 
     public interface IAgileNodePicker<TVal> : IObjectRetriever<string, TVal> where TVal: IMTreeVal
     {

@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Widget
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
     using System.Drawing;
     using System.Threading;

@@ -78,6 +78,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // ProgressForm
             // 
@@ -88,8 +89,10 @@
             this.Controls.Add(this.skinLabel_TaskName);
             this.Controls.Add(this.skinLabel1);
             this.Controls.Add(this.progressBar1);
+            this.EffectCaption = CCWin.TitleType.EffectTitle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.Mobile = CCWin.MobileStyle.Mobile;
             this.Name = "ProgressForm";
             this.ShowDrawIcon = false;
             this.ShowInTaskbar = false;

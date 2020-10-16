@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Emit.Management
 {
-    using CJBasic.ObjectManagement.Managers;
+    using global::CJBasic.ObjectManagement.Managers;
     using System;
     using System.Collections.Generic;
     using System.Reflection;

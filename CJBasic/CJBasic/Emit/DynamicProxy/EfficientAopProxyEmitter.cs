@@ -1,11 +1,12 @@
 ﻿namespace CJBasic.Emit.DynamicProxy
 {
-    using CJBasic.Emit;
-    using CJBasic.Helpers;
+    using global::CJBasic.Emit;
+    using global::CJBasic.Helpers;
     using System;
     using System.Collections.Generic;
     using System.Reflection;
     using System.Reflection.Emit;
+    using global::CJBasic.Helpers;
 
     public class EfficientAopProxyEmitter
     {

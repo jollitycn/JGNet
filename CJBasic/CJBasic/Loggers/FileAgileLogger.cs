@@ -1,14 +1,15 @@
 ﻿namespace CJBasic.Loggers
 {
-    using CJBasic;
-    using CJBasic.Helpers;
+    using global::CJBasic;
+    using global::CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
     using System.Threading;
 
     public sealed class FileAgileLogger : IAgileLogger, IDisposable
     {
         private bool enabled;
-        private CJBasic.Loggers.FileLogger fileLogger;
+        private global::CJBasic.Loggers.FileLogger fileLogger;
         private string filePath;
         private long maxLength;
 
@@ -101,13 +102,13 @@
             }
         }
 
-        private CJBasic.Loggers.FileLogger FileLogger
+        private global::CJBasic.Loggers.FileLogger FileLogger
         {
             get
             {
                 if (this.fileLogger == null)
                 {
-                    this.fileLogger = new CJBasic.Loggers.FileLogger(this.filePath);
+                    this.fileLogger = new global::CJBasic.Loggers.FileLogger(this.filePath);
                     this.fileLogger.MaxLength4ChangeFile = this.maxLength;
                 }
                 return this.fileLogger;

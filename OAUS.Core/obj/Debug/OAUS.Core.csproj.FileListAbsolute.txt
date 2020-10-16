@@ -65,12 +65,11 @@ F:\studio\projects\CostumeERP\OAUS.Core\obj\Debug\OAUS.Core.csproj.CopyComplete
 F:\studio\projects\CostumeERP\OAUS.Core\obj\Debug\OAUS.Core.dll
 F:\studio\projects\CostumeERP\OAUS.Core\obj\Debug\OAUS.Core.pdb
 F:\studio\projects\CostumeERP\OAUS.Core\obj\Debug\OAUS.Core.csprojAssemblyReference.cache
-D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\obj\Debug\OAUS.Core.csproj.CoreCompileInputs.cache
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\bin\Debug\OAUS.Core.dll
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\bin\Debug\OAUS.Core.pdb
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\bin\Debug\CJBasic.dll
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\bin\Debug\CJBasic.pdb
-D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\obj\Debug\OAUS.Core.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\obj\Debug\OAUS.Core.csproj.CoreCompileInputs.cache
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\obj\Debug\OAUS.Core.csproj.CopyComplete
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\obj\Debug\OAUS.Core.dll
 D:\BaiduNetdiskDownload\CostumeERP_20200928\JGNet\OAUS.Core\obj\Debug\OAUS.Core.pdb

@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Arithmetic.AStar
 {
-    using CJBasic.Geometry;
+     using global::CJBasic.Geometry;
     using System;
     using System.Collections.Generic;
     using System.Drawing;

@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.Arithmetic
 {
-    using CJBasic;
-    using CJBasic.Threading.Engines;
+    using global::CJBasic; 
+    using global::CJBasic.Threading.Engines;
     using System;
     using System.Threading;
 

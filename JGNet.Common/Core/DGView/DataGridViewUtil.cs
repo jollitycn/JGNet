@@ -533,6 +533,7 @@ namespace JGNet.Common.Core.Util
                 foreach (DataColumn column in row.Table.Columns)
                 {
                     PropertyInfo prop = obj.GetType().GetProperty(column.ColumnName);
+                    if(prop!=null)
                     try
                     {
                         object value = row[column.ColumnName];

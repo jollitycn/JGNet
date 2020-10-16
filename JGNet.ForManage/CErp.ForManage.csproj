@@ -7,8 +7,8 @@
     <ProjectGuid>{1C4A0125-B110-4158-8BF8-CF4C4BD90B29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CErp.ForManage</RootNamespace>
-    <AssemblyName>CErp.ForManage</AssemblyName>
+    <RootNamespace>JGNet.ForManage</RootNamespace>
+    <AssemblyName>JGNet.ForManage</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,13 +48,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CErp.Common\CErp.Common.csproj">
+    <ProjectReference Include="..\JGNet.Common\JGNet.Common.csproj">
       <Project>{2BF356C7-F1F4-4447-ABA8-D0F23DBD99DD}</Project>
-      <Name>CErp.Common</Name>
+      <Name>JGNet.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CErp.Core\CErp.Core.csproj">
+    <ProjectReference Include="..\JGNet.Core\JGNet.Core.csproj">
       <Project>{94abc99c-89ec-44fa-8a0e-59ff3eae4d62}</Project>
-      <Name>CErp.Core</Name>
+      <Name>JGNet.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

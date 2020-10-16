@@ -1,7 +1,8 @@
 ﻿namespace CJBasic.Threading.Timers.RichTimer
 {
-    using CJBasic;
-    using CJBasic.Helpers;
+    using global::CJBasic;
+    using global::CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
 
     [Serializable]
@@ -13,9 +14,9 @@
         [NonSerialized]
         private DateTime lastRightTime = DateTime.Parse("2000-01-01 00:00:00");
         private int minute = 0;
-        private CJBasic.Threading.Timers.RichTimer.RichTimerType richTimerType = CJBasic.Threading.Timers.RichTimer.RichTimerType.PerDay;
+        private global::CJBasic.Threading.Timers.RichTimer.RichTimerType richTimerType = global::CJBasic.Threading.Timers.RichTimer.RichTimerType.PerDay;
         private int second = 0;
-        private CJBasic.ShortTimeScope shortTimeScope = new CJBasic.ShortTimeScope();
+        private global::CJBasic.ShortTimeScope shortTimeScope = new global::CJBasic.ShortTimeScope();
         private DateTime targetTimeForJustOnce = DateTime.Now;
         private DateScope validityDateScope = new DateScope();
 
@@ -33,28 +34,28 @@
             DateTime requiredTime = new DateTime();
             switch (this.richTimerType)
             {
-                case CJBasic.Threading.Timers.RichTimer.RichTimerType.PerHour:
+                case global::CJBasic.Threading.Timers.RichTimer.RichTimerType.PerHour:
                     requiredTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, this.minute, this.second);
                     break;
 
-                case CJBasic.Threading.Timers.RichTimer.RichTimerType.PerDay:
+                case global::CJBasic.Threading.Timers.RichTimer.RichTimerType.PerDay:
                     requiredTime = new DateTime(now.Year, now.Month, now.Day, this.hour, this.minute, this.second);
                     break;
 
-                case CJBasic.Threading.Timers.RichTimer.RichTimerType.PerWeek:
+                case global::CJBasic.Threading.Timers.RichTimer.RichTimerType.PerWeek:
                     requiredTime = new DateTime(now.Year, now.Month, now.Day, this.hour, this.minute, this.second);
                     break;
 
-                case CJBasic.Threading.Timers.RichTimer.RichTimerType.PerMonth:
+                case global::CJBasic.Threading.Timers.RichTimer.RichTimerType.PerMonth:
                     requiredTime = new DateTime(now.Year, now.Month, this.Day, this.hour, this.minute, this.second);
                     break;
 
-                case CJBasic.Threading.Timers.RichTimer.RichTimerType.EverySpan:
+                case global::CJBasic.Threading.Timers.RichTimer.RichTimerType.EverySpan:
                 {
                     int cycleSpanInSecs = ((this.hour * 0xe10) + (this.minute * 60)) + this.second;
                     return ((cycleSpanInSecs > 0) && TimeHelper.IsOnTime(this.shortTimeScope.ShortTimeStart.GetDateTime(), now, cycleSpanInSecs, checkSpanSeconds));
                 }
-                case CJBasic.Threading.Timers.RichTimer.RichTimerType.JustOnce:
+                case global::CJBasic.Threading.Timers.RichTimer.RichTimerType.JustOnce:
                     requiredTime = this.targetTimeForJustOnce;
                     break;
             }
@@ -73,7 +74,7 @@
 
         public bool IsExpired(DateTime now)
         {
-            if (this.richTimerType == CJBasic.Threading.Timers.RichTimer.RichTimerType.JustOnce)
+            if (this.richTimerType == global::CJBasic.Threading.Timers.RichTimer.RichTimerType.JustOnce)
             {
                 TimeSpan span = (TimeSpan) (now - this.targetTimeForJustOnce);
                 return (span.TotalMilliseconds >= 10000.0);
@@ -174,7 +175,7 @@
             }
         }
 
-        public CJBasic.Threading.Timers.RichTimer.RichTimerType RichTimerType
+        public global::CJBasic.Threading.Timers.RichTimer.RichTimerType RichTimerType
         {
             get
             {
@@ -198,7 +199,7 @@
             }
         }
 
-        public CJBasic.ShortTimeScope ShortTimeScope
+        public global::CJBasic.ShortTimeScope ShortTimeScope
         {
             get
             {
@@ -206,7 +207,7 @@
             }
             set
             {
-                this.shortTimeScope = value ?? new CJBasic.ShortTimeScope();
+                this.shortTimeScope = value ?? new global::CJBasic.ShortTimeScope();
             }
         }
 

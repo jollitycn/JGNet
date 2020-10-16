@@ -1,6 +1,6 @@
-﻿using CErp.Common;
-using CErp.Core;
-using CErp.Core.InteractEntity;
+﻿using JGNet.Common;
+using JGNet.Core;
+using JGNet.Core.InteractEntity;
 using ESPlus.Rapid;
 using ESPlus.Serialization;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CErp.ForManage
+namespace JGNet.ForManage
 {
     public class ServerProxy: Common.ServerProxy
     {

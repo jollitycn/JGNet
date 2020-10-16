@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement.Trees.Binary
 {
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
 
@@ -8,30 +8,30 @@
     public class Heap<TVal> : IHeap<TVal>, IBinaryTree<TVal> where TVal: IComparable
     {
         [NonSerialized]
-        private CJBasic.Threading.Synchronize.SmartRWLocker _smartRWLocker;
-        private List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> allNode;
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker _smartRWLocker;
+        private List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> allNode;
         private int count;
-        private CJBasic.ObjectManagement.Trees.Binary.HeapType heapType;
-        private CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root;
+        private global::CJBasic.ObjectManagement.Trees.Binary.HeapType heapType;
+        private global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root;
 
         public Heap()
         {
-            this.allNode = new List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
+            this.allNode = new List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
             this._smartRWLocker = null;
-            this.heapType = CJBasic.ObjectManagement.Trees.Binary.HeapType.Max;
+            this.heapType = global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max;
             this.count = 0;
         }
 
-        public Heap(CJBasic.ObjectManagement.Trees.Binary.HeapType type)
+        public Heap(global::CJBasic.ObjectManagement.Trees.Binary.HeapType type)
         {
-            this.allNode = new List<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
+            this.allNode = new List<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
             this._smartRWLocker = null;
-            this.heapType = CJBasic.ObjectManagement.Trees.Binary.HeapType.Max;
+            this.heapType = global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max;
             this.count = 0;
             this.heapType = type;
         }
 
-        private bool Contain(TVal val, CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node)
+        private bool Contain(TVal val, global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node)
         {
             if (node == null)
             {
@@ -41,7 +41,7 @@
             {
                 return true;
             }
-            if (((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (node.TheValue.CompareTo(val) < 0)) || ((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (node.TheValue.CompareTo(val) > 0)))
+            if (((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (node.TheValue.CompareTo(val) < 0)) || ((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (node.TheValue.CompareTo(val) > 0)))
             {
                 return false;
             }
@@ -56,11 +56,11 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Get(TVal val)
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Get(TVal val)
         {
             using (this.SmartRWLocker.Lock(AccessMode.Read))
             {
-                foreach (CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node in this.allNode)
+                foreach (global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node in this.allNode)
                 {
                     if (node.TheValue.CompareTo(val) == 0)
                     {
@@ -71,14 +71,14 @@
             }
         }
 
-        private CJBasic.ObjectManagement.Trees.Binary.Node<TVal> GetTheLastNode(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> rootNode)
+        private global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> GetTheLastNode(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> rootNode)
         {
             if (rootNode == null)
             {
                 return null;
             }
-            CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node = null;
-            Queue<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> queue = new Queue<CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
+            global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node = null;
+            Queue<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>> queue = new Queue<global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>>();
             queue.Enqueue(rootNode);
             while (queue.Count > 0)
             {
@@ -101,7 +101,7 @@
             {
                 if (!this.Contains(val))
                 {
-                    CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node = new CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(val, null);
+                    global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node = new global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal>(val, null);
                     if (this.root == null)
                     {
                         this.root = node;
@@ -144,7 +144,7 @@
         {
             using (this.SmartRWLocker.Lock(AccessMode.Write))
             {
-                CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root = this.Get(val);
+                global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root = this.Get(val);
                 if (root != null)
                 {
                     if (this.allNode.Count == 1)
@@ -153,7 +153,7 @@
                     }
                     else
                     {
-                        CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node2 = this.allNode[this.allNode.Count - 1];
+                        global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node2 = this.allNode[this.allNode.Count - 1];
                         if (root.TheValue.CompareTo(node2.TheValue) != 0)
                         {
                             root.TheValue = node2.TheValue;
@@ -174,10 +174,10 @@
             }
         }
 
-        private void SwapFromLeafToRoot(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node)
+        private void SwapFromLeafToRoot(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node)
         {
-            CJBasic.ObjectManagement.Trees.Binary.Node<TVal> parent = node;
-            if (this.heapType != CJBasic.ObjectManagement.Trees.Binary.HeapType.Max)
+            global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> parent = node;
+            if (this.heapType != global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max)
             {
                 while ((parent.Parent != null) && (parent.Parent.TheValue.CompareTo(parent.TheValue) > 0))
                 {
@@ -195,14 +195,14 @@
             }
         }
 
-        private void SwapFromRootToLeaf(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root)
+        private void SwapFromRootToLeaf(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> root)
         {
-            CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leftChild = root;
+            global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> leftChild = root;
             while ((leftChild.LeftChild != null) || (leftChild.RightChild != null))
             {
                 if (leftChild.RightChild == null)
                 {
-                    if (((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) < 0)) || ((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) > 0)))
+                    if (((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) < 0)) || ((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) > 0)))
                     {
                         this.SwapValueOfTwoNode(leftChild, leftChild.LeftChild);
                         leftChild = leftChild.LeftChild;
@@ -210,9 +210,9 @@
                     }
                     break;
                 }
-                if (((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.LeftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) < 0)) || ((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.LeftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) > 0)))
+                if (((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.LeftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) < 0)) || ((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.LeftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) > 0)))
                 {
-                    if (((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) < 0)) || ((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) > 0)))
+                    if (((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) < 0)) || ((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.TheValue.CompareTo(leftChild.RightChild.TheValue) > 0)))
                     {
                         this.SwapValueOfTwoNode(leftChild, leftChild.RightChild);
                         leftChild = leftChild.RightChild;
@@ -220,7 +220,7 @@
                     }
                     break;
                 }
-                if (((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) < 0)) || ((this.heapType == CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) > 0)))
+                if (((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Max) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) < 0)) || ((this.heapType == global::CJBasic.ObjectManagement.Trees.Binary.HeapType.Min) && (leftChild.TheValue.CompareTo(leftChild.LeftChild.TheValue) > 0)))
                 {
                     this.SwapValueOfTwoNode(leftChild, leftChild.LeftChild);
                     leftChild = leftChild.LeftChild;
@@ -232,7 +232,7 @@
             }
         }
 
-        private void SwapValueOfTwoNode(CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node1, CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node2)
+        private void SwapValueOfTwoNode(global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node1, global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> node2)
         {
             TVal theValue = node1.TheValue;
             node1.TheValue = node2.TheValue;
@@ -255,7 +255,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.HeapType HeapType
+        public global::CJBasic.ObjectManagement.Trees.Binary.HeapType HeapType
         {
             get
             {
@@ -263,7 +263,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Root
+        public global::CJBasic.ObjectManagement.Trees.Binary.Node<TVal> Root
         {
             get
             {
@@ -271,17 +271,19 @@
             }
         }
 
-        private CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
+        private global::CJBasic.Threading.Synchronize.SmartRWLocker SmartRWLocker
         {
             get
             {
                 if (this._smartRWLocker == null)
                 {
-                    this._smartRWLocker = new CJBasic.Threading.Synchronize.SmartRWLocker();
+                    this._smartRWLocker = new global::CJBasic.Threading.Synchronize.SmartRWLocker();
                 }
                 return this._smartRWLocker;
             }
         }
+
+        Node<TVal> IBinaryTree<TVal>.Root => throw new NotImplementedException();
     }
 }
 

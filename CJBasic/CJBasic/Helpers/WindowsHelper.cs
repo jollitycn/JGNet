@@ -104,7 +104,7 @@
         private static extern IntPtr GetWindowDC(IntPtr ptr);
         public static void KeybdEvent(byte key, byte bScan, KeybdEventFlag flags, uint dwExtraInfo)
         {
-            CJBasic.Helpers.INPUT pInputs = new CJBasic.Helpers.INPUT();
+            global::CJBasic.Helpers.INPUT pInputs = new global::CJBasic.Helpers.INPUT();
             pInputs.type = 1;
             pInputs.ki.wVk = key;
             pInputs.ki.wScan = MapVirtualKey(key, 0);
@@ -149,7 +149,7 @@
         [DllImport("gdi32.dll")]
         private static extern IntPtr SelectObject(IntPtr hdc, IntPtr bmp);
         [DllImport("user32.dll")]
-        private static extern uint SendInput(uint nInputs, ref CJBasic.Helpers.INPUT pInputs, int cbSize);
+        private static extern uint SendInput(uint nInputs, ref global::CJBasic.Helpers.INPUT pInputs, int cbSize);
         [DllImport("user32.dll", EntryPoint="SetForegroundWindow")]
         private static extern bool SetActiveWindow(IntPtr hWnd);
         [DllImport("user32.dll")]

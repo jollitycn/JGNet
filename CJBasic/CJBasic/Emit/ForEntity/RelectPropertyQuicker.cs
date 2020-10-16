@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Emit.ForEntity
 {
-    using CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
 
     internal class RelectPropertyQuicker : IPropertyQuicker

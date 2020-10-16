@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:CErp.Manage.Setup"
+"ProjectName" = "8:JGNet.Manage.Setup"
 "LanguageId" = "3:2052"
 "CodePage" = "3:936"
 "UILanguageId" = "3:2052"
@@ -641,7 +641,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\CErp.Manage.Setup.msi"
+        "OutputFilename" = "8:Release\\JGNet.Manage.Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -862,7 +862,7 @@
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\CErp.Manage\\bin\\Debug\\ESBasic.dll"
+            "SourcePath" = "8:..\\JGNet.Manage\\bin\\Debug\\ESBasic.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
@@ -904,16 +904,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CErp.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:JGNet.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_2642E0A78D18187FCF5A22A671D2AA1C"
                     {
-                    "Name" = "8:CErp.Common.dll"
+                    "Name" = "8:JGNet.Common.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CErp.Common.dll"
+            "SourcePath" = "8:JGNet.Common.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
@@ -984,7 +984,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BA0BB5937A447A79BD5B914E3A45889"
             {
-            "SourcePath" = "8:..\\CErp.Manage\\bin\\Debug\\areas.dat"
+            "SourcePath" = "8:..\\JGNet.Manage\\bin\\Debug\\areas.dat"
             "TargetName" = "8:areas.dat"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
@@ -1004,8 +1004,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F2F711EE0C94A3CACB053CF91723B1D"
             {
-            "SourcePath" = "8:..\\CErp.Manage\\bin\\Debug\\CErp.Common.pdb"
-            "TargetName" = "8:CErp.Common.pdb"
+            "SourcePath" = "8:..\\JGNet.Manage\\bin\\Debug\\JGNet.Common.pdb"
+            "TargetName" = "8:JGNet.Common.pdb"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
             "Condition" = "8:"
@@ -1188,7 +1188,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_665605119E1B45DB9E2DA0AE18A4096A"
             {
-            "SourcePath" = "8:..\\CErp.Manage\\bin\\Debug\\CitySelectForm.dat"
+            "SourcePath" = "8:..\\JGNet.Manage\\bin\\Debug\\CitySelectForm.dat"
             "TargetName" = "8:CitySelectForm.dat"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
@@ -1589,16 +1589,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CErp.Manage, Version=0.1.2019.516, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:JGNet.Manage, Version=0.1.2019.516, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_E085EE5A4E37435A9C83BF71C4CF2850"
                     {
-                    "Name" = "8:CErp.Manage.exe"
+                    "Name" = "8:JGNet.Manage.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\CErp.Manage\\bin\\Debug\\CErp.Manage.exe"
+            "SourcePath" = "8:..\\JGNet.Manage\\bin\\Debug\\JGNet.Manage.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
@@ -1669,8 +1669,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F58866C112424B7C8634F9FD3D86B81A"
             {
-            "SourcePath" = "8:..\\CErp.Manage\\bin\\Debug\\CErp.Manage.exe.config"
-            "TargetName" = "8:CErp.Manage.exe.config"
+            "SourcePath" = "8:..\\JGNet.Manage\\bin\\Debug\\JGNet.Manage.exe.config"
+            "TargetName" = "8:JGNet.Manage.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
             "Condition" = "8:"
@@ -1691,16 +1691,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CErp.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:JGNet.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_FCCECEA67C35DAF8677157E13000BC63"
                     {
-                    "Name" = "8:CErp.Core.dll"
+                    "Name" = "8:JGNet.Core.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CErp.Core.dll"
+            "SourcePath" = "8:JGNet.Core.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"
@@ -2371,7 +2371,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B358868692EE4760B143EDFBBA14AEAE"
             {
-            "SourcePath" = "8:..\\CErp.Manage\\obj\\Debug\\CErp.Manage.exe"
+            "SourcePath" = "8:..\\JGNet.Manage\\obj\\Debug\\JGNet.Manage.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BA115D38399F4938A99BA33A73FE7465"

@@ -261,7 +261,7 @@
     <Compile Include="Class92.cs" />
     <Compile Include="CJPlus\Rapid\IServerEngine.cs" />
     <Compile Include="CJPlus\Rapid\WssOptions.cs" />
-    <Compile Include="Interface34.cs" />
+    <Compile Include="IResumedProjectItemOutter.cs" />
     <Compile Include="ResumedProjectItemOutter.cs" />
     <Compile Include="CJPlus\FileTransceiver\ResumedProjectItem.cs" />
     <Compile Include="IFilePackageHelper.cs" />
@@ -355,7 +355,7 @@
     <Compile Include="Class128.cs" />
     <Compile Include="Class129.cs" />
     <Compile Include="Class130.cs" />
-    <Compile Include="Class131.cs" />
+    <Compile Include="ResumedProjectItemOutter2.cs" />
     <Compile Include="Class132.cs" />
     <Compile Include="CJPlus\Application\Friends\Server\EmptyFriendsManager.cs" />
     <Compile Include="CJPlus\Application\Friends\Server\DefaultFriendsManager.cs" />

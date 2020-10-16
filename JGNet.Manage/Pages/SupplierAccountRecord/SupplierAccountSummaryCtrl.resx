@@ -144,7 +144,7 @@
         18gP/RYKq1L7Bw8AN9TW9zQtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="skinComboBoxSupplier.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxSupplier.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAACPAUNFcnAuQ29yZSwgVmVyc2lvbj0xLjAuMC4w
@@ -160,7 +160,7 @@
         c2l6ZQhfdmVyc2lvbgQAAAxDRXJwLkJyYW5kW10CAAAACAgDAAAACQgAAAAAAAAAAAAAAAcIAAAAAAEA
         AAAAAAAABApDRXJwLkJyYW5kAgAAAAs=
 </value>
-  </data>
+  </data>-->
   <data name="dataGridView1.MergeColumnNames" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1u

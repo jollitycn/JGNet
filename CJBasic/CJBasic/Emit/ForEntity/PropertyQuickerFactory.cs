@@ -6,8 +6,8 @@
     public static class PropertyQuickerFactory
     {
         private static Dictionary<Type, IPropertyQuicker> PropertyQuickerDic = new Dictionary<Type, IPropertyQuicker>();
-        private static CJBasic.Emit.ForEntity.PropertyQuickerEmitter PropertyQuickerEmitter = new CJBasic.Emit.ForEntity.PropertyQuickerEmitter(false);
-        private static CJBasic.Emit.ForEntity.RelectPropertyQuicker RelectPropertyQuicker = new CJBasic.Emit.ForEntity.RelectPropertyQuicker();
+        private static global::CJBasic.Emit.ForEntity.PropertyQuickerEmitter PropertyQuickerEmitter = new global::CJBasic.Emit.ForEntity.PropertyQuickerEmitter(false);
+        private static global::CJBasic.Emit.ForEntity.RelectPropertyQuicker RelectPropertyQuicker = new global::CJBasic.Emit.ForEntity.RelectPropertyQuicker();
 
         public static IPropertyQuicker<TEntity> CreatePropertyQuicker<TEntity>()
         {

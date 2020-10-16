@@ -7,17 +7,17 @@ using System.Data;
 using System.Text;
 
 using System.Windows.Forms;
-using CErp.Common;
-using CErp.Core.InteractEntity;
+using JGNet.Common;
+using JGNet.Core.InteractEntity;
 using CCWin;
-using CErp.Common.Core.Util;
-using CErp.Common.Core; using CErp.Common;
-using CErp.Core.Const;
-using CErp.Common.Components;
-using CErp.Core.Tools;
+using JGNet.Common.Core.Util;
+using JGNet.Common.Core; using JGNet.Common;
+using JGNet.Core.Const;
+using JGNet.Common.Components;
+using JGNet.Core.Tools;
 using ESBasic.Helpers;
 
-namespace CErp.Common
+namespace JGNet.Common
 {/// <summary>
 /// 营业日报
 /// </summary>

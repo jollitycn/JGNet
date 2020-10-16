@@ -1,8 +1,8 @@
 ﻿namespace CJBasic.ObjectManagement.Cache
 {
-    using CJBasic.Collections;
-    using CJBasic.ObjectManagement;
-    using CJBasic.ObjectManagement.Trees.Multiple;
+     using global::CJBasic.Collections;
+    using global::CJBasic.ObjectManagement;
+    using global::CJBasic.ObjectManagement.Trees.Multiple;
     using System;
     using System.Collections.Generic;
 

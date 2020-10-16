@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Helpers
 {
-    using CJBasic.Emit.ForEntity;
+     using global::CJBasic.Emit.ForEntity;
     using System;
     using System.Collections.Generic;
     using System.Reflection;

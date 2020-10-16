@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Threading.Application
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     public interface IHeartBeatChecker

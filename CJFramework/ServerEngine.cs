@@ -23,7 +23,7 @@ using System;
 using System.Net;
 using System.Threading;
 
-internal class ServerEngine : IRapidEngine, IServerEngine, Interface41
+internal class ServerEngine : IRapidEngine, IRapidServerEngine, Interface41
 {
     private bool bool_0 = false;
     private bool bool_1 = false;

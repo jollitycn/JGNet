@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Loggers
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
 
     [EnumDescription("异常/错误严重级别")]

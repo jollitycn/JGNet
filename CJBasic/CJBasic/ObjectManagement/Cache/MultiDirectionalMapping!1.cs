@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.ObjectManagement.Cache
 {
-    using CJBasic.Collections;
-    using CJBasic.Threading.Synchronize;
+     using global::CJBasic.Collections;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
 

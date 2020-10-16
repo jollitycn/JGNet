@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F988DDA-955F-42F2-82EB-D6058FB7FF75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CCWin</RootNamespace>
+    <AssemblyName>CSkin</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\CSkin.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\AllSkin\SkinForm.cs" />
+    <Compile Include="Form\AllSkin\SkinForm.Designer.cs">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AllSkin\SkinMain.cs" />
+    <Compile Include="Form\AllSkin\SkinMain.Designer.cs">
+      <DependentUpon>SkinMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\AntiAliasGraphics.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_Color.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_Color.Designer.cs">
+      <DependentUpon>Skin_Color.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\Skin\Skin_VS.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_VS.Designer.cs">
+      <DependentUpon>Skin_VS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\ThemeEventArgs.cs" />
+    <Compile Include="Form\CCSkin\BackEventArgs.cs" />
+    <Compile Include="Form\CCSkin\BitmapHelper.cs" />
+    <Compile Include="Form\CCSkin\CCSkinForm.cs" />
+    <Compile Include="Form\CCSkin\CCSkinForm.Designer.cs">
+      <DependentUpon>CCSkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\CCSkinMain.cs" />
+    <Compile Include="Form\CCSkin\CCSkinMain.designer.cs">
+      <DependentUpon>CCSkinMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\CmSysButton.cs" />
+    <Compile Include="Form\CCSkin\ColorMax.cs" />
+    <Compile Include="Form\CCSkin\ControlBoxManager.cs" />
+    <Compile Include="Form\CCSkin\ControlBoxState.cs" />
+    <Compile Include="Form\CCSkin\ControlBoxStyle.cs" />
+    <Compile Include="Form\CCSkin\CustomSysButtonCollection.cs" />
+    <Compile Include="Form\CCSkin\ImageDrawRect.cs" />
+    <Compile Include="Form\CCSkin\MobileStyle.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_DevExpress.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_DevExpress.Designer.cs">
+      <DependentUpon>Skin_DevExpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Printscreen\FrmPrintscreen.cs" />
+    <Compile Include="Form\Printscreen\FrmPrintscreen.designer.cs">
+      <DependentUpon>FrmPrintscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imaging\ColorConvertEx.cs" />
+    <Compile Include="Imaging\GrayscaleStyel.cs" />
+    <Compile Include="Imaging\HSL.cs" />
+    <Compile Include="Imaging\RGB.cs" />
+    <Compile Include="SkinClass\ColorHelper.cs" />
+    <Compile Include="SkinClass\EnumCommon.cs" />
+    <Compile Include="SkinClass\DrawImage.cs" />
+    <Compile Include="SkinClass\ExtensionAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkinClass\HttpHelper.cs" />
+    <Compile Include="SkinClass\NewGraphics.cs" />
+    <Compile Include="SkinClass\RenderHelper.cs" />
+    <Compile Include="Form\CCSkin\SkinFormBackgroundRenderEvent.cs" />
+    <Compile Include="Form\CCSkin\SkinFormBorderRenderEvent.cs" />
+    <Compile Include="Form\CCSkin\SkinFormCaptionRenderEvent.cs" />
+    <Compile Include="Form\CCSkin\SkinFormColorTable.cs" />
+    <Compile Include="Form\CCSkin\SkinFormControlBoxRenderEvent.cs" />
+    <Compile Include="Form\CCSkin\SkinFormImageRenderer.cs" />
+    <Compile Include="Form\CCSkin\SkinFormProfessionalRenderer.cs" />
+    <Compile Include="Form\CCSkin\SkinFormRenderer.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_Mac.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_Mac.Designer.cs">
+      <DependentUpon>Skin_Mac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\Skin\Skin_Metro.cs" />
+    <Compile Include="Form\CCSkin\Skin\Skin_Metro.Designer.cs">
+      <DependentUpon>Skin_Metro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CCSkin\SysBottomEventArgs.cs" />
+    <Compile Include="Form\CCSkin\TitleType.cs" />
+    <Compile Include="Form\MessageBox\DialogButton.cs" />
+    <Compile Include="Form\MessageBox\MessageBoxEx.cs" />
+    <Compile Include="Form\MessageBox\MessageBoxForm.cs" />
+    <Compile Include="SkinClass\ControlPaintEx.cs" />
+    <Compile Include="SkinClass\ControlState.cs" />
+    <Compile Include="SkinClass\Conversion.cs" />
+    <Compile Include="SkinClass\DesktopIcon.cs" />
+    <Compile Include="SkinClass\DrawHelper.cs" />
+    <Compile Include="SkinClass\FastBitmap.cs" />
+    <Compile Include="SkinClass\GraphicsPathHelper.cs" />
+    <Compile Include="SkinClass\ImageDc.cs" />
+    <Compile Include="SkinClass\ImageDrawRect.cs" />
+    <Compile Include="SkinClass\ImageObject.cs" />
+    <Compile Include="SkinClass\InterpolationModeGraphics.cs" />
+    <Compile Include="SkinClass\RegionHelper.cs" />
+    <Compile Include="SkinClass\RoundStyle.cs" />
+    <Compile Include="SkinClass\SkinTools.cs" />
+    <Compile Include="SkinClass\SmoothingModeGraphics.cs" />
+    <Compile Include="SkinClass\TextRenderingHintGraphics.cs" />
+    <Compile Include="SkinClass\ThumbArrowDirection.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\RichTxtControl.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\RichTxtControl.designer.cs">
+      <DependentUpon>RichTxtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinChatRichTextBox\SkinChatRichTextBox.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\GifBox.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\ImageForm.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\ImageForm.Designer.cs">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\CHARRANGE.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\CLIPFORMAT.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\COMRECT.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\DVASPECT.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\FORMATETC.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\GETCLIPBOARDDATAFLAGS.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\GETOBJECTOPTIONS.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IAdviseSink.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IDataObject.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IEnumFORMATETC.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IEnumOLEVERB.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IEnumSTATDATA.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IEnumSTATSTG.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\ILockBytes.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\ImageHelper.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IOleClientSite.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IOleContainer.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IOleObject.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IRichEditOle.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\ISequentialStream.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IStorge.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\IStream.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\NativeMethods.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\REOBJECT.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\REOOBJECTFLAGS.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\RichEditOle.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\STATDATA.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\STGM.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\STGMEDIUM.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\tagLOGPALETTE.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\tagOLEVERB.cs" />
+    <Compile Include="SkinControl\SkinChatRichTextBox\Internals\TYMED.cs" />
+    <Compile Include="SkinControl\SkinControlBase\SkinControlBase.cs" />
+    <Compile Include="SkinControl\SkinDateTimePicker\SkinDateTimePicker.cs" />
+    <Compile Include="SkinControl\SkinDateTimePicker\SkinDateTimePicker.Designer.cs">
+      <DependentUpon>SkinDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinFlowLayoutPanel\SkinFlowLayoutPanel.cs" />
+    <Compile Include="SkinControl\SkinFlowLayoutPanel\SkinFlowLayoutPanel.Designer.cs">
+      <DependentUpon>SkinFlowLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinHotKey\SkinHotKey.cs" />
+    <Compile Include="SkinClass\GeneralUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkinControl\SkinLine\SkinLine.cs" />
+    <Compile Include="SkinControl\SkinLine\SkinLine.Designer.cs">
+      <DependentUpon>SkinLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinMdi\MdiClientController.cs" />
+    <Compile Include="SkinControl\SkinMonthCalendar\SkinMonthCalendar.cs" />
+    <Compile Include="SkinControl\SkinMonthCalendar\SkinMonthCalendar.Designer.cs">
+      <DependentUpon>SkinMonthCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinDropDown\SkinDropDown.cs" />
+    <Compile Include="SkinControl\SkinDropDown\SkinDropDown.designer.cs">
+      <DependentUpon>SkinDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\ChatListBox\ChatListClickEventArgs.cs" />
+    <Compile Include="SkinControl\SkinCode\SkinCode.cs" />
+    <Compile Include="SkinControl\SkinCode\SkinCode.Designer.cs">
+      <DependentUpon>SkinCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinFileTransfers\SkinFileTansfersContainer.cs" />
+    <Compile Include="SkinControl\SkinFileTransfers\SkinFileTransfersItem.cs" />
+    <Compile Include="SkinControl\SkinFileTransfers\FileTransfersItemStyle.cs" />
+    <Compile Include="SkinControl\SkinFileTransfers\FileTransfersItemText.cs" />
+    <Compile Include="SkinControl\SkinFileTransfers\IFileTransfersItemText.cs" />
+    <Compile Include="SkinControl\SkinListView\SkinListView.cs" />
+    <Compile Include="SkinControl\SkinListView\SkinListView.Designer.cs">
+      <DependentUpon>SkinListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinProgressBar\PBarRenderHelper.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\BorderPanel.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\CaptionImageStyle.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\SkinCaptionPanel.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\CaptionStyle.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\Design\PanelDesigner.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\Design\PushPanelDesigner.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\Design\PushPanelItemDesigner.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\ImageDc.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\InterpolationModeGraphics.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\NCPanel.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\PanelBase.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\PanelColorTable.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\SkinPushPanel.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\PushPanelItem.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\PushPanelItemCaptionClickEventArgs.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\RegionHelper.cs" />
+    <Compile Include="SkinControl\SkinPushPanel\SmoothingModeGraphics.cs" />
+    <Compile Include="SkinControl\SkinRollingBar\RollingBarPainter.cs" />
+    <Compile Include="SkinControl\SkinRollingBar\RollingBarStyle.cs" />
+    <Compile Include="SkinControl\SkinRollingBar\SkinRollingBar.cs" />
+    <Compile Include="SkinControl\SkinRollingBar\SkinRollingBarThemeBase.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\cGraphics.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\cScrollBar.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\cStoreDc.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\cTransition.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\cTreeView.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\ScrollBarDrawImage.cs" />
+    <Compile Include="SkinControl\SkinScrollBarHelper\ScrollBarHelper.cs" />
+    <Compile Include="SkinControl\Animator\Animation.cs" />
+    <Compile Include="SkinControl\Animator\Controller.cs" />
+    <Compile Include="SkinControl\Animator\DecorationControl.cs" />
+    <Compile Include="SkinControl\Animator\DoubleBitmapControl.cs" />
+    <Compile Include="SkinControl\Animator\DoubleBitmapControl.designer.cs">
+      <DependentUpon>DoubleBitmapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\Animator\PointFConverter.cs" />
+    <Compile Include="SkinControl\Animator\SkinAnimator.cs" />
+    <Compile Include="SkinControl\Animator\TransfromHelper.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListBox.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListBox.Designer.cs">
+      <DependentUpon>ChatListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\ChatListBox\ChatListEventArgs.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListItem.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListItemCollection.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListItemConverter.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListItemIcon.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListSubItem.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListSubItemConverter.cs" />
+    <Compile Include="SkinControl\ChatListBox\ChatListVScroll.cs" />
+    <Compile Include="SkinControl\ChatListBox\DragListEventArgs.cs" />
+    <Compile Include="SkinControl\ChatListBox\PlatformType.cs" />
+    <Compile Include="SkinControl\SkinProgressIndicator\SkinProgressIndicator.cs" />
+    <Compile Include="SkinControl\SkinProgressIndicator\SkinProgressIndicator.designer.cs">
+      <DependentUpon>SkinProgressIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinProgressIndicator\RotationType.cs" />
+    <Compile Include="SkinControl\SkinProgressIndicator\TextDisplayModes.cs" />
+    <Compile Include="SkinControl\RtfRichTextBox\RtfRichTextBox.cs" />
+    <Compile Include="SkinControl\SkinAlphaWaterTextBox\SkinAlphaWaterTextBox.cs" />
+    <Compile Include="SkinControl\SkinAnimatorImg\SkinAnimatorImg.cs" />
+    <Compile Include="SkinControl\SkinAnimatorImg\SkinAnimatorImg.Designer.cs">
+      <DependentUpon>SkinAnimatorImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinButton\MobileStyle.cs" />
+    <Compile Include="SkinControl\SkinButton\SkinButton.cs" />
+    <Compile Include="SkinControl\SkinButton\SkinButton.Designer.cs">
+      <DependentUpon>SkinButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinButton\StopStates.cs" />
+    <Compile Include="SkinControl\SkinCheckBox\SkinCheckBox.cs" />
+    <Compile Include="SkinControl\SkinCheckBox\SkinCheckBox.Designer.cs">
+      <DependentUpon>SkinCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinColorSelectPanel\ColorSelectMode.cs" />
+    <Compile Include="SkinControl\SkinColorSelectPanel\SkinColorSelectPanel.cs" />
+    <Compile Include="SkinControl\SkinComboBox\CmbControlPaintEx.cs" />
+    <Compile Include="SkinControl\SkinComboBox\CmbRenderHelper.cs" />
+    <Compile Include="SkinControl\SkinComboBox\SkinComboBox.cs" />
+    <Compile Include="SkinControl\SkinDataGridView\SkinDataGridView.cs" />
+    <Compile Include="SkinControl\SkinDataGridView\SkinDataGridView.Designer.cs">
+      <DependentUpon>SkinDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinGroupBox\SkinGroupBox.cs" />
+    <Compile Include="SkinControl\SkinGroupBox\SkinGroupBox.designer.cs">
+      <DependentUpon>SkinGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinKey\PassKey.cs" />
+    <Compile Include="SkinControl\SkinKey\PassKey.Designer.cs">
+      <DependentUpon>PassKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinLabel\ArtTextStyle.cs" />
+    <Compile Include="SkinControl\SkinLabel\SkinLabel.cs" />
+    <Compile Include="SkinControl\SkinListBox\SkinListBox.cs" />
+    <Compile Include="SkinControl\SkinListBox\SkinListBoxItem.cs" />
+    <Compile Include="SkinControl\SkinListBox\SkinListBoxItemCollection.cs" />
+    <Compile Include="SkinControl\SkinNumericUpDown\Events.cs" />
+    <Compile Include="SkinControl\SkinNumericUpDown\SkinNumericUpDown.cs" />
+    <Compile Include="SkinControl\SkinPanel\SkinPanel.cs" />
+    <Compile Include="SkinControl\SkinPanel\SkinPanel.Designer.cs">
+      <DependentUpon>SkinPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPictureBox\SkinPictureBox.cs" />
+    <Compile Include="SkinControl\SkinPictureBox\SkinPictureBox.Designer.cs">
+      <DependentUpon>SkinPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\ColorBox.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\ColorBox.designer.cs">
+      <DependentUpon>ColorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\ColorBoxDesginer.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\FrmCapture.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\FrmCapture.designer.cs">
+      <DependentUpon>FrmCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\FrmOut.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\FrmOut.designer.cs">
+      <DependentUpon>FrmOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\FrmSize.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\FrmSize.designer.cs">
+      <DependentUpon>FrmSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\ImageProcessBox.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\ImageProcessBox.designer.cs">
+      <DependentUpon>ImageProcessBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\MouseHook.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\ToolButton.cs" />
+    <Compile Include="SkinControl\SkinPrintScreen\ToolButton.designer.cs">
+      <DependentUpon>ToolButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinPrintScreen\ToolButtonDesigner.cs" />
+    <Compile Include="SkinControl\SkinProgressBar\BackStyle.cs" />
+    <Compile Include="SkinControl\SkinProgressBar\ControlPaintEx.cs" />
+    <Compile Include="SkinControl\SkinProgressBar\SkinProgressBar.cs" />
+    <Compile Include="SkinControl\SkinProgressBar\TextRenderingHintGraphics.cs" />
+    <Compile Include="SkinControl\SkinRadioButton\SkinRadioButton.cs" />
+    <Compile Include="Imaging\BasicBlockPainter.cs" />
+    <Compile Include="SkinControl\SkinScrollBar\ButtonColorTable.cs" />
+    <Compile Include="SkinControl\SkinDui\CutePointAndValuePresenter.cs" />
+    <Compile Include="Imaging\GlassPainter.cs" />
+    <Compile Include="SkinControl\SkinDui\SkinButtonThemeBase.cs" />
+    <Compile Include="SkinControl\SkinDui\SkinEventsCollection.cs" />
+    <Compile Include="SkinControl\SkinScrollBar\SkinHScrollBar.cs" />
+    <Compile Include="SkinControl\SkinScrollBar\SkinScrollBarBase.cs" />
+    <Compile Include="SkinControl\SkinScrollBar\SkinScrollBarThemeBase.cs" />
+    <Compile Include="SkinControl\SkinScrollBar\SkinVScrollBar.cs" />
+    <Compile Include="SkinClass\RectHelper.cs" />
+    <Compile Include="SkinControl\SkinDui\WLButton.cs" />
+    <Compile Include="SkinControl\SkinDui\WLButtonBase.cs" />
+    <Compile Include="SkinControl\SkinDui\WLContainerBase.cs" />
+    <Compile Include="SkinControl\SkinDui\WLControlBase.cs" />
+    <Compile Include="SkinControl\SkinDui\WLScrollBar.cs" />
+    <Compile Include="SkinControl\SkinSplitContainer\RenderHelper.cs" />
+    <Compile Include="SkinControl\SkinStrip\LayoutUtils.cs" />
+    <Compile Include="SkinControl\SkinStrip\ProfessionalToolStripRendererEx.cs" />
+    <Compile Include="SkinControl\SkinStrip\RenderHelperStrip.cs" />
+    <Compile Include="SkinControl\SkinStrip\SkinContextMenuStrip\SkinContextMenuStrip.cs" />
+    <Compile Include="SkinControl\SkinStrip\SkinMenuStrip\SkinMenuStrip.cs" />
+    <Compile Include="SkinControl\SkinStrip\SkinToolStrip\SkinToolStrip.cs" />
+    <Compile Include="SkinControl\SkinStrip\ToolStripColorTable.cs" />
+    <Compile Include="SkinControl\SkinTabControl\SkinTabControlDesigner.cs" />
+    <Compile Include="SkinControl\SkinTabControl\SkinTabPageCollectionEditor.cs" />
+    <Compile Include="SkinControl\SkinTabControl\TabPageEventArgs.cs" />
+    <Compile Include="SkinControl\SkinTabControl\SkinTabControl.cs" />
+    <Compile Include="SkinControl\SkinTextBox\SkinTextBox.cs" />
+    <Compile Include="SkinControl\SkinTextBox\SkinTextBox.designer.cs">
+      <DependentUpon>SkinTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControl\SkinTextBox\SkinWaterTextBox.cs" />
+    <Compile Include="SkinControl\SkinToolTip\SkinToolTip.cs" />
+    <Compile Include="SkinControl\SkinToolTip\ToolTipRenderHelper.cs" />
+    <Compile Include="SkinControl\SkinTrackBar\ClientUtils.cs" />
+    <Compile Include="SkinControl\SkinTrackBar\SkinTrackBar.cs" />
+    <Compile Include="SkinControl\SkinTrackBar\TrackBarBase.cs" />
+    <Compile Include="SkinControl\SkinTrackBar\TrackBarBaseDesigner.cs" />
+    <Compile Include="SkinControl\SkinSplitContainer\CollapsePanel.cs" />
+    <Compile Include="SkinControl\SkinSplitContainer\SkinSplitContainer.cs" />
+    <Compile Include="SkinControl\SkinSplitContainer\SpliterPanelState.cs" />
+    <Compile Include="SkinControl\SkinTreeView\SkinTreeView.cs" />
+    <Compile Include="SkinControl\SkinTreeView\SkinTreeView.Designer.cs">
+      <DependentUpon>SkinTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\Callback\Functions.cs" />
+    <Compile Include="Win32\ClassName.cs" />
+    <Compile Include="Win32\Com\DOCHOSTUIFLAG.cs" />
+    <Compile Include="Win32\Com\DOCHOSTUIINFO.cs" />
+    <Compile Include="Win32\Com\DWebBrowserEvents2.cs" />
+    <Compile Include="Win32\Com\ICustomDoc.cs" />
+    <Compile Include="Win32\Com\IDocHostUIHandler.cs" />
+    <Compile Include="Win32\Com\IDropTarget.cs" />
+    <Compile Include="Win32\Com\IOleCommandTarget.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceActiveObject.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceFrame.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceUIWindow.cs" />
+    <Compile Include="Win32\Com\IWebBrowser2.cs" />
+    <Compile Include="Win32\Com\OLECMDEXECOPT.cs" />
+    <Compile Include="Win32\Com\OLECMDF.cs" />
+    <Compile Include="Win32\Com\OLECMDID.cs" />
+    <Compile Include="Win32\Com\tagMSG.cs" />
+    <Compile Include="Win32\Com\tagOLECMD.cs" />
+    <Compile Include="Win32\Com\tagPOINT.cs" />
+    <Compile Include="Win32\Com\tagRECT.cs" />
+    <Compile Include="Win32\Const\AC.cs" />
+    <Compile Include="Win32\Const\AW.cs" />
+    <Compile Include="Win32\Const\CDDS.cs" />
+    <Compile Include="Win32\Const\CDRF.cs" />
+    <Compile Include="Win32\Const\CombineRgnStyles.cs" />
+    <Compile Include="Win32\Const\CS.cs" />
+    <Compile Include="Win32\Const\DCX.cs" />
+    <Compile Include="Win32\Const\DI.cs" />
+    <Compile Include="Win32\Const\EM.cs" />
+    <Compile Include="Win32\Const\ESB.cs" />
+    <Compile Include="Win32\Const\GCW.cs" />
+    <Compile Include="Win32\Const\GCL.cs" />
+    <Compile Include="Win32\Const\GWL.cs" />
+    <Compile Include="Win32\Const\HC.cs" />
+    <Compile Include="Win32\Const\HITTEST.cs" />
+    <Compile Include="Win32\Const\HWND.cs" />
+    <Compile Include="Win32\Const\ICC.cs" />
+    <Compile Include="Win32\Const\ICON.cs" />
+    <Compile Include="Win32\Const\LPSTR.cs" />
+    <Compile Include="Win32\Const\MA.cs" />
+    <Compile Include="Win32\Const\NM.cs" />
+    <Compile Include="Win32\Const\OBJID.cs" />
+    <Compile Include="Win32\Const\PRF.cs" />
+    <Compile Include="Win32\Const\RDW.cs" />
+    <Compile Include="Win32\Const\RGN.cs" />
+    <Compile Include="Win32\Const\SB.cs" />
+    <Compile Include="Win32\Const\SBM.cs" />
+    <Compile Include="Win32\Const\SC.cs" />
+    <Compile Include="Win32\Const\SIF.cs" />
+    <Compile Include="Win32\Const\SS.cs" />
+    <Compile Include="Win32\Const\SW.cs" />
+    <Compile Include="Win32\Const\SWP.cs" />
+    <Compile Include="Win32\Const\TBM.cs" />
+    <Compile Include="Win32\Const\TCHT.cs" />
+    <Compile Include="Win32\Const\TCM.cs" />
+    <Compile Include="Win32\Const\TernaryRasterOperations.cs" />
+    <Compile Include="Win32\Const\TME.cs" />
+    <Compile Include="Win32\Const\TPM.cs" />
+    <Compile Include="Win32\Const\TTDT.cs" />
+    <Compile Include="Win32\Const\TTF.cs" />
+    <Compile Include="Win32\Const\TTI.cs" />
+    <Compile Include="Win32\Const\TTM.cs" />
+    <Compile Include="Win32\Const\TTN.cs" />
+    <Compile Include="Win32\Const\TTS.cs" />
+    <Compile Include="Win32\Const\VK.cs" />
+    <Compile Include="Win32\Const\WA.cs" />
+    <Compile Include="Win32\Const\WH.cs" />
+    <Compile Include="Win32\Const\WM.cs" />
+    <Compile Include="Win32\Const\WS.cs" />
+    <Compile Include="Win32\Const\WS_EX.cs" />
+    <Compile Include="Win32\Const\WVR.cs" />
+    <Compile Include="Win32\DwmApi.cs" />
+    <Compile Include="Win32\Helper.cs" />
+    <Compile Include="Win32\HttpWebRequestHelper.cs" />
+    <Compile Include="Win32\NativeMethods.cs" />
+    <Compile Include="Win32\Result.cs" />
+    <Compile Include="Win32\ShellHelper.cs" />
+    <Compile Include="Win32\Struct\API_MSG.cs" />
+    <Compile Include="Win32\Struct\BLENDFUNCTION.cs" />
+    <Compile Include="Win32\Struct\CWPRETSTRUCT.cs" />
+    <Compile Include="Win32\Struct\CWPSTRUCT.cs" />
+    <Compile Include="Win32\Struct\INITCOMMONCONTROLSEX.cs" />
+    <Compile Include="Win32\Struct\MINMAXINFO.cs" />
+    <Compile Include="Win32\Struct\MOUSEHOOKSTRUCT.cs" />
+    <Compile Include="Win32\Struct\MOUSEHOOKSTRUCTEX.cs" />
+    <Compile Include="Win32\Struct\NCCALCSIZE_PARAMS.cs" />
+    <Compile Include="Win32\Struct\NMCUSTOMDRAW.cs" />
+    <Compile Include="Win32\Struct\NMHDR.cs" />
+    <Compile Include="Win32\Struct\NMTTCUSTOMDRAW.cs" />
+    <Compile Include="Win32\Struct\NMTTDISPINFO.cs" />
+    <Compile Include="Win32\Struct\PAINTSTRUCT.cs" />
+    <Compile Include="Win32\Struct\POINT.cs" />
+    <Compile Include="Win32\Struct\RECT.cs" />
+    <Compile Include="Win32\Struct\SCROLLBARINFO.cs" />
+    <Compile Include="Win32\Struct\SCROLLINFO.cs" />
+    <Compile Include="Win32\Struct\STYLESTRUCT.cs" />
+    <Compile Include="Win32\Struct\TCHITTESTINFO.cs" />
+    <Compile Include="Win32\Struct\TOOLINFO.cs" />
+    <Compile Include="Win32\Struct\TRACKMOUSEEVENT.cs" />
+    <Compile Include="Win32\Struct\TT_HITTESTINFO.cs" />
+    <Compile Include="Win32\Struct\WINDOWINFO.cs" />
+    <Compile Include="Win32\Struct\WINDOWPLACEMENT.cs" />
+    <Compile Include="Win32\Struct\WINDOWPOS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Win32\SystemInformationHelper.cs" />
+    <Compile Include="Win32\WinAPI.cs" />
+    <Compile Include="Win32\WindowsType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\AllSkin\SkinForm.resx">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AllSkin\SkinMain.resx">
+      <DependentUpon>SkinMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\CCSkinForm.resx">
+      <DependentUpon>CCSkinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\CCSkinMain.resx">
+      <DependentUpon>CCSkinMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\Skin\Skin_DevExpress.resx">
+      <DependentUpon>Skin_DevExpress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\Skin\Skin_Mac.resx">
+      <DependentUpon>Skin_Mac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\Skin\Skin_Color.resx">
+      <DependentUpon>Skin_Color.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\Skin\Skin_VS.resx">
+      <DependentUpon>Skin_VS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CCSkin\Skin\Skin_Metro.resx">
+      <DependentUpon>Skin_Metro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MessageBox\MessageBoxForm.resx">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Printscreen\FrmPrintscreen.resx">
+      <DependentUpon>FrmPrintscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinChatRichTextBox\SkinChatRichTextBox.resx">
+      <DependentUpon>SkinChatRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinChatRichTextBox\GifBox.resx">
+      <DependentUpon>GifBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinChatRichTextBox\ImageForm.resx">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinDateTimePicker\SkinDateTimePicker.resx">
+      <DependentUpon>SkinDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinLine\SkinLine.resx">
+      <DependentUpon>SkinLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinMonthCalendar\SkinMonthCalendar.resx">
+      <DependentUpon>SkinMonthCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\ChatListBox\ChatListBox.resx">
+      <DependentUpon>ChatListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinProgressIndicator\SkinProgressIndicator.resx">
+      <DependentUpon>SkinProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinAlphaWaterTextBox\SkinAlphaWaterTextBox.resx">
+      <DependentUpon>SkinAlphaWaterTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinAnimatorImg\SkinAnimatorImg.resx">
+      <DependentUpon>SkinAnimatorImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinButton\SkinButton.resx">
+      <DependentUpon>SkinButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinDataGridView\SkinDataGridView.resx">
+      <DependentUpon>SkinDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinGroupBox\SkinGroupBox.resx">
+      <DependentUpon>SkinGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinKey\PassKey.resx">
+      <DependentUpon>PassKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinPrintScreen\ColorBox.resx">
+      <DependentUpon>ColorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinPrintScreen\FrmCapture.resx">
+      <DependentUpon>FrmCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinPrintScreen\FrmOut.resx">
+      <DependentUpon>FrmOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinPrintScreen\FrmSize.resx">
+      <DependentUpon>FrmSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinTabControl\SkinTabControl.resx">
+      <DependentUpon>SkinTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinControl\SkinTextBox\SkinTextBox.resx">
+      <DependentUpon>SkinTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tips_light_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_bluelight_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_light_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dont Disturb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainPanel_ContactHeadSelect_paddingDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OffLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputbox_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameBorderEffect_mouseDownDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnClose_hight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Norml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_100.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameBorderEffect_normalDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_tab_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_tab_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_tabbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_tabbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_light_bkg_top123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab_dots_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab_dots_mouseover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab_dots_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-imoffline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-imonline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-ImQQAway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-ImQQOnline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-invisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-IPhoneQQ_Head_Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-MobilePhoneQQOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-MobileWapQQBusy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-MobileWapQQOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-Qme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-QQForPad_Head_Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MobileWapQQOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQForPad_Head_Big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebQQAway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebQQBusy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebQQMute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebQQOnline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebQQQme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imoffline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imonline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImQQAway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImQQBusy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImQQMute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImQQOnline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImQQQme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IPhoneQQ_Head_Big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MobilePhoneQQAway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MobilePhoneQQBusy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MobilePhoneQQOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MobileWapQQAway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outdent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveFormat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowHTML.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellCheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StrikeThrough.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subscript .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Superscript .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wordclean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordcount.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackColor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForeColor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTML.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtmlSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Indent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertHorizontalRule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertOrderedList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertUnorderedList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JustifyCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JustifyFull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JustifyLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JustifyRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_tab_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_checked.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unChecked.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollHorzArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollHorzShaft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollHorzThumb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollVertArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollVertArrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollVertShaft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollVertThumb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vista-ScrollVertThumb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VScroll_Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VScroll_Middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VScroll_Middle_Enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VScroll_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HScroll_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HScroll_Middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HScroll_Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlMonthCalendar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlMonthCalendar02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlMonthCalendar03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlMonthCalendar04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlMonthCalendarBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlMonthCalendarBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlBorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlDateTimePicker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackPalace.png" />
+    <None Include="Resources\Full_close_down.PNG" />
+    <None Include="Resources\Full_close_hover.PNG" />
+    <None Include="Resources\Full_close_normal.PNG" />
+    <None Include="Resources\icon_close_down.png" />
+    <None Include="Resources\icon_close_hover.png" />
+    <None Include="Resources\icon_close_normal.png" />
+    <None Include="Resources\allbtn_down1.png" />
+    <None Include="Resources\allbtn_highlight1.png" />
+    <None Include="Resources\RestoreNormlBack.png" />
+    <None Include="Resources\CloseDownBack.png" />
+    <None Include="Resources\CloseMouseBack.png" />
+    <None Include="Resources\CloseNormlBack.png" />
+    <None Include="Resources\MaxDownBack.png" />
+    <None Include="Resources\MaxMouseBack.png" />
+    <None Include="Resources\MaxNormlBack.png" />
+    <None Include="Resources\MiniDownBack.png" />
+    <None Include="Resources\MiniMouseBack.png" />
+    <None Include="Resources\MiniNormlBack.png" />
+    <None Include="Resources\RestoreDownBack.png" />
+    <None Include="Resources\RestoreMouseBack.png" />
+    <None Include="Resources\fader.png" />
+    <Content Include="SkinControl\SkinMdi\MdiClientController.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

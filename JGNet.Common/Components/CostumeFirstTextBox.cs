@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
 
-namespace CErp.Common
+namespace JGNet.Common
 {
-    public partial class CostumeFirstTextBox : CErp.Common.TextBox
+    public partial class CostumeFirstTextBox : JGNet.Common.TextBox
     {
         public CostumeFirstTextBox()
         {

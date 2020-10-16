@@ -162,7 +162,7 @@
         18gP/RYKq1L7Bw8AN9TW9zQtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="skinComboBoxSupplierID.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxSupplierID.SelectedItem" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAACPAUNFcnAuQ29yZSwgVmVyc2lvbj0xLjAuMC4w
@@ -178,7 +178,7 @@
         c2l6ZQhfdmVyc2lvbgQAAAxDRXJwLkJyYW5kW10CAAAACAgDAAAACQgAAAAAAAAAAAAAAAcIAAAAAAEA
         AAAAAAAABApDRXJwLkJyYW5kAgAAAAs=
 </value>
-  </data>
+  </data>-->
   <metadata name="CostPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

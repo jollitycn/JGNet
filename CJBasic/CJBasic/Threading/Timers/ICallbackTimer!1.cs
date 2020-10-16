@@ -1,7 +1,7 @@
 ﻿namespace CJBasic.Threading.Timers
 {
-    using CJBasic;
-    using CJBasic.Threading.Engines;
+    using global::CJBasic;
+     using global::CJBasic.Threading.Engines;
     using System;
 
     public interface ICallbackTimer<T> : ICycleEngine

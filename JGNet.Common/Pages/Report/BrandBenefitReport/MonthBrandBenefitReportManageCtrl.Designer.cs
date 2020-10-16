@@ -1,7 +1,7 @@
 ﻿using CCWin.SkinControl;
 using ESBasic.Widget;
 
-namespace CErp.Common
+namespace JGNet.Common
 {
     partial class MonthBrandBenefitReportManageCtrl
     {
@@ -36,7 +36,7 @@ namespace CErp.Common
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.skinPanel1 = new System.Windows.Forms.Panel();
-            this.BaseButton1 = new CErp.Common.Components.BaseButton();
+            this.BaseButton1 = new JGNet.Common.Components.BaseButton();
             this.skinComboBox_Shop = new  SkinComboBox();
             this.skinLabel11 = new CCWin.SkinControl.SkinLabel();
             this.dateTimePicker_End = new YearMonthPicker();
@@ -66,7 +66,7 @@ namespace CErp.Common
             // 
             // reportBindingSource
             // 
-            this.reportBindingSource.DataSource = typeof(CErp.BrandBenefitMonthReport);
+            this.reportBindingSource.DataSource = typeof(JGNet.BrandBenefitMonthReport);
             // 
             // skinPanel1
             // 
@@ -88,13 +88,13 @@ namespace CErp.Common
             // 
             this.BaseButton1.BackColor = System.Drawing.Color.Transparent;
             this.BaseButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.BaseButton1.DownBack = global::CErp.Common.Properties.Resources.btnDownBack;
+            this.BaseButton1.DownBack = global::JGNet.Common.Properties.Resources.btnDownBack;
             this.BaseButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.BaseButton1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.BaseButton1.Location = new System.Drawing.Point(549, 3);
-            this.BaseButton1.MouseBack = global::CErp.Common.Properties.Resources.btnMouseBack;
+            this.BaseButton1.MouseBack = global::JGNet.Common.Properties.Resources.btnMouseBack;
             this.BaseButton1.Name = "BaseButton1";
-            this.BaseButton1.NormlBack = global::CErp.Common.Properties.Resources.btnNormlBack;
+            this.BaseButton1.NormlBack = global::JGNet.Common.Properties.Resources.btnNormlBack;
             this.BaseButton1.Size = new System.Drawing.Size(75, 32);
             this.BaseButton1.TabIndex = 3;
             this.BaseButton1.Text = "查询";

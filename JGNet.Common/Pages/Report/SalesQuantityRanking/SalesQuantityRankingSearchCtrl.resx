@@ -164,7 +164,7 @@
         18gP/RYKq1L7Bw8AN9TW9zQtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
+  <!--<data name="skinComboBoxBigClass.SelectedValue" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEBDRXJwLkNvcmUsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsDAMAAAD3AW1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAs
@@ -197,7 +197,7 @@
         Ty3rLL/WiAAAAADdTy3rLL/WiAAAAADdTy3rLL/WiN1PLessv9aIAAkFAAAACQUAAAAJBQAAAAAAAAAA
         AAAACw==
 </value>
-  </data>
+  </data>-->
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

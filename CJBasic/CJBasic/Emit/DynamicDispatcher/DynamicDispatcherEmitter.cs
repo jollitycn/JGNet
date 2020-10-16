@@ -1,12 +1,13 @@
 ﻿namespace CJBasic.Emit.DynamicDispatcher
 {
-    using CJBasic.Emit;
-    using CJBasic.Helpers;
+    using global::CJBasic.Emit;
+    using global::CJBasic.Helpers;
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Reflection;
     using System.Reflection.Emit;
+    using global::CJBasic.Helpers;
 
     public class DynamicDispatcherEmitter
     {

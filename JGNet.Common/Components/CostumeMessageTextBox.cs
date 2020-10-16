@@ -8,12 +8,12 @@ using System.Text;
 
 using System.Windows.Forms;
 using CCWin.SkinControl;
-using CErp.Core.InteractEntity;
-using CErp.Core.Tools;
+using JGNet.Core.InteractEntity;
+using JGNet.Core.Tools;
 
-namespace CErp.Common
+namespace JGNet.Common
 {
-    public partial class CostumeMessageTextBox :  CErp.Common.TextBox
+    public partial class CostumeMessageTextBox :  JGNet.Common.TextBox
     {
 
        

@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGNetWeb", "JGNetWeb\JGNetW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdater", "AutoUpdater\AutoUpdater.csproj", "{5F320D65-5B96-4D12-88BD-FEAD99BC2B8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGNet.Server", "..\CostumeERP\CErp.Server\JGNet.Server.csproj", "{B14117D1-61DA-489C-82BD-6D38ADA71072}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGNet.Server", "..\CostumeERP\JGNet.Server\JGNet.Server.csproj", "{B14117D1-61DA-489C-82BD-6D38ADA71072}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

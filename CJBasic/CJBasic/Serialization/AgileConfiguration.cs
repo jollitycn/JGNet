@@ -1,6 +1,7 @@
 ﻿namespace CJBasic.Serialization
 {
-    using CJBasic.Helpers;
+    using global::CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
     using System.IO;
     using System.Xml;

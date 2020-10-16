@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CErp.Core.Dev.Enum
+namespace JGNet.Core.Dev.Enum
 {
     public enum DateType
     {

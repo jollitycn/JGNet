@@ -7,7 +7,7 @@
         void Insert(TVal val);
         TVal Pop();
 
-        CJBasic.ObjectManagement.Trees.Binary.HeapType HeapType { get; }
+        global::CJBasic.ObjectManagement.Trees.Binary.HeapType HeapType { get; }
     }
 }
 

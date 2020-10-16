@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Addins
 {
-    using CJBasic;
+    using global::CJBasic;
     using System;
     using System.Collections.Generic;
 

@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.ObjectManagement.Trees.Binary
 {
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic.Threading.Synchronize;
     using System;
 
     [Serializable]

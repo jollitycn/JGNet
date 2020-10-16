@@ -7,8 +7,8 @@
     [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown), Guid("0000000b-0000-0000-C000-000000000046")]
     public interface IStorage
     {
-        int CreateStream(string pwcsName, uint grfMode, uint reserved1, uint reserved2, out CJBasic.Widget.Internals.IStream ppstm);
-        int OpenStream(string pwcsName, IntPtr reserved1, uint grfMode, uint reserved2, out CJBasic.Widget.Internals.IStream ppstm);
+        int CreateStream(string pwcsName, uint grfMode, uint reserved1, uint reserved2, out global::CJBasic.Widget.Internals.IStream ppstm);
+        int OpenStream(string pwcsName, IntPtr reserved1, uint grfMode, uint reserved2, out global::CJBasic.Widget.Internals.IStream ppstm);
         int CreateStorage(string pwcsName, uint grfMode, uint reserved1, uint reserved2, out IStorage ppstg);
         int OpenStorage(string pwcsName, IStorage pstgPriority, uint grfMode, IntPtr snbExclude, uint reserved, out IStorage ppstg);
         int CopyTo(uint ciidExclude, Guid rgiidExclude, IntPtr snbExclude, IStorage pstgDest);

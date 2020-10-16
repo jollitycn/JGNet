@@ -1,6 +1,6 @@
 ﻿namespace CJBasic
 {
-    using CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
 
     [Serializable]

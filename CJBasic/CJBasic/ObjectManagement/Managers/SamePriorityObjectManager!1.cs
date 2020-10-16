@@ -1,14 +1,14 @@
 ﻿namespace CJBasic.ObjectManagement.Managers
 {
-    using CJBasic;
-    using CJBasic.Threading.Synchronize;
+    using global::CJBasic;
+    using global::CJBasic.Threading.Synchronize;
     using System;
     using System.Collections.Generic;
     using System.Threading;
 
     public class SamePriorityObjectManager<T> : ISamePriorityObjectManager<T>
     {
-        private CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow actionTypeOnAddOverflow;
+        private global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow actionTypeOnAddOverflow;
         private int capacity;
         private int detectSpanInMSecsOnWait;
         private SmartRWLocker smartRWLocker;
@@ -21,7 +21,7 @@
             this.waiterList = new LinkedList<T>();
             this.smartRWLocker = new SmartRWLocker();
             this.capacity = 0x7fffffff;
-            this.actionTypeOnAddOverflow = CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.Wait;
+            this.actionTypeOnAddOverflow = global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.Wait;
             this.detectSpanInMSecsOnWait = 10;
             this.WaiterDiscarded += delegate {
             };
@@ -31,11 +31,11 @@
         {
         }
 
-        public SamePriorityObjectManager(int _capacity, CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow actionType) : this(_capacity, actionType, 10)
+        public SamePriorityObjectManager(int _capacity, global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow actionType) : this(_capacity, actionType, 10)
         {
         }
 
-        public SamePriorityObjectManager(int _capacity, CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow actionType, int _detectSpanInMSecsOnWait) : this()
+        public SamePriorityObjectManager(int _capacity, global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow actionType, int _detectSpanInMSecsOnWait) : this()
         {
             this.capacity = _capacity;
             this.actionTypeOnAddOverflow = actionType;
@@ -53,14 +53,14 @@
                     return;
                 }
             }
-            if (this.actionTypeOnAddOverflow == CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.DiscardCurrent)
+            if (this.actionTypeOnAddOverflow == global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.DiscardCurrent)
             {
                 this.WaiterDiscarded(waiter);
             }
             else
             {
                 T local;
-                if (this.actionTypeOnAddOverflow == CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.DiscardLatest)
+                if (this.actionTypeOnAddOverflow == global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.DiscardLatest)
                 {
                     local = default(T);
                     using (obj2 = this.smartRWLocker.Lock(AccessMode.Write))
@@ -74,7 +74,7 @@
                     }
                     this.WaiterDiscarded(local);
                 }
-                else if (this.actionTypeOnAddOverflow == CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.DiscardOldest)
+                else if (this.actionTypeOnAddOverflow == global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow.DiscardOldest)
                 {
                     local = default(T);
                     using (obj2 = this.smartRWLocker.Lock(AccessMode.Write))
@@ -175,7 +175,7 @@
             }
         }
 
-        public CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow ActionTypeOnAddOverflow
+        public global::CJBasic.ObjectManagement.Managers.ActionTypeOnAddOverflow ActionTypeOnAddOverflow
         {
             get
             {

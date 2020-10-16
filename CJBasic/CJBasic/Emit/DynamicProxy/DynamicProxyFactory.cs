@@ -4,7 +4,7 @@
 
     public static class DynamicProxyFactory
     {
-        private static CJBasic.Emit.DynamicProxy.EfficientAopProxyEmitter EfficientAopProxyEmitter = new CJBasic.Emit.DynamicProxy.EfficientAopProxyEmitter(false);
+        private static global::CJBasic.Emit.DynamicProxy.EfficientAopProxyEmitter EfficientAopProxyEmitter = new global::CJBasic.Emit.DynamicProxy.EfficientAopProxyEmitter(false);
 
         public static TInterface CreateEfficientAopProxy<TInterface>(object origin, IAopInterceptor aopInterceptor)
         {

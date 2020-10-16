@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CErp
+namespace JGNet
 {
     public partial class CostumeStoreSnapshot
     {

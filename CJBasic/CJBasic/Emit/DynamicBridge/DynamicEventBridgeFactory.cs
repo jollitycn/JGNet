@@ -6,7 +6,7 @@
 
     public static class DynamicEventBridgeFactory
     {
-        private static CJBasic.Emit.DynamicBridge.DynamicEventBridgeEmitter DynamicEventBridgeEmitter = new CJBasic.Emit.DynamicBridge.DynamicEventBridgeEmitter(false);
+        private static global::CJBasic.Emit.DynamicBridge.DynamicEventBridgeEmitter DynamicEventBridgeEmitter = new global::CJBasic.Emit.DynamicBridge.DynamicEventBridgeEmitter(false);
 
         public static IEventBridge CreateEventBridge(object eventPublisher, object eventHandler, IDictionary<string, string> eventAndHanlerMapping)
         {

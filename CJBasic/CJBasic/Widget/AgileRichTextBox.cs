@@ -1,17 +1,18 @@
 ﻿namespace CJBasic.Widget
 {
-    using CJBasic.Collections;
-    using CJBasic.Widget.Internals;
+     using global::CJBasic.Collections;
+    using global::CJBasic.Widget.Internals;
     using System;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
+    using global::CJBasic.Widget.Internals;
 
     public class AgileRichTextBox : RichTextBox
     {
         private IImagePathGetter imagePathGetter = new DefaultImagePathGetter();
-        private CJBasic.Widget.Internals.RichEditOle richEditOle;
+        private global::CJBasic.Widget.Internals.RichEditOle richEditOle;
 
         public void AppendRichText(string textContent, SortedArray<int, uint> imagePosition_imageID, Font font, Color color)
         {
@@ -146,13 +147,13 @@
             this.RichEditOle.InsertControl(control, position, imageID);
         }
 
-        private CJBasic.Widget.Internals.RichEditOle RichEditOle
+        private global::CJBasic.Widget.Internals.RichEditOle RichEditOle
         {
             get
             {
                 if ((this.richEditOle == null) && base.IsHandleCreated)
                 {
-                    this.richEditOle = new CJBasic.Widget.Internals.RichEditOle(this);
+                    this.richEditOle = new global::CJBasic.Widget.Internals.RichEditOle(this);
                 }
                 return this.richEditOle;
             }

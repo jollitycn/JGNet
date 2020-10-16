@@ -6,7 +6,7 @@
     public class DesEncryption
     {
         private uint[] bits_tb64;
-        private CJBasic.Security.DesStrategy desStrategy;
+        private global::CJBasic.Security.DesStrategy desStrategy;
         private int[] expt_tb;
         private int[] fst_change_tb;
         private string iniVector;
@@ -112,10 +112,10 @@
             };
             this.key = "";
             this.iniVector = "";
-            this.desStrategy = CJBasic.Security.DesStrategy.DesSimple;
+            this.desStrategy = global::CJBasic.Security.DesStrategy.DesSimple;
         }
 
-        public DesEncryption(CJBasic.Security.DesStrategy strategy, string _key)
+        public DesEncryption(global::CJBasic.Security.DesStrategy strategy, string _key)
         {
             this.keyArray = new uint[0x10][];
             this.fst_change_tb = new int[] { 
@@ -206,12 +206,12 @@
             };
             this.key = "";
             this.iniVector = "";
-            this.desStrategy = CJBasic.Security.DesStrategy.DesSimple;
+            this.desStrategy = global::CJBasic.Security.DesStrategy.DesSimple;
             this.desStrategy = strategy;
             this.key = _key;
         }
 
-        public DesEncryption(CJBasic.Security.DesStrategy strategy, string _key, string _iniVector)
+        public DesEncryption(global::CJBasic.Security.DesStrategy strategy, string _key, string _iniVector)
         {
             this.keyArray = new uint[0x10][];
             this.fst_change_tb = new int[] { 
@@ -302,7 +302,7 @@
             };
             this.key = "";
             this.iniVector = "";
-            this.desStrategy = CJBasic.Security.DesStrategy.DesSimple;
+            this.desStrategy = global::CJBasic.Security.DesStrategy.DesSimple;
             this.desStrategy = strategy;
             this.key = _key;
             this.iniVector = _iniVector;
@@ -348,19 +348,19 @@
             byte[] dst = new byte[encrypted.Length - 4];
             Buffer.BlockCopy(encrypted, 4, dst, 0, dst.Length);
             byte[] src = null;
-            if (this.desStrategy == CJBasic.Security.DesStrategy.DesSimple)
+            if (this.desStrategy == global::CJBasic.Security.DesStrategy.DesSimple)
             {
                 src = this.Des(dst, this.key, false);
             }
-            else if (this.desStrategy == CJBasic.Security.DesStrategy.Des3)
+            else if (this.desStrategy == global::CJBasic.Security.DesStrategy.Des3)
             {
                 src = this.Des3(dst, this.key, false);
             }
-            else if (this.desStrategy == CJBasic.Security.DesStrategy.DesCBC)
+            else if (this.desStrategy == global::CJBasic.Security.DesStrategy.DesCBC)
             {
                 src = this.DesCBC(dst, this.key, this.iniVector, false);
             }
-            else if (this.desStrategy == CJBasic.Security.DesStrategy.DesTwoKeys)
+            else if (this.desStrategy == global::CJBasic.Security.DesStrategy.DesTwoKeys)
             {
                 src = this.DesTwoKeys(dst, this.key, this.iniVector, false);
             }
@@ -371,7 +371,7 @@
 
         public static byte[] Decrypt(byte[] encrypted, string key)
         {
-            DesEncryption encryption = new DesEncryption(CJBasic.Security.DesStrategy.Des3, key);
+            DesEncryption encryption = new DesEncryption(global::CJBasic.Security.DesStrategy.Des3, key);
             return encryption.Decrypt(encrypted);
         }
 
@@ -568,19 +568,19 @@
             byte[] array = new byte[num2];
             origin.CopyTo(array, 0);
             byte[] src = null;
-            if (this.desStrategy == CJBasic.Security.DesStrategy.DesSimple)
+            if (this.desStrategy == global::CJBasic.Security.DesStrategy.DesSimple)
             {
                 src = this.Des(array, this.key, true);
             }
-            else if (this.desStrategy == CJBasic.Security.DesStrategy.Des3)
+            else if (this.desStrategy == global::CJBasic.Security.DesStrategy.Des3)
             {
                 src = this.Des3(array, this.key, true);
             }
-            else if (this.desStrategy == CJBasic.Security.DesStrategy.DesCBC)
+            else if (this.desStrategy == global::CJBasic.Security.DesStrategy.DesCBC)
             {
                 src = this.DesCBC(array, this.key, this.iniVector, true);
             }
-            else if (this.desStrategy == CJBasic.Security.DesStrategy.DesTwoKeys)
+            else if (this.desStrategy == global::CJBasic.Security.DesStrategy.DesTwoKeys)
             {
                 src = this.DesTwoKeys(array, this.key, this.iniVector, true);
             }
@@ -592,7 +592,7 @@
 
         public static byte[] Encrypt(byte[] origin, string key)
         {
-            DesEncryption encryption = new DesEncryption(CJBasic.Security.DesStrategy.Des3, key);
+            DesEncryption encryption = new DesEncryption(global::CJBasic.Security.DesStrategy.Des3, key);
             return encryption.Encrypt(origin);
         }
 
@@ -720,7 +720,7 @@
             return numArray;
         }
 
-        public CJBasic.Security.DesStrategy DesStrategy
+        public global::CJBasic.Security.DesStrategy DesStrategy
         {
             get
             {

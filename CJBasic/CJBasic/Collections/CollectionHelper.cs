@@ -1,6 +1,6 @@
 ﻿namespace CJBasic.Collections
 {
-    using CJBasic.Helpers;
+    using global::CJBasic.Helpers;
     using System;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
